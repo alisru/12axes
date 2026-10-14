@@ -23,15 +23,15 @@ const pt: ExampleResult[] = [
       compatibility: 99
     },
     country: {
-      countryId: 'cuba',
-      name: 'Cuba',
-      category: 'Socialismo unipartidário-igualitário',
+      countryId: 'australia',
+      name: 'Austrália',
+      category: 'Monarquia multicultural-extrativa',
       description:
-        'Estado socialista de partido único no Caribe, Cuba mantém economia planificada, forte controle estatal e serviços públicos universais, com poder centralizado desde a revolução liderada por Fidel Castro em 1959.',
-      flagPath: '/countries/flags/cuba.gif',
+        'Monarquia parlamentar federativa, a Austrália une democracia estável, multiculturalismo e economia de mercado rica em recursos naturais, com forte alinhamento ao Ocidente e políticas migratórias rigorosas e seletivas.',
+      flagPath: '/countries/flags/australia.png',
       historical: false,
       period: '',
-      compatibility: 93
+      compatibility: 96
     },
     personality: {
       personalityId: 'lenin',
@@ -570,15 +570,15 @@ const en: ExampleResult[] = [
       compatibility: 99
     },
     country: {
-      countryId: 'cuba',
-      name: 'Cuba',
-      category: 'One-party egalitarian socialism',
+      countryId: 'australia',
+      name: 'Australia',
+      category: 'Multicultural-extractive monarchy',
       description:
-        'A single-party socialist state in the Caribbean, Cuba maintains a planned economy, strong state control, and universal public services, with power centralized since the revolution led by Fidel Castro in 1959.',
-      flagPath: '/countries/flags/cuba.gif',
+        'A federal parliamentary monarchy, Australia unites stable democracy, multiculturalism, and a market economy rich in natural resources, with strong alignment with the West and rigorous, selective migration policies.',
+      flagPath: '/countries/flags/australia.png',
       historical: false,
       period: '',
-      compatibility: 93
+      compatibility: 96
     },
     personality: {
       personalityId: 'lenin',
@@ -1102,4 +1102,4 @@ const en: ExampleResult[] = [
   }
 ];
 
-export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'en' ? en : pt;
+export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'pt' ? pt : en;

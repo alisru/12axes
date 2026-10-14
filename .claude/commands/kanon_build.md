@@ -1,0 +1,1 @@
+Use the skill `kanon-build` (`.claude/skills/kanon-build/SKILL.md`) to build or extend a 343 National/Ideological Kanon ($7 \times 7 \times 7$ Qqci framework with Psochic Hegemony $(\upsilon, \psi)$ coordinates and $7 \times 4$ Survival Matrix mapping) for: $ARGUMENTS

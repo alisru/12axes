@@ -1,0 +1,293 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\components\QuestionTargetPad.tsx. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -752,9 +752,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'top-left' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['top-left'].color,
+-                  background: proximities['top-left'].bg,
+-                  boxShadow: proximities['top-left'].score > 0.72 ? `0 0 0 1.5px ${proximities['top-left'].color}` : undefined
++                  borderColor: shares['top-left'].color,
++                  background: shares['top-left'].bg,
++                  boxShadow: shares['top-left'].pct >= 35 ? `0 0 0 1.5px ${shares['top-left'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(1.15, 1.15)}
+               >
+@@ -762,12 +762,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['top-left'].color,
+-                      borderColor: proximities['top-left'].color,
+-                      background: `hsla(${Math.round(proximities['top-left'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['top-left'].pct}% match
++                      color: shares['top-left'].pct > 0 ? shares['top-left'].color : 'var(--text-muted)',
++                      borderColor: shares['top-left'].pct > 0 ? shares['top-left'].color : 'var(--line)',
++                      background: shares['top-left'].pct > 0 ? shares['top-left'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['top-left'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).topLeft}</p>
+@@ -776,9 +776,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'top-center' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['top-center'].color,
+-                  background: proximities['top-center'].bg,
+-                  boxShadow: proximities['top-center'].score > 0.72 ? `0 0 0 1.5px ${proximities['top-center'].color}` : undefined
++                  borderColor: shares['top-center'].color,
++                  background: shares['top-center'].bg,
++                  boxShadow: shares['top-center'].pct >= 35 ? `0 0 0 1.5px ${shares['top-center'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(0, 1.15)}
+               >
+@@ -786,12 +786,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['top-center'].color,
+-                      borderColor: proximities['top-center'].color,
+-                      background: `hsla(${Math.round(proximities['top-center'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['top-center'].pct}% match
++                      color: shares['top-center'].pct > 0 ? shares['top-center'].color : 'var(--text-muted)',
++                      borderColor: shares['top-center'].pct > 0 ? shares['top-center'].color : 'var(--line)',
++                      background: shares['top-center'].pct > 0 ? shares['top-center'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['top-center'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).topCenter}</p>
+@@ -800,9 +800,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'top-right' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['top-right'].color,
+-                  background: proximities['top-right'].bg,
+-                  boxShadow: proximities['top-right'].score > 0.72 ? `0 0 0 1.5px ${proximities['top-right'].color}` : undefined
++                  borderColor: shares['top-right'].color,
++                  background: shares['top-right'].bg,
++                  boxShadow: shares['top-right'].pct >= 35 ? `0 0 0 1.5px ${shares['top-right'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(-1.15, 1.15)}
+               >
+@@ -810,12 +810,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['top-right'].color,
+-                      borderColor: proximities['top-right'].color,
+-                      background: `hsla(${Math.round(proximities['top-right'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['top-right'].pct}% match
++                      color: shares['top-right'].pct > 0 ? shares['top-right'].color : 'var(--text-muted)',
++                      borderColor: shares['top-right'].pct > 0 ? shares['top-right'].color : 'var(--line)',
++                      background: shares['top-right'].pct > 0 ? shares['top-right'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['top-right'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).topRight}</p>
+@@ -825,9 +825,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'mid-left' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['mid-left'].color,
+-                  background: proximities['mid-left'].bg,
+-                  boxShadow: proximities['mid-left'].score > 0.72 ? `0 0 0 1.5px ${proximities['mid-left'].color}` : undefined
++                  borderColor: shares['mid-left'].color,
++                  background: shares['mid-left'].bg,
++                  boxShadow: shares['mid-left'].pct >= 35 ? `0 0 0 1.5px ${shares['mid-left'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(1.15, 0)}
+               >
+@@ -835,12 +835,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['mid-left'].color,
+-                      borderColor: proximities['mid-left'].color,
+-                      background: `hsla(${Math.round(proximities['mid-left'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['mid-left'].pct}% match
++                      color: shares['mid-left'].pct > 0 ? shares['mid-left'].color : 'var(--text-muted)',
++                      borderColor: shares['mid-left'].pct > 0 ? shares['mid-left'].color : 'var(--line)',
++                      background: shares['mid-left'].pct > 0 ? shares['mid-left'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['mid-left'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).midLeft}</p>
+@@ -849,9 +849,9 @@
+                 type="button"
+                 className={`target-cell-btn is-center-neutral ${activeCell9 === 'mid-center' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['mid-center'].color,
+-                  background: proximities['mid-center'].bg,
+-                  boxShadow: proximities['mid-center'].score > 0.72 ? `0 0 0 1.5px ${proximities['mid-center'].color}` : undefined
++                  borderColor: shares['mid-center'].color,
++                  background: shares['mid-center'].bg,
++                  boxShadow: shares['mid-center'].pct >= 35 ? `0 0 0 1.5px ${shares['mid-center'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(0, 0)}
+               >
+@@ -859,12 +859,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['mid-center'].color,
+-                      borderColor: proximities['mid-center'].color,
+-                      background: `hsla(${Math.round(proximities['mid-center'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['mid-center'].pct}% match
++                      color: shares['mid-center'].pct > 0 ? shares['mid-center'].color : 'var(--text-muted)',
++                      borderColor: shares['mid-center'].pct > 0 ? shares['mid-center'].color : 'var(--line)',
++                      background: shares['mid-center'].pct > 0 ? shares['mid-center'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['mid-center'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).center}</p>
+@@ -873,9 +873,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'mid-right' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['mid-right'].color,
+-                  background: proximities['mid-right'].bg,
+-                  boxShadow: proximities['mid-right'].score > 0.72 ? `0 0 0 1.5px ${proximities['mid-right'].color}` : undefined
++                  borderColor: shares['mid-right'].color,
++                  background: shares['mid-right'].bg,
++                  boxShadow: shares['mid-right'].pct >= 35 ? `0 0 0 1.5px ${shares['mid-right'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(-1.15, 0)}
+               >
+@@ -883,12 +883,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['mid-right'].color,
+-                      borderColor: proximities['mid-right'].color,
+-                      background: `hsla(${Math.round(proximities['mid-right'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['mid-right'].pct}% match
++                      color: shares['mid-right'].pct > 0 ? shares['mid-right'].color : 'var(--text-muted)',
++                      borderColor: shares['mid-right'].pct > 0 ? shares['mid-right'].color : 'var(--line)',
++                      background: shares['mid-right'].pct > 0 ? shares['mid-right'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['mid-right'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).midRight}</p>
+@@ -898,9 +898,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'bottom-left' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['bottom-left'].color,
+-                  background: proximities['bottom-left'].bg,
+-                  boxShadow: proximities['bottom-left'].score > 0.72 ? `0 0 0 1.5px ${proximities['bottom-left'].color}` : undefined
++                  borderColor: shares['bottom-left'].color,
++                  background: shares['bottom-left'].bg,
++                  boxShadow: shares['bottom-left'].pct >= 35 ? `0 0 0 1.5px ${shares['bottom-left'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(1.15, -1.15)}
+               >
+@@ -908,12 +908,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['bottom-left'].color,
+-                      borderColor: proximities['bottom-left'].color,
+-                      background: `hsla(${Math.round(proximities['bottom-left'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['bottom-left'].pct}% match
++                      color: shares['bottom-left'].pct > 0 ? shares['bottom-left'].color : 'var(--text-muted)',
++                      borderColor: shares['bottom-left'].pct > 0 ? shares['bottom-left'].color : 'var(--line)',
++                      background: shares['bottom-left'].pct > 0 ? shares['bottom-left'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['bottom-left'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).bottomLeft}</p>
+@@ -922,9 +922,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'bottom-center' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['bottom-center'].color,
+-                  background: proximities['bottom-center'].bg,
+-                  boxShadow: proximities['bottom-center'].score > 0.72 ? `0 0 0 1.5px ${proximities['bottom-center'].color}` : undefined
++                  borderColor: shares['bottom-center'].color,
++                  background: shares['bottom-center'].bg,
++                  boxShadow: shares['bottom-center'].pct >= 35 ? `0 0 0 1.5px ${shares['bottom-center'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(0, -1.15)}
+               >
+@@ -932,12 +932,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['bottom-center'].color,
+-                      borderColor: proximities['bottom-center'].color,
+-                      background: `hsla(${Math.round(proximities['bottom-center'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['bottom-center'].pct}% match
++                      color: shares['bottom-center'].pct > 0 ? shares['bottom-center'].color : 'var(--text-muted)',
++                      borderColor: shares['bottom-center'].pct > 0 ? shares['bottom-center'].color : 'var(--line)',
++                      background: shares['bottom-center'].pct > 0 ? shares['bottom-center'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['bottom-center'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).bottomCenter}</p>
+@@ -946,9 +946,9 @@
+                 type="button"
+                 className={`target-cell-btn ${activeCell9 === 'bottom-right' ? 'is-active' : ''}`}
+                 style={{
+-                  borderColor: proximities['bottom-right'].color,
+-                  background: proximities['bottom-right'].bg,
+-                  boxShadow: proximities['bottom-right'].score > 0.72 ? `0 0 0 1.5px ${proximities['bottom-right'].color}` : undefined
++                  borderColor: shares['bottom-right'].color,
++                  background: shares['bottom-right'].bg,
++                  boxShadow: shares['bottom-right'].pct >= 35 ? `0 0 0 1.5px ${shares['bottom-right'].color}` : undefined
+                 }}
+                 onClick={() => selectPreset9(-1.15, -1.15)}
+               >
+@@ -956,12 +956,12 @@
+                   <span
+                     className="target-cell-proximity-pill"
+                     style={{
+-                      color: proximities['bottom-right'].color,
+-                      borderColor: proximities['bottom-right'].color,
+-                      background: `hsla(${Math.round(proximities['bottom-right'].score * 135)}, 75%, 45%, 0.12)`
+-                    }}
+-                  >
+-                    {proximities['bottom-right'].pct}% match
++                      color: shares['bottom-right'].pct > 0 ? shares['bottom-right'].color : 'var(--text-muted)',
++                      borderColor: shares['bottom-right'].pct > 0 ? shares['bottom-right'].color : 'var(--line)',
++                      background: shares['bottom-right'].pct > 0 ? shares['bottom-right'].bg : 'transparent'
++                    }}
++                  >
++                    {shares['bottom-right'].pct}%
+                   </span>
+                 </div>
+                 <p className="target-cell-desc">{(scenarios as HegemonicScenario9Set).bottomRight}</p>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

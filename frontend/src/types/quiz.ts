@@ -86,6 +86,26 @@ export interface SubmittedAnswer {
   answer: AnswerValue;
 }
 
+export type ParableQuadrant = 'WILL_BE' | 'MAY_BE' | 'CANT_BE' | 'WONT_BE' | 'INDIFFERENT';
+
+/**
+ * Resposta vetorial em 2 eixos:
+ * - Centro (0,0): Indiferença / Força nula (magnitude = 0).
+ * - Distância radial (magnitude r): Convicção / Força de vontade aplicada (0.0 a 2.0).
+ * - Eixo Y (Ação): Apoiar (+Y) vs Opor (-Y).
+ * - Eixo X (Condição / Beneficiário υ): Universal / Bem Comum (+X) vs Particular / Extração (-X).
+ */
+export interface VectorAnswer {
+  questionId: string;
+  x: number; // -2.0 a +2.0 (Beneficiário υ: -2 só eu -> +2 todos)
+  y: number; // -2.0 a +2.0 (Ação: -2 abolir/opor -> +2 expandir/apoiar)
+  magnitude: number; // 0.0 (indiferente) a 2.0+ (radical)
+  angleDeg: number; // 0 a 360 graus
+  derived1D: AnswerValue; // Mapeamento compatível para o cálculo clássico
+  quadrant: ParableQuadrant;
+  rationale?: string;
+}
+
 export interface AxisResult {
   axisId: string;
   label: string;

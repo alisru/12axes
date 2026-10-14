@@ -3,22 +3,21 @@
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en';
+export type Lang = 'pt' | 'en' | 'es';
 
 const STORAGE_KEY = '12axes-lang';
 
-// Idioma forçado pelo caminho: /en sempre inglês, /br sempre português,
-// independente do aparelho ou da preferência salva.
+// Idioma forçado pelo caminho: /en sempre inglês, /br sempre português
 function langForcedByPath(pathname: string): Lang | null {
   const path = (pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
   if (path === '/en') return 'en';
-  if (path === '/br') return 'pt';
+  if (path === '/br' || path === '/pt') return 'pt';
   return null;
 }
 
 export function resolveLang(): Lang {
   if (typeof window === 'undefined') {
-    return 'pt';
+    return 'en';
   }
   const forced = langForcedByPath(window.location.pathname);
   if (forced) {
@@ -31,9 +30,9 @@ export function resolveLang(): Lang {
   }
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === 'pt' || stored === 'en') {
-    return stored;
+    return stored as Lang;
   }
-  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+  return 'en';
 }
 
 export const LANG: Lang = resolveLang();
@@ -41,7 +40,7 @@ export const LANG: Lang = resolveLang();
 export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
-  url.searchParams.delete('lang');
+  url.searchParams.set('lang', lang);
   // Em /en ou /br a URL é o que define o idioma, então o toggle troca de rota.
   if (langForcedByPath(url.pathname)) {
     url.pathname = lang === 'en' ? '/en' : '/br';
@@ -1622,4 +1621,70 @@ const en: Strings = {
   ]
 };
 
-export const t: Strings = LANG === 'en' ? en : pt;
+const es: Strings = {
+  ...en,
+  htmlLang: 'es',
+  docTitle: '12 Axes — Test Político Gratis y Brújula de Ideología en 12 Ejes',
+  loadingAnalysis: 'Cargando análisis político...',
+  loadingQuiz: 'Cargando test...',
+  loadingResult: 'Cargando resultados...',
+  tryAgain: 'Intentar de nuevo',
+  crashTitle: 'Algo salió mal',
+  crashBody: 'La página encontró un error inesperado. Recarga para intentar de nuevo.',
+  crashBodyWithProgress: 'La página encontró un error inesperado, pero tus respuestas están guardadas. Recarga y continúa donde lo dejaste.',
+  crashReload: 'Recargar página',
+  resumeEyebrow: 'Test en curso',
+  resumeTitle: 'Continúa donde lo dejaste',
+  resumeBody: (answered, total) => `Ya has respondido ${answered} de ${total} preguntas. Tus respuestas están guardadas en este navegador.`,
+  resumeContinue: 'Continuar',
+  resumeDiscard: 'Empezar de nuevo',
+  resumeUnavailable: 'No se pudo reanudar el test anterior. Por favor inicia uno nuevo.',
+  skipToContent: 'Saltar al contenido',
+  backToStartAria: 'Volver al inicio',
+  mainNavAria: 'Navegación principal',
+  navHow: 'Cómo funciona',
+  navAxes: '12 Ejes',
+  navSpectrum: 'Espectro',
+  navFaq: 'Preguntas',
+  navIdeologies: 'Ideologías',
+  navPersonalities: 'Personalidades',
+  navCountries: 'Países',
+  navSupport: 'Apoyar',
+  langToggleLabel: 'EN',
+  langToggleAria: 'Cambiar a inglés',
+  redoQuiz: 'Rehacer test',
+  religionLabel: 'Religión',
+  religionQuestion: '¿Sigues alguna religión? Solo usamos esto para calibrar recomendaciones.',
+  religionNone: 'Sin religión',
+  religionNames: {
+    christianity: 'Cristianismo',
+    judaism: 'Judaísmo',
+    islam: 'Islam',
+    buddhism: 'Budismo',
+    hinduism: 'Hinduismo'
+  },
+  denominationLabel: 'Vertiente cristiana',
+  denominationQuestion: '¿Cuál es tu vertiente cristiana? Solo usamos esto para calibrar recomendaciones.',
+  denominationNames: { catholic: 'Católica', protestant: 'Protestante', orthodox: 'Ortodoxa' },
+  restartQuiz: 'Reiniciar test',
+  heroEyebrow: 'BRÚJULA POLÍTICA DE 12 EJES',
+  h1Pre: 'Mapea tus convicciones en ',
+  h1Em: '12 ejes',
+  h1Post: ' y descubre tu ideología.',
+  introLead: 'Un test político riguroso y substrate-neutral que evalúa economía, sociedad, poder y soberanía en 12 dimensiones.',
+  startQuiz: 'Comenzar Test',
+  seeAxes: 'Explorar los 12 Ejes',
+  questionHelpTitle: 'Guía de la Pregunta',
+  questionHelpAgree: 'Qué significa apoyar',
+  questionHelpDisagree: 'Qué significa oponerse',
+  questionHelpNote: 'Nota de contexto',
+  answersAria: 'Opciones de respuesta',
+  back: 'Atrás',
+  next: 'Siguiente',
+  autoAdvance: 'Avance automático',
+  shareFilePrefix: '12axes-resultado',
+  shareTitle: 'Mi resultado en 12 Axes'
+};
+
+export const t: Strings = LANG === 'es' ? es : (LANG === 'en' ? en : pt);
+export { en, pt, es };

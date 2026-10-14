@@ -188,7 +188,7 @@ class IdeologyMatcherServiceTest {
 
         assertThat(matches).hasSize(4);
         assertThat(matches.get(0).category())
-                .isIn("Extrema Direita", "Esquerda Radical");
+                .isIn("Extrema Direita", "Terceira Posição");
         // Every top match should have meaningful compatibility (>= 60%).
         assertThat(matches).allSatisfy(m -> assertThat(m.compatibility()).isGreaterThan(50.0));
     }

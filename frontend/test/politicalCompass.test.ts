@@ -1,7 +1,14 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { centerSide, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
+import {
+  centerSide,
+  compassRegion,
+  computeCompass,
+  computePsochicHegemony,
+  computeSurvivalMatrix,
+  socialLevel
+} from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -148,3 +155,40 @@ describe('centerSide', () => {
     expect(centerSide('centro', 'centro')).toBeNull();
   });
 });
+
+describe('computePsochicHegemony & computeSurvivalMatrix', () => {
+  it('alcança (+2, +2) Systemic Justice no quiz rápido quando respostas são inclusivas e ativas (Do)', () => {
+    const heg = computePsochicHegemony(
+      results({
+        ...ALL,
+        economia: 95,
+        representacao: 90,
+        moral: 90,
+        imigracao: 10,
+        intervencao: 90,
+        religiao: 85,
+        diplomacia: 15,
+        controle: 95,
+        tecnologia: 92,
+        comercio: 85,
+        estrutura: 15,
+        poder: 85
+      })
+    );
+    expect(heg).not.toBeNull();
+    expect(heg?.upsilon).toBe(2);
+    expect(heg?.psi).toBe(2);
+    expect(heg?.quadrant).toBe('productive');
+    expect(heg?.anchor).toBe('systemicJustice');
+    expect(heg?.definitionMode).toBe('willBe');
+  });
+
+  it('calcula as 7 capacitâncias Φ₁..Φ₇ e viabilidade multiplicativa V', () => {
+    const mat = computeSurvivalMatrix(results(ALL));
+    expect(mat).not.toBeNull();
+    expect(mat?.planes).toHaveLength(7);
+    expect(mat?.viability).toBeGreaterThan(0.01);
+    expect(mat?.viable).toBe(true);
+  });
+});
+

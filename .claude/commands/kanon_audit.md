@@ -1,0 +1,1 @@
+Use the skill `kanon-audit` (`.claude/skills/kanon-audit/SKILL.md`) to audit the specified profile or actor against the 343 Kanon, Psochic Hegemony $(\upsilon, \psi)$, Rhetoric vs. Actuality ($\Delta H$), and the $7 \times 4$ Survival Matrix: $ARGUMENTS

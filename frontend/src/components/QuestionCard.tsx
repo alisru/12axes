@@ -1,9 +1,10 @@
 import { useState, type CSSProperties } from 'react';
-import { t } from '../i18n';
-import type { AnswerOption, AnswerValue, Axis, Question, QuestionHelp } from '../types/quiz';
+import { LANG, t } from '../i18n';
+import type { AnswerOption, AnswerValue, Axis, Question, QuestionHelp, VectorAnswer } from '../types/quiz';
 import { PoleIcon } from './AxisIcon';
 import { GlossaryText } from './GlossaryText';
 import { InfoButton, InfoSheet } from './results/InfoSheet';
+import { QuestionTargetPad } from './QuestionTargetPad';
 
 const answerClassById: Record<AnswerValue, string> = {
   STRONGLY_AGREE: 'answer-button answer-strong-agree',
@@ -22,12 +23,32 @@ interface QuestionCardProps {
   number?: number;
   options: AnswerOption[];
   selected?: AnswerValue;
+  selectedVector?: VectorAnswer;
   disabled?: boolean;
+  targetPadMode?: boolean;
+  onToggleTargetPadMode?: () => void;
   onSelect: (answer: AnswerValue) => void;
+  onSelectVector?: (vector: VectorAnswer) => void;
 }
 
-export function QuestionCard({ question, axisLabel, axis, number, options, selected, disabled = false, onSelect }: QuestionCardProps) {
+export function QuestionCard({
+  question,
+  axisLabel,
+  axis,
+  number,
+  options,
+  selected,
+  selectedVector,
+  disabled = false,
+  targetPadMode,
+  onToggleTargetPadMode,
+  onSelect,
+  onSelectVector
+}: QuestionCardProps) {
   const [isAxisInfoOpen, setIsAxisInfoOpen] = useState(false);
+  const [localTargetPadMode, setLocalTargetPadMode] = useState(true);
+  const isTargetPadMode = targetPadMode !== undefined ? targetPadMode : localTargetPadMode;
+  const toggleMode = onToggleTargetPadMode ?? (() => setLocalTargetPadMode((mode) => !mode));
   const agreeColor = axis && (question.agreePole === 'LEFT' ? axis.leftColor : axis.rightColor);
 
   return (
@@ -50,8 +71,51 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
           <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
         )}
         <h2 id="question-title"><GlossaryText text={question.text} terms={question.terms} /></h2>
+
+        <div style={{ display: 'flex', justifyContent: 'flex-start', margin: '8px 0 0' }}>
+          <button
+            type="button"
+            className="quiz-mode-switch"
+            onClick={toggleMode}
+            aria-label="Alternar modo de resposta"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {isTargetPadMode ? (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              ) : (
+                <>
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M12 3v18M3 12h18" />
+                </>
+              )}
+            </svg>
+            {LANG === 'es'
+              ? (isTargetPadMode ? 'Cambiar a 1D Clásico (5 Botones)' : 'Espectro de 2 Ejes (Acción × Alcance)')
+              : LANG === 'pt'
+              ? (isTargetPadMode ? 'Mudar para 1D Clássico (5 Botões)' : 'Espectro de 2 Eixos (Ação × Escopo)')
+              : (isTargetPadMode ? 'Switch to 1D Classic (5 Buttons)' : '2-Axis Spectrum (Action × Scope)')
+            }
+          </button>
+        </div>
       </header>
-      <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>
+
+      {isTargetPadMode ? (
+        <QuestionTargetPad
+          question={question}
+          axis={axis}
+          selected1D={selected}
+          selectedVector={selectedVector}
+          disabled={disabled}
+          onSelect={(_ans1D, vec) => {
+            if (onSelectVector) onSelectVector(vec);
+          }}
+          onConfirm={(ans1D, vec) => {
+            if (onSelectVector) onSelectVector(vec);
+            onSelect(ans1D);
+          }}
+        />
+      ) : (
+        <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>
         {options.map((option) => {
           const isSelected = selected === option.id;
           return (
@@ -81,6 +145,7 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
           );
         })}
       </div>
+      )}
       {axis && isAxisInfoOpen && (
         <InfoSheet
           titleId="quiz-axis-sheet-title"

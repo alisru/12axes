@@ -4,7 +4,7 @@ import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
-import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
+import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant, VectorAnswer } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
@@ -184,6 +184,8 @@ function randomExampleIndex(length: number): number {
 function MainApp() {
   const [quiz, setQuiz] = useState<QuizPayload | null>(null);
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
+  const [vectorAnswers, setVectorAnswers] = useState<Record<string, VectorAnswer>>({});
+  const [isTargetPadMode, setIsTargetPadMode] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screen, setScreen] = useState<Screen>('home');
   const [selectedVariant, setSelectedVariant] = useState<QuizVariant>(INITIAL_VARIANT);
@@ -759,10 +761,10 @@ function MainApp() {
                 <button
                   className="e-lang"
                   type="button"
-                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
+                  onClick={() => setLang(LANG === 'en' ? 'pt' : 'en')}
                   aria-label={t.langToggleAria}
                 >
-                  {t.langToggleLabel}
+                  {LANG === 'en' ? 'PT-BR' : 'EN'}
                 </button>
               </nav>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
@@ -889,8 +891,14 @@ function MainApp() {
                 number={currentIndex + 1}
                 options={quiz.answerOptions}
                 selected={answers[currentQuestion.id]}
+                selectedVector={vectorAnswers[currentQuestion.id]}
                 disabled={isAdvancing || isSubmitting}
+                targetPadMode={isTargetPadMode}
+                onToggleTargetPadMode={() => setIsTargetPadMode((mode) => !mode)}
                 onSelect={selectAnswer}
+                onSelectVector={(vec) =>
+                  setVectorAnswers((prev) => ({ ...prev, [currentQuestion.id]: vec }))
+                }
               />
               </div>
 

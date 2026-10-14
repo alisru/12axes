@@ -122,7 +122,14 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
-          {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
+          {compass && (
+            <PoliticalCompassSection
+              position={compass}
+              category={top.category}
+              moralAxis={axes.find((axis) => axis.id === 'moral')}
+              results={axisResults}
+            />
+          )}
 
           <div className="e-actions">
             <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>

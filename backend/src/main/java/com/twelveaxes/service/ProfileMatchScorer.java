@@ -56,12 +56,42 @@ public class ProfileMatchScorer {
         double directionSimilarity = directionSimilarity(userVector, targetVector, axisIds);
         double magnitudeSimilarity = magnitudeSimilarity(userVector, targetVector, axisIds);
         double outlierSimilarity = outlierSimilarity(userVector, targetVector, axisIds);
-        return round1(clamp(
-                AXIS_WEIGHT * axisSimilarity
-                        + DIRECTION_WEIGHT * directionSimilarity
-                        + MAGNITUDE_WEIGHT * magnitudeSimilarity
-                        + OUTLIER_WEIGHT * outlierSimilarity
-        ));
+        double rawScore = AXIS_WEIGHT * axisSimilarity
+                + DIRECTION_WEIGHT * directionSimilarity
+                + MAGNITUDE_WEIGHT * magnitudeSimilarity
+                + OUTLIER_WEIGHT * outlierSimilarity;
+        return round1(clamp(rawScore * psochicQuadrantFactor(userVector, targetVector, axisIds)));
+    }
+
+    /**
+     * Psochic Hegemony (υ) Inclusive-vs-Exclusive Cross-Quadrant Penalty:
+     * Prevents Exclusive/Traditionalist corporatist vectors (-υ: low moral, high imigracao,
+     * low economia) from false-matching Inclusive/Socialist vectors (+υ: high economia,
+     * high moral, low imigracao) merely because both share high state planning (controle)
+     * and protectionism (comercio).
+     * Equals 1.0 whenever either profile is neutral on social/scope axes or both lie on the
+     * same side of the Inclusive/Exclusive (υ) divide.
+     */
+    private double psochicQuadrantFactor(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
+        if (axisIds.size() < AXIS_IDS.size()) {
+            return 1.0;
+        }
+        double userSocialScope = ((userVector.getOrDefault("moral", CENTER) - CENTER)
+                + (CENTER - userVector.getOrDefault("imigracao", CENTER))) / 100.0;
+        double targetSocialScope = ((targetVector.getOrDefault("moral", CENTER) - CENTER)
+                + (CENTER - targetVector.getOrDefault("imigracao", CENTER))) / 100.0;
+        if (Math.abs(userSocialScope) < 0.25 || Math.abs(targetSocialScope) < 0.25) {
+            return 1.0;
+        }
+        double userUpsilon = 0.45 * ((userVector.getOrDefault("economia", CENTER) - CENTER) / 50.0)
+                + 0.55 * userSocialScope;
+        double targetUpsilon = 0.45 * ((targetVector.getOrDefault("economia", CENTER) - CENTER) / 50.0)
+                + 0.55 * targetSocialScope;
+        if (userUpsilon * targetUpsilon >= 0.0) {
+            return 1.0;
+        }
+        double crossMagnitude = Math.min(1.0, Math.abs(userUpsilon - targetUpsilon) / 1.5);
+        return 1.0 - 0.14 * crossMagnitude * Math.tanh(Math.abs(userUpsilon) * 2.0) * Math.tanh(Math.abs(targetUpsilon) * 2.0);
     }
 
     public double percentile(double compatibility, List<Double> catalogCompatibilities) {
