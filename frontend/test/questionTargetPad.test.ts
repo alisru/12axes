@@ -107,4 +107,94 @@ describe('Question Target Pad & 2D Vector Polar Answering Engine', () => {
     expect(radical.magnitude).toBeGreaterThan(1.8);
     expect(radical.derived1D).toBe('STRONGLY_AGREE');
   });
+
+  describe('Angle-Magnitude 9-Cell Polar Sector Model (computeShares)', () => {
+    // Import dynamically or test against anchors9 structure
+    const testAnchors = [
+      { key: 'top-left', name: 'Top Left', u: 1.15, psi: 1.15, x: 86.75, y: 86.75 },
+      { key: 'top-center', name: 'Top Center', u: 0, psi: 1.15, x: 150, y: 86.75 },
+      { key: 'top-right', name: 'Top Right', u: -1.15, psi: 1.15, x: 213.25, y: 86.75 },
+      { key: 'mid-left', name: 'Mid Left', u: 1.15, psi: 0, x: 86.75, y: 150 },
+      { key: 'mid-center', name: 'Center', u: 0, psi: 0, x: 150, y: 150 },
+      { key: 'mid-right', name: 'Mid Right', u: -1.15, psi: 0, x: 213.25, y: 150 },
+      { key: 'bottom-left', name: 'Bottom Left', u: 1.15, psi: -1.15, x: 86.75, y: 213.25 },
+      { key: 'bottom-center', name: 'Bottom Center', u: 0, psi: -1.15, x: 150, y: 213.25 },
+      { key: 'bottom-right', name: 'Bottom Right', u: -1.15, psi: -1.15, x: 213.25, y: 213.25 },
+    ];
+
+    it('allocates 100% to Center and 0% to perimeter at origin (0, 0)', async () => {
+      const { computeShares } = await import('../src/components/QuestionTargetPad');
+      const shares = computeShares(0, 0, testAnchors);
+
+      expect(shares['mid-center'].pct).toBe(100);
+      testAnchors.filter(a => a.key !== 'mid-center').forEach(a => {
+        expect(shares[a.key].pct).toBe(0);
+      });
+    });
+
+    it('allocates 100% direction to Agree for Self (top-right) at 50% magnitude with 0% to side neighbors', async () => {
+      const { computeShares } = await import('../src/components/QuestionTargetPad');
+      // Anchor is at u = -1.15, psi = 1.15. Halfway out is u = -0.575, psi = 0.575
+      const shares = computeShares(-0.60, 0.60, testAnchors);
+
+      // Top-right and Center split the conviction evenly (~50/50)
+      expect(shares['top-right'].pct).toBeGreaterThanOrEqual(45);
+      expect(shares['top-right'].pct).toBeLessThanOrEqual(55);
+      expect(shares['mid-center'].pct).toBeGreaterThanOrEqual(45);
+      expect(shares['mid-center'].pct).toBeLessThanOrEqual(55);
+
+      // Crucial requirement: all other 7 perimeter anchors are strictly 0% (no radial bleed)
+      testAnchors
+        .filter(a => a.key !== 'top-right' && a.key !== 'mid-center')
+        .forEach(a => {
+          expect(shares[a.key].pct).toBe(0);
+        });
+
+      // Strict 100% sum
+      const total = Object.values(shares).reduce((acc, s) => acc + s.pct, 0);
+      expect(total).toBe(100);
+    });
+
+    it('splits 50% / 50% between two adjacent anchors at full magnitude with 0% to all other 7 anchors', async () => {
+      const { computeShares } = await import('../src/components/QuestionTargetPad');
+      // Halfway between top-center (0°) and top-right (45°) is 22.5°
+      // Along the top edge where psi = 1.15:
+      // tan(22.5°) = sqrt(2) - 1 ≈ 0.41421356
+      // dx = -u = psi * tan(22.5°) => u = -1.15 * tan(22.5°)
+      const tan225 = Math.SQRT2 - 1;
+      const psi = 1.15;
+      const u = -1.15 * tan225;
+
+      const shares = computeShares(u, psi, testAnchors);
+
+      // Split exactly 50% between top-center and top-right
+      expect(shares['top-center'].pct).toBe(50);
+      expect(shares['top-right'].pct).toBe(50);
+      expect(shares['mid-center'].pct).toBe(0);
+
+      // All other 6 perimeter anchors are strictly 0%
+      testAnchors
+        .filter(a => a.key !== 'top-center' && a.key !== 'top-right')
+        .forEach(a => {
+          expect(shares[a.key].pct).toBe(0);
+        });
+
+      const total = Object.values(shares).reduce((acc, s) => acc + s.pct, 0);
+      expect(total).toBe(100);
+    });
+
+    it('gives 100% on any clicked preset anchor with 0% on all others', async () => {
+      const { computeShares } = await import('../src/components/QuestionTargetPad');
+      testAnchors.forEach(targetAnchor => {
+        const shares = computeShares(targetAnchor.u, targetAnchor.psi, testAnchors);
+        expect(shares[targetAnchor.key].pct).toBe(100);
+
+        testAnchors
+          .filter(a => a.key !== targetAnchor.key)
+          .forEach(other => {
+            expect(shares[other.key].pct).toBe(0);
+          });
+      });
+    });
+  });
 });

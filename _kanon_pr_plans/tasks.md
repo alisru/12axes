@@ -49,4 +49,11 @@
 - [x] **[Task 4] Preserve Existing Spanish Without Teardown Churn; Maintain Clean EN/PT Defaults**
   - English is default for test takers; Portuguese is fully preserved for author.
   - Kept existing Spanish translations intact to avoid token waste and churn per user instruction.
-  - *Completed:* All 12 test suites (85/85 tests) and TypeScript compilation pass with 0 errors.
+  - *Completed:* All 12 test suites and TypeScript compilation pass with 0 errors.
+
+- [x] **[Task 5] Implement Angle-Magnitude Polar Sector Answering Model**
+  - Replaced isotropic distance bleed with strict polar sectoring:
+    - Bearing $\beta$ partitions directional belief exclusively between the 1 or 2 enclosing perimeter anchors (0% radial bleed to sideways/opposite anchors).
+    - Radial magnitude $m$ governs conviction: origin $(0, 0)$ is 100% Center ("I Don't Know / Not Sure"); $m$ scales outward linearly to the anchor ring ($R = 1.15$), transferring share into the perimeter sector.
+    - All preset buttons click directly to 100% with 0% elsewhere.
+  - *Completed:* All 89 unit tests pass in `frontend/`. Exported `computeShares` with comprehensive test coverage.

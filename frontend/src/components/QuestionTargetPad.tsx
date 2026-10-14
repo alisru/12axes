@@ -130,7 +130,7 @@ const SVG_CENTER = 150;
 const GRID_HALF = 110; // ±2.0 maps to ±110px from center (box from 40 to 260)
 const INNER_HALF = 55;  // ±1.0 maps to ±55px from center (box from 95 to 205)
 
-interface AnchorNode {
+export interface AnchorNode {
   key: string;
   name: string;
   u: number;
@@ -139,63 +139,116 @@ interface AnchorNode {
   y: number;
 }
 
-interface AnchorShare extends AnchorNode {
+export interface AnchorShare extends AnchorNode {
   distance: number;
   pct: number;
   color: string;
   bg: string;
 }
 
-function computeShares(u: number, psi: number, anchors: AnchorNode[]): Record<string, AnchorShare> {
+export const PERIMETER_ANCHOR_ORDER = [
+  'top-center',    // 0: 0° (North)
+  'top-right',     // 1: 45° (North-East)
+  'mid-right',     // 2: 90° (East)
+  'bottom-right',  // 3: 135° (South-East)
+  'bottom-center', // 4: 180° (South)
+  'bottom-left',   // 5: 225° (South-West)
+  'mid-left',      // 6: 270° (West)
+  'top-left',      // 7: 315° (North-West)
+];
+
+export function computeShares(u: number, psi: number, anchors: AnchorNode[]): Record<string, AnchorShare> {
   const dists = anchors.map((a) => {
     const dx = u - a.u;
     const dy = psi - a.psi;
     return Math.sqrt(dx * dx + dy * dy);
   });
 
-  const minDist = Math.min(...dists);
+  const rawPcts: Record<string, number> = {};
+  anchors.forEach((a) => {
+    rawPcts[a.key] = 0;
+  });
 
-  let rawPcts: number[];
+  const is9 = anchors.length === 9 && anchors.some((a) => a.key === 'mid-center');
 
-  if (minDist < 0.04) {
-    const exactIdx = dists.indexOf(minDist);
-    rawPcts = anchors.map((_, i) => (i === exactIdx ? 100 : 0));
-  } else {
-    // Raio de influência local baseado no espaçamento da grade (1.15)
-    const R = Math.max(1.65, minDist + 0.35);
+  if (is9) {
+    // Modelo Polar: Magnitude Radial (Chebyshev / L-infinito até anel ±1.15)
+    const anchorRingRadius = 1.15;
+    const distChebyshev = Math.max(Math.abs(u), Math.abs(psi));
 
-    // Kernel cúbico localizado: (1 - d/R)^3 para d < R
-    const rawWeights = dists.map((d) => {
-      if (d >= R) return 0;
-      const q = 1 - d / R;
-      return q * q * q;
-    });
-
-    const sumWeights = rawWeights.reduce((acc, w) => acc + w, 0);
-
-    if (sumWeights === 0) {
-      const nearestIdx = dists.indexOf(minDist);
-      rawPcts = anchors.map((_, i) => (i === nearestIdx ? 100 : 0));
+    // Zona central estrita se muito próximo da origem
+    if (distChebyshev <= 0.05) {
+      rawPcts['mid-center'] = 100;
     } else {
-      rawPcts = rawWeights.map((w) => (w / sumWeights) * 100);
+      // Magnitude de convicção perimétrica (0.0 no limiar central até 1.0 no anel ou além)
+      const m = Math.min(1.0, (distChebyshev - 0.05) / (anchorRingRadius - 0.05));
+
+      // Centro retém convicção inversamente à magnitude
+      const centerShare = (1.0 - m) * 100;
+      rawPcts['mid-center'] = centerShare;
+
+      // Restante 100% distribuído estritamente no setor angular entre os dois pontos vizinhos
+      const perimeterShare = m * 100;
+
+      // Ângulo de rumo (bearing 0° a 360°, sentido horário: 0° = Norte / Top-Center)
+      // dx na tela = -u; dy na tela = -psi
+      const bearing = (Math.atan2(-u, psi) * (180 / Math.PI) + 360) % 360;
+
+      const sectorExact = bearing / 45.0;
+      const k = Math.floor(sectorExact) % 8;
+      const kNext = (k + 1) % 8;
+      const fracNext = sectorExact - Math.floor(sectorExact);
+      const fracCurr = 1.0 - fracNext;
+
+      const keyCurr = PERIMETER_ANCHOR_ORDER[k];
+      const keyNext = PERIMETER_ANCHOR_ORDER[kNext];
+
+      rawPcts[keyCurr] = perimeterShare * fracCurr;
+      rawPcts[keyNext] = perimeterShare * fracNext;
+      // Os outros 6 âncoras perimétricas permanecem estritamente em 0%
+    }
+  } else {
+    // Modo de fallback (ex: 4 quadrantes clássicos)
+    const minDist = Math.min(...dists);
+    if (minDist < 0.04) {
+      const exactIdx = dists.indexOf(minDist);
+      anchors.forEach((a, i) => {
+        rawPcts[a.key] = i === exactIdx ? 100 : 0;
+      });
+    } else {
+      const R = Math.max(1.65, minDist + 0.35);
+      const rawWeights = dists.map((d) => (d >= R ? 0 : Math.pow(1 - d / R, 3)));
+      const sumWeights = rawWeights.reduce((acc, w) => acc + w, 0);
+      anchors.forEach((a, i) => {
+        rawPcts[a.key] = sumWeights > 0 ? (rawWeights[i] / sumWeights) * 100 : 0;
+      });
     }
   }
 
   // Arredondamento e garantia estrita de soma 100%
-  const roundedPcts = rawPcts.map((p) => Math.round(p));
-  const total = roundedPcts.reduce((acc, p) => acc + p, 0);
-  const diff = 100 - total;
-  if (diff !== 0) {
-    let maxIdx = 0;
-    for (let i = 1; i < rawPcts.length; i++) {
-      if (rawPcts[i] > rawPcts[maxIdx]) maxIdx = i;
+  const roundedPcts: Record<string, number> = {};
+  let total = 0;
+  let maxKey = anchors[0].key;
+  let maxVal = -1;
+
+  anchors.forEach((a) => {
+    const r = Math.round(rawPcts[a.key] || 0);
+    roundedPcts[a.key] = r;
+    total += r;
+    if ((rawPcts[a.key] || 0) > maxVal) {
+      maxVal = rawPcts[a.key] || 0;
+      maxKey = a.key;
     }
-    roundedPcts[maxIdx] += diff;
+  });
+
+  const diff = 100 - total;
+  if (diff !== 0 && roundedPcts[maxKey] !== undefined) {
+    roundedPcts[maxKey] += diff;
   }
 
   const result: Record<string, AnchorShare> = {};
   anchors.forEach((anc, i) => {
-    const pct = roundedPcts[i];
+    const pct = roundedPcts[anc.key] || 0;
     const dist = dists[i];
 
     let hue = 0;
