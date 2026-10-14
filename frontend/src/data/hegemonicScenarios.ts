@@ -89,11 +89,37 @@ export const HEGEMONIC_SCENARIOS: Record<'en' | 'pt', Record<string, HegemonicSc
       bottomRight: "People in distant capitals shouldn't be able to overrule our regional laws and force rules onto us that our local community voted against."
     },
     estrutura_03: {
-      willBe: "Local representatives are directly accountable to the neighbours they see in the street every day, leading to honest, responsive local governance.",
-      cantBe: "Letting our local council make the call means our town's specific interests aren't ignored by big-city politicians.",
-      mayBe: "Local councils are notorious for petty corruption, nimbyism, and incompetence; key public rules need regional or national oversight.",
-      wontBe: "Local councils already charge ridiculous rates and waste money on vanity projects; giving them more power will just mean more fees for residents.",
-      indifferent: "I don't know / Not sure; depends on whether the council is actually competent or completely useless."
+      topLeft: "Local councils and communities are directly accountable to the neighbours they see every day; letting them make local laws keeps government close to the people.",
+      topCenter: "Pass local bylaws at the council level so town planning, parking, and community amenities can be solved quickly without state government delays.",
+      topRight: "Our town should set its own local business rules and rates so small businesses and homeowners here aren't strangled by big-city regulations.",
+      midLeft: "Local lawmaking makes sense in principle, but smaller councils often lack the legal expertise to draft sound regulations without central help.",
+      center: "I don't know / Not sure — some zoning and parking issues are clearly local, but environmental and building standards probably need broader oversight.",
+      midRight: "It sounds democratic in theory, but small councils are notorious for petty politics, nimbyism, and favoring their own mates over residents.",
+      bottomLeft: "Crucial standards for health, safety, and tenant rights must be set nationally or statewide; leaving them to local councils leaves vulnerable residents unprotected.",
+      bottomCenter: "Maintain statewide or national legal consistency; having dozens of different local laws in neighboring suburbs creates confusion and costly legal disputes.",
+      bottomRight: "Local councils already gouge homeowners on rates and waste money on pet projects; giving them more power to pass fines and bylaws just means more fees for us."
+    },
+    estrutura_04: {
+      topLeft: "Every child in the country deserves the exact same high-quality education, regardless of what postcode they grow up in.",
+      topCenter: "Standardise math, science, and literacy standards nationally so families moving between states don't face disrupted schooling.",
+      topRight: "A single national curriculum ensures our qualifications and test scores are recognised nationwide when applying for university and jobs.",
+      midLeft: "National benchmarks are great in theory, but teachers need the flexibility to adapt lessons to the specific needs of local students.",
+      center: "I don't know / Not sure — core subjects like math should be national, but local history and vocational training might be better handled regionally.",
+      midRight: "A centralized curriculum usually ends up hijacked by whichever political party is in power in the capital pushing their ideological agenda.",
+      bottomLeft: "Different regions have distinct community needs, languages, and cultural histories that a rigid, one-size-fits-all national syllabus completely erases.",
+      bottomCenter: "Regional and state education departments understand their local schools and teacher capacity far better than distant central bureaucrats.",
+      bottomRight: "Parents and local school boards should decide what their children are taught, rather than bureaucrats hundreds of miles away dictating values to our families."
+    },
+    estrutura_05: {
+      topLeft: "States are sovereign partners in the nation; letting them frame their own democratic constitutions respects local democracy and diverse cultural traditions.",
+      topCenter: "Give states constitutional independence to design their own parliamentary and judicial structures to suit their regional scale.",
+      topRight: "Our state should govern its own affairs and protect our local tax base without Canberra or central politicians interfering.",
+      midLeft: "State constitutions make sense in principle, provided they are bound to respect universal national human rights and core democratic standards.",
+      center: "I don't know / Not sure — states need administrative independence, but having completely different constitutions could fracture the country.",
+      midRight: "Letting states draft separate constitutions often leads to gerrymandering and local oligarchs locking in power with zero outside checks.",
+      bottomLeft: "A unified country requires a single foundational constitution guaranteeing equal rights and freedoms to every citizen regardless of the state they're in.",
+      bottomCenter: "Multiple competing state constitutions create conflicting court systems, legal gridlock, and threaten national unity.",
+      bottomRight: "We shouldn't risk corrupt state politicians writing discriminatory clauses into local constitutions that strip ordinary citizens of their basic protections."
     },
 
     // REPRESENTACAO

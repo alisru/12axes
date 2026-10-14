@@ -57,3 +57,12 @@
     - Radial magnitude $m$ governs conviction: origin $(0, 0)$ is 100% Center ("I Don't Know / Not Sure"); $m$ scales outward linearly to the anchor ring ($R = 1.15$), transferring share into the perimeter sector.
     - All preset buttons click directly to 100% with 0% elsewhere.
   - *Completed:* All 89 unit tests pass in `frontend/`. Exported `computeShares` with comprehensive test coverage.
+
+- [x] **[Task 6] Establish Workspace Rules & Expand 9-Cell Scenarios (estrutura_03 to 05)**
+  - Codified permanent rules in `.agent/rules/hegemonic-grid-quiz.md` and `.agents/AGENTS.md`.
+  - Replaced 3-column debug telemetry with single dynamic human sentence banner.
+  - Formulated full pub-tested 9-cell scenarios for:
+    - `estrutura_03`: "Laws on local matters should be made by local governments."
+    - `estrutura_04`: "I prefer a single national school curriculum to curricula set by each region."
+    - `estrutura_05`: "Each state or province should be free to write its own constitution, without national interference."
+  - *Completed:* Clean TypeScript compilation and 89/89 passing tests.
