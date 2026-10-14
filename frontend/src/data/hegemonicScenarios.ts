@@ -44,25 +44,37 @@ export const HEGEMONIC_SCENARIOS: Record<'en' | 'pt', Record<string, HegemonicSc
       bottomRight: "The wealthy and dishonest would find ways to pay nothing, leaving honest taxpayers to carry the whole load."
     },
     economia_01: {
-      willBe: "Wealth has become so concentrated in the hands of a few billionaires that only a radical overhaul can give everyday people a fair go.",
-      cantBe: "The system is completely rigged against working blokes; taking down corporate monopolists is the only way people like us get our fair share.",
-      mayBe: "Violent upheavals and revolutions always end in chaos, tyranny, and ruin; reforming the rules peacefully is the only way to protect society.",
-      wontBe: "Every time radicals try to seize property, ordinary families and small businesses end up losing what little they've worked their whole lives to build.",
-      indifferent: "I don't know / Not sure; inequality is crook, but bloody revolutions usually make things worse."
+      topLeft: "Wealth concentration has reached obscene levels; only a radical democratic overhaul can break corporate monopolies and give every citizen a fair go.",
+      topCenter: "Break up corporate oligopolies through aggressive trust-busting and heavily tax excessive windfall profits to fund public infrastructure.",
+      topRight: "The economic game is rigged against everyday workers; tearing down billionaire cartels is the only way people like us will ever get a decent cut.",
+      midLeft: "Extreme inequality is deeply unhealthy for society, but violent upheaval usually causes massive suffering and rarely delivers what it promises.",
+      center: "I don't know / Not sure — massive corporate power is obviously crook, but violent revolutions usually make everyday life much worse.",
+      midRight: "Taking down big companies sounds heroic, but radical socialist overhauls always end up mismanaged by incompetent bureaucrats.",
+      bottomLeft: "Violent revolutions destroy social trust, collapse the economy, and lead directly to dictatorship; genuine reform must come through peaceful laws.",
+      bottomCenter: "Maintain the rule of law and secure property rights; an unpredictable legal climate scares off investment and destroys national prosperity.",
+      bottomRight: "Every time radicals launch wealth seizures, everyday families and small business owners end up losing their savings and what they worked to build."
     },
     economia_02: {
-      willBe: "Competition keeps everyone honest and brings prices down; government departments get lazy and sloppy when they hold a monopoly.",
-      cantBe: "Let private businesses and local contractors bid for the work instead of locking everything behind government red tape.",
-      mayBe: "Things like water, power, and healthcare should be run for the public good, not corporate profit. Private mobs just cut corners and jack up prices.",
-      wontBe: "Every time they privatise an asset, our bills go through the roof and customer service goes down the toilet.",
-      indifferent: "I don't know / Not sure; depends entirely on which service we're talking about."
+      topLeft: "Genuine competition drives innovation, improves service standards, and saves taxpayer money compared to sleepy government monopolies.",
+      topCenter: "Tender out service contracts to competing private bidders, with strict penalties for failing to meet performance and reliability targets.",
+      topRight: "Allowing private enterprise gives local businesses and contractors a chance to compete instead of locking every job behind government red tape.",
+      midLeft: "Market competition works well for consumer goods, but basic public essentials like healthcare and power need strong non-profit guarantees.",
+      center: "I don't know / Not sure — competitive transport might work fine, but privatizing water or emergency care feels dangerous.",
+      midRight: "Private firms can be efficient, but big corporations usually just form cartels, buy off regulators, and eliminate real competition anyway.",
+      bottomLeft: "Essential public services exist to serve people, not generate private profit; privatization leads to cut corners, sacked workers, and neglected vulnerable users.",
+      bottomCenter: "Core utilities and public infrastructure should be directly run by public authorities to ensure long-term stability and equitable universal access.",
+      bottomRight: "Every time politicians sell off a public asset, our utility bills skyrocket, maintenance gets slashed, and customer service goes down the toilet."
     },
     economia_03: {
-      willBe: "Essential infrastructure like power grids, ports, and water supplies must stay in public hands to guarantee national security and fair access for all.",
-      cantBe: "Keeping strategic assets public stops foreign corporations from buying up our resources and gouging our local businesses on utility rates.",
-      mayBe: "Private operators run commercial enterprises far more efficiently than state bureaucracies, freeing up taxpayer funds for real public needs.",
-      wontBe: "Government-owned companies are just cash cows for lazy bureaucrats and union mates, funded directly out of our tax dollars.",
-      indifferent: "I don't know / Not sure; some key assets should stay public, but other industries are better off private."
+      topLeft: "Crucial infrastructure like ports, power grids, and water systems are vital to national security and must stay owned by the public.",
+      topCenter: "Keep majority public ownership and voting control over critical infrastructure to stop foreign corporations from holding national assets hostage.",
+      topRight: "Keeping strategic assets in public hands protects local jobs and stops predatory private monopolies from price-gouging our households.",
+      midLeft: "Public ownership makes sense for vital lifelines, but everyday commercial industries run much better under private management.",
+      center: "I don't know / Not sure — energy grids should probably stay public, but deciding which companies count as 'strategic' is tricky.",
+      midRight: "Government control sounds patriotic, but state-owned companies usually end up bloated, inefficient, and bleeding taxpayer cash.",
+      bottomLeft: "Private enterprises adapt faster, innovate more, and take on commercial risks without leaving the public to foot the bill when mistakes happen.",
+      bottomCenter: "Governments should stick to regulation and safety standards, leaving commercial operations to private companies that specialize in them.",
+      bottomRight: "State-owned monopolies turn into protected clubs for political mates and union bosses, funded directly out of our hard-earned taxes."
     },
 
     // ESTRUTURA
@@ -124,232 +136,352 @@ export const HEGEMONIC_SCENARIOS: Record<'en' | 'pt', Record<string, HegemonicSc
 
     // REPRESENTACAO
     representacao_01: {
-      willBe: "Even if voters elect clowns or duds, voting is the only way we get to sack them peacefully without burning the joint down.",
-      cantBe: "I want my vote to count so politicians have to look working people in the eye, instead of some unelected elite dictating how we live.",
-      mayBe: "When an incompetent government is driving the country off a cliff, waiting years for an election causes irreversible damage to the whole nation.",
-      wontBe: "Idiots keep voting for corrupt politicians who jack up our taxes, wreck our jobs, and run down our local services.",
-      indifferent: "I don't know / Not sure; politicians are mostly useless, but I don't know what you'd replace elections with that wouldn't end up worse."
+      topLeft: "Even when the public picks a terrible government, free voting is the only peaceful way citizens can hold power to account and vote them out.",
+      topCenter: "Protect the integrity of the ballot box and independent electoral commissions so voters always retain the right to fire their leaders.",
+      topRight: "I want my vote to count so politicians have to face working people in their electorates, rather than some unelected official deciding for us.",
+      midLeft: "Democratic elections are the best foundation we have, but voters can be misled by media disinformation and populism.",
+      center: "I don't know / Not sure — politicians are often hopeless, but any system that scraps elections usually turns into tyranny.",
+      midRight: "Elections just give people the illusion of choice between two sets of corrupt party apparatchiks who both answer to corporate donors.",
+      bottomLeft: "When a destructive or extremist government is actively wrecking the nation's future, waiting years for the next election can cause irreversible damage.",
+      bottomCenter: "Constitutional institutions, expert judges, and technical bodies must have the power to constrain erratic elected politicians when necessary.",
+      bottomRight: "Uninformed mobs repeatedly vote in reckless governments that run up huge debts and jack up taxes on the productive people who actually work."
     },
     representacao_02: {
-      willBe: "During national emergencies, pandemics, or wars, strong executive leadership is vital to take decisive action without months of parliamentary bickering.",
-      cantBe: "In a real crisis, I want a leader who can cut straight through bureaucratic roadblocks and fix the problem for my community immediately.",
-      mayBe: "Concentrating absolute power in one person's hands always leads to tyranny; parliamentary checks and balances exist to protect citizen freedom.",
-      wontBe: "Once you let a politician rule by decree, they never give that power back and they'll use it to crush anyone who stands up to them.",
-      indifferent: "I don't know / Not sure; speed matters in an emergency, but giving a leader unchecked power is bloody risky."
+      topLeft: "During catastrophic emergencies, wars, or natural disasters, decisive executive leadership is vital to protect the population without paralysis.",
+      topCenter: "Allow time-limited emergency executive powers to coordinate disaster relief, rescue efforts, and supply chains rapidly.",
+      topRight: "In a crisis, I want a leader who can cut straight through bureaucratic red tape and protect my community without endless political debates.",
+      midLeft: "Quick executive decisions are necessary in a flash crisis, but they must face mandatory parliamentary review as soon as the danger passes.",
+      center: "I don't know / Not sure — speed matters in a disaster, but giving a single politician unchecked power is dangerous.",
+      midRight: "Politicians routinely hype up fake crises just to grab emergency powers that they never willingly give back.",
+      bottomLeft: "Concentrating unchecked power in one person's hands invites tyranny; parliamentary oversight and public debate exist precisely to prevent abuses.",
+      bottomCenter: "The constitution and legislature must never be sidelined; democratic laws and judicial checks are our most important defense against autocracy.",
+      bottomRight: "Once a leader starts ruling by decree, ordinary citizens lose their civil liberties and anyone who speaks out gets crushed."
     },
     representacao_03: {
-      willBe: "Freedom to criticize the government in public is the cornerstone of a free society; exposing government failures keeps leaders honest.",
-      cantBe: "The opposition has to be able to speak up so whistleblowers and everyday blokes who get screwed over by official decisions have a voice.",
-      mayBe: "Constant partisan attacks and malicious rumors undermine public trust, divide the community, and paralyse national progress during tough times.",
-      wontBe: "Oppositions just lie and sabotage good policies for their own political gain, leaving ordinary taxpayers to pay for the endless circus.",
-      indifferent: "I don't know / Not sure; criticism is healthy, but constant toxic mudslinging gets on everyone's nerves."
+      topLeft: "The freedom to criticize leaders in public is essential to a free society; exposing government incompetence and corruption keeps leaders honest.",
+      topCenter: "Protect open debate and investigative journalism so ministers are questioned aggressively on their policy records.",
+      topRight: "I have a fundamental right to call out bad government decisions that hurt my family or livelihood without fear of police harassment.",
+      midLeft: "Constructive opposition criticism is healthy, but constant partisan smear campaigns erode public trust in national institutions.",
+      center: "I don't know / Not sure — freedom of speech is vital, but politicians often use it just to spread toxic rumors and division.",
+      midRight: "Opposition parties don't actually care about accountability; they just criticize whatever the government does to score cheap political points.",
+      bottomLeft: "During wartime or national emergencies, destructive political attacks undermine national morale and jeopardize public security.",
+      bottomCenter: "Public opposition should follow orderly parliamentary rules; reckless disinformation campaigns that undermine state institutions must be restrained.",
+      bottomRight: "Hostile political factions shouldn't be allowed to weaponize lies and slander to destabilize the country and disrupt everyday life."
     },
 
     // PODER / LEI E ORDEM
     poder_01: {
-      willBe: "Law-abiding families and shopkeepers deserve safety; letting violent criminal gangs take over streets destroys the entire community.",
-      cantBe: "Smash the gangs and clear out the thugs so my family can walk down our own street in peace without getting mugged or threatened.",
-      mayBe: "Going in all guns blazing terrorises ordinary families, leads to dodgy cops abusing their power, and never fixes the real reasons kids turn to crime in the first place.",
-      wontBe: "Whenever cops go on a rampage, innocent working blokes in an old ute get pulled over and harassed for doing nothing wrong.",
-      indifferent: "I don't know / Not sure; you need to stop violent crime, but nobody wants innocent people caught in the crossfire."
+      topLeft: "Law-abiding families and local businesses deserve safety; allowing violent gangs to control suburbs destroys the entire community.",
+      topCenter: "Deploy coordinated police taskforces to dismantle organized crime syndicates and seize illegal weapons.",
+      topRight: "Clean out violent criminals so my family can walk down our own street in peace without getting mugged or threatened.",
+      midLeft: "Strong policing is needed against violent crime, but officers must maintain community trust and respect basic human rights.",
+      center: "I don't know / Not sure — gangs need to be stopped, but aggressive raids often catch innocent bystanders in the crossfire.",
+      midRight: "Heavy-handed raids make good headlines, but cops usually just harass petty offenders while the real gang bosses walk away clean.",
+      bottomLeft: "Militarized police operations terrorize marginalized neighbourhoods, cause wrongful deaths, and don't fix the underlying poverty driving crime.",
+      bottomCenter: "Rely on judicial oversight, intelligence-led investigations, and youth programs rather than unchecked paramilitary policing.",
+      bottomRight: "Whenever police get blank-check powers, innocent working people get pulled over, searched, and treated like suspects on their way to work."
     },
     poder_02: {
-      willBe: "Adults should have the personal freedom to choose, and legalising it stops wasting police time so they can focus on violent crime.",
-      cantBe: "I should be able to unwind with a joint or an edible after a hard week's work without fear of cops, criminal records, or losing my ticket.",
-      mayBe: "Legalising drugs damages public health, worsens youth mental health, and puts massive strain on emergency departments and families.",
-      wontBe: "Keep that reeking crap away from my kids, my front gate, and people driving on our local roads.",
-      indifferent: "I don't know / Not sure; don't care what people do at home, but don't want it causing chaos in public."
+      topLeft: "Adults should have the personal freedom to choose what they consume; decriminalisation ends pointless arrests and redirects police to violent crime.",
+      topCenter: "Regulate and tax adult cannabis like alcohol and tobacco, using the tax revenue to fund public healthcare and mental health services.",
+      topRight: "I should be able to unwind after a hard week's work without fear of cops, criminal records, or losing my employment.",
+      midLeft: "Decriminalising possession makes sense to stop ruining young lives, provided drug driving and public nuisance are strictly policed.",
+      center: "I don't know / Not sure — treating it as a crime seems excessive, but commercialising it might increase youth dependency.",
+      midRight: "Politicians claim legalisation brings tax revenue, but it usually just creates corporate drug cartels and more public health problems.",
+      bottomLeft: "Widespread cannabis use increases youth psychosis and mental illness, putting massive extra pressure on hospitals and family carers.",
+      bottomCenter: "Maintain prohibition to send a clear message that drug abuse is harmful to public health and social order.",
+      bottomRight: "Keep drug culture and smoke away from our children, our front gates, and people driving on our local suburban roads."
     },
     poder_03: {
-      willBe: "Targeted digital monitoring helps police intercept terrorist plots, drug syndicates, and child exploitation networks before innocent people get hurt.",
-      cantBe: "If you've got nothing to hide from the cops and it catches violent crims targeting our suburbs, the state should use whatever tools it takes.",
-      mayBe: "Mass government surveillance violates basic privacy rights and creates a police state where every citizen is treated as a suspect.",
-      wontBe: "Government agencies can't even keep our Medicare data safe; giving them access to our private texts is an open invitation for blackmail and abuse.",
-      indifferent: "I don't know / Not sure; tracking serious crims is fine, but spying on everyday citizens is a bridge too far."
+      topLeft: "Targeted digital surveillance helps intelligence agencies intercept terrorist plots, drug cartels, and child exploitation networks before innocent people get hurt.",
+      topCenter: "Require judicial warrants and strict oversight for security agencies to monitor encrypted criminal communications.",
+      topRight: "If law enforcement has the tools to stop violent predators and organized gangs targeting our communities, they should use them.",
+      midLeft: "Tracking dangerous extremists makes sense, but surveillance powers must be strictly confined to serious crimes with independent judicial oversight.",
+      center: "I don't know / Not sure — catching terrorists is essential, but mass automated snooping feels like an invasion of privacy.",
+      midRight: "Government agencies claim surveillance is for public safety, but they always end up using it to monitor peaceful dissenters and political rivals.",
+      bottomLeft: "Mass digital monitoring destroys personal privacy and creates a surveillance state where every citizen is treated as a guilty suspect.",
+      bottomCenter: "Protect constitutional privacy and encryption; undermining secure digital communications exposes national infrastructure to foreign hackers.",
+      bottomRight: "Government departments can't even stop basic data leaks; giving them access to our private messages is an open invitation for blackmail and abuse."
     },
 
     // IMIGRACAO
     imigracao_01: {
-      willBe: "If we don't all speak the same language and share basic Aussie values, the country just splits into separate tribes that don't talk to each other.",
-      cantBe: "If you come here to live, respect our way of life and speak English like the rest of us instead of expecting us to change for you.",
-      mayBe: "Forcing everyone into the same mould ruins what makes Australia great; you can be a proud Aussie and still keep your family's heritage and language.",
-      wontBe: "Don't tell my family or mates to erase who we are or abandon our cultural roots just to get a fair go.",
-      indifferent: "I don't know / Not sure; speaking the lingo is essential to get by, but keeping your culture is fair enough too."
+      topLeft: "A shared common language and mutual civic values are the bedrock of social cohesion and mutual trust in a successful democracy.",
+      topCenter: "Provide free, mandatory language and civics classes for all new arrivals so they can integrate quickly into the workforce and community.",
+      topRight: "If you choose to move here to work and build a life, learning the language and fitting in with local customs makes daily work and neighborhood life easy for everyone.",
+      midLeft: "Learning the national language is practical for work and civic life, but families should be free to maintain their heritage and cultural traditions at home.",
+      center: "I don't know / Not sure — knowing the language is essential for jobs, but forcing people to abandon their cultural customs feels wrong.",
+      midRight: "Politicians push integration slogans, but they don't provide the language classes or support needed for migrants to actually assimilate.",
+      bottomLeft: "Forcing cultural conformity suppresses rich diverse heritages and alienates migrant communities instead of welcoming their contribution.",
+      bottomCenter: "The law must protect freedom of cultural expression and cultural diversity, not enforce state-sanctioned lifestyle conformity.",
+      bottomRight: "Nobody should have their language or cultural heritage dictated by narrow-minded politicians looking to score cheap nationalist points."
     },
     imigracao_02: {
-      willBe: "A multilingual society enriches our culture, connects our economy to global trade, and makes people from all backgrounds feel genuinely welcome.",
-      cantBe: "Embracing diverse languages helps my community preserve our ancestral tongue and trade with partners abroad without feeling like second-class citizens.",
-      mayBe: "A functioning democracy requires a single common language for laws, public debates, and workplaces; fracturing into languages undermines unity.",
-      wontBe: "When signs, public services, and jobs start demanding other languages, locals who only speak English get shut out in our own country.",
-      indifferent: "I don't know / Not sure; learning languages is great, but having one common language keeps everyone on the same page."
+      topLeft: "Multilingualism enriches our national culture, deepens global connections, and ensures non-English speakers can access essential services with dignity.",
+      topCenter: "Fund bilingual translation in hospitals, courts, and emergency communications so vital public services remain accessible to everyone.",
+      topRight: "Being multilingual gives our children and local businesses massive commercial advantages in international trade and tourism.",
+      midLeft: "Embracing multiple languages is culturally vibrant, provided there is still a shared common language that unites the country in civic life.",
+      center: "I don't know / Not sure — multilingual services are helpful in emergencies, but not having a single shared language could divide communities.",
+      midRight: "Multilingual signage and services sound nice, but government agencies waste huge sums on tokenistic translation rather than teaching people English.",
+      bottomLeft: "Without a shared common language, society fractures into isolated language enclaves with little communication or mutual trust between groups.",
+      bottomCenter: "Maintain the national language as the sole standard for official government business, courts, and schooling to safeguard unified national identity.",
+      bottomRight: "I shouldn't have to navigate public services or street signs in foreign languages in my own hometown; everyone here should speak the common tongue."
     },
     imigracao_03: {
-      willBe: "Pausing immigration gives our housing, hospitals, roads, and environment a breather to catch up before quality of life degrades for everyone.",
-      cantBe: "Cut immigration right now so our kids can actually afford to buy a house and local workers aren't undercut by cheap imported labour.",
-      mayBe: "Australia was built on migration; closing borders starves our hospitals, farms, and aged care of vital workers and harms our standing in the world.",
-      wontBe: "Closing the border stops our family members from reuniting and cuts off our businesses from hiring the skilled workers we desperately need.",
-      indifferent: "I don't know / Not sure; high numbers are putting pressure on rent, but our economy still needs skilled workers."
+      topLeft: "Rapid population growth strains public infrastructure and dilutes local cultural cohesion; pausing intake allows existing communities to integrate.",
+      topCenter: "Temporarily cap immigration numbers and tie annual intakes strictly to local housing supply and hospital capacity.",
+      topRight: "Pausing high migration stops landlords from jacking up rents and protects local working people from having their wages undercut.",
+      midLeft: "Slowing down intake makes practical sense while housing is in crisis, but completely shutting borders to refugees and skilled workers is unfeasible.",
+      center: "I don't know / Not sure — current migration levels are straining housing and roads, but completely shutting the door could hurt hospitals and farms.",
+      midRight: "Politicians blame cultural identity for border issues, but really big corporations lobby for high migration just to suppress domestic wages.",
+      bottomLeft: "Completely closing borders strangles our universities, deprives healthcare of nurses, and abandons humanitarian commitments to desperate refugees.",
+      bottomCenter: "A modern economy depends on international talent and dynamic global engagement; shutting borders leads directly to cultural and economic stagnation.",
+      bottomRight: "Stoking paranoia about foreign cultures is a cynical distraction used by politicians to avoid fixing housing shortages and health funding."
     },
 
     // DIPLOMACIA
     diplomacia_01: {
-      willBe: "If you want peace, prepare for defense; rogue regimes and dictators only respect military strength, not polite diplomatic speeches.",
-      cantBe: "A powerful military keeps foreign aggressors from threatening our sea lanes, our resources, and our national sovereignty.",
-      mayBe: "Stockpiling massive arsenals fuels an arms race, wastes billions that should go to healthcare and education, and makes war more likely.",
-      wontBe: "Billions spent on shiny submarines and fighter jets is just pork-barrelling for foreign arms contractors while our local hospitals are crumbling.",
-      indifferent: "I don't know / Not sure; we need defense forces, but we shouldn't be wasting money picking fights abroad."
+      topLeft: "A credible defense force deters aggressive authoritarian regimes and secures peaceful international shipping lanes for everyone.",
+      topCenter: "Equip our military with modern defensive capabilities, naval patrol vessels, and domestic cyber defenses.",
+      topRight: "A strong defense force stops foreign powers from pushing us around and protects our national resources and trade routes.",
+      midLeft: "Maintaining a competent military is a necessary insurance policy, but true international respect comes from humanitarian aid, trade, and diplomacy.",
+      center: "I don't know / Not sure — we obviously need to defend our borders, but pouring billions into shiny weapons while hospitals struggle feels wrong.",
+      midRight: "Defense budgets always blow out, enriching foreign arms contractors without making our everyday communities any safer.",
+      bottomLeft: "Stockpiling massive offensive arsenals fuels regional arms races, escalates tensions, and diverts billions away from schools and healthcare.",
+      bottomCenter: "Security is built through multilateral treaties, international law, and regional cooperation, not sabre-rattling.",
+      bottomRight: "We shouldn't waste our taxes playing deputy sheriff in overseas arms races that only benefit overseas weapons manufacturers."
     },
     diplomacia_02: {
-      willBe: "War is a catastrophic tragedy that destroys lives and economies; every diplomatic avenue must be exhausted before a single shot is fired.",
-      cantBe: "I don't want our sons and daughters coming home in body bags when conflicts could have been settled around a negotiating table.",
-      mayBe: "Endless diplomatic talks just buy time for aggressive tyrants and terrorists to build up weapons and strike us when our guard is down.",
-      wontBe: "Negotiating with hostile bullies who don't play by the rules is a sign of weakness that puts our country directly in their crosshairs.",
-      indifferent: "I don't know / Not sure; diplomacy is always first, but you can't reason with an enemy that wants you wiped out."
+      topLeft: "War brings catastrophic human devastation; every single diplomatic avenue must be exhausted to protect human life and regional stability.",
+      topCenter: "Engage multilateral diplomats, independent mediators, and targeted diplomatic pressure to resolve conflicts before considering military force.",
+      topRight: "Exhausting diplomacy stops our sons and daughters in uniform from being sent to die in unnecessary overseas quagmires.",
+      midLeft: "Diplomacy should always be the default approach, but negotiations must be backed by credible resolve if the other side acts in bad faith.",
+      center: "I don't know / Not sure — diplomacy should be tried first, but when facing a ruthless dictator, endless talking can just buy them time to attack.",
+      midRight: "Endless diplomatic summits are mostly photo-ops for politicians while hostile forces prepare on the ground anyway.",
+      bottomLeft: "Hesitating and negotiating endlessly with aggressive invaders gives them time to build military footholds and commit mass atrocities.",
+      bottomCenter: "Credible military readiness and rapid counter-action are essential; an enemy preparing a strike won't be stopped by polite diplomatic letters.",
+      bottomRight: "Naive appeasement only emboldens hostile regimes; standing down our defenses leaves our nation vulnerable to economic and military extortion."
     },
     diplomacia_03: {
-      willBe: "Waiting to absorb a devastating first strike could wipe out our defense forces; taking out an imminent threat saves innocent lives.",
-      cantBe: "Hit them before they hit us; our government's primary duty is protecting our people, not waiting around to be attacked.",
-      mayBe: "Preemptive strikes violate international law, create endless cycles of retaliation, and are often based on flawed or fabricated intelligence.",
-      wontBe: "Politicians love claiming an attack is 'imminent' just to drag us into illegal foreign quagmires that cost working families billions.",
-      indifferent: "I don't know / Not sure; if an attack is genuinely hours away you have to act, but history shows leaders lie about threats."
+      topLeft: "Neutralizing a confirmed imminent attack before missiles or forces launch protects millions of innocent civilian lives from catastrophic destruction.",
+      topCenter: "Authorize targeted strikes strictly against confirmed imminent launch sites or aggressive staging operations under rigorous intelligence proof.",
+      topRight: "If an enemy is openly aiming weapons at our cities, I want our forces to hit them first rather than sitting back and absorbing the hit.",
+      midLeft: "Self-defense against an imminent attack is legitimate, but launching strikes without international consensus sets a dangerous global precedent.",
+      center: "I don't know / Not sure — hitting a missile before it fires makes sense, but intelligence can be dead wrong and trigger an unnecessary war.",
+      midRight: "Governments frequently fabricate intelligence about 'imminent threats' just to justify illegal regime-change invasions.",
+      bottomLeft: "Preemptive strikes normalize aggression, tear up the UN Charter, and drag nations into uncontrollable, bloody conflicts based on flawed intelligence.",
+      bottomCenter: "Military force is only lawful in response to an actual armed attack or with explicit UN Security Council authorization.",
+      bottomRight: "Warmongering politicians shouldn't be allowed to drag our country into foreign wars based on dodgy dossiers that our soldiers have to die for."
     },
 
     // INTERVENCAO
     intervencao_01: {
-      willBe: "Every nation has the sovereign right to determine its own future; foreign regime changes always create chaos, refugee crises, and devastation.",
-      cantBe: "We should mind our own bloody business and fix our own backyard instead of spending our blood and treasure trying to fix other countries.",
-      mayBe: "Standing by while brutal dictators butcher their own citizens or commit genocide makes the international community complicit in mass murder.",
-      wontBe: "If rogue regimes with weapons of mass destruction threaten global stability and our trade routes, we can't just stick our heads in the sand.",
-      indifferent: "I don't know / Not sure; foreign wars usually make things worse, but letting genocidal maniacs run riot is horrible too."
+      topLeft: "Every nation has the sovereign right to self-determination; foreign-sponsored coups and invasions always cause chaos and destroy civilian lives.",
+      topCenter: "Enforce strict non-intervention treaties and ban covert foreign funding or paramilitary meddling in other nations' political affairs.",
+      topRight: "Our country should mind its own business and fix problems at home rather than wasting our blood and treasure trying to fix other countries.",
+      midLeft: "Non-intervention is the correct baseline, but there must be rare exceptions when a regime is actively committing genocide against its own people.",
+      center: "I don't know / Not sure — foreign meddling usually backfires, but watching a brutal dictator slaughter civilians without lifting a finger feels wrong.",
+      midRight: "Superpowers never intervene for democracy; they only overthrow governments to grab oil, minerals, and lucrative corporate contracts.",
+      bottomLeft: "The international community has a moral responsibility to protect civilians and remove tyrants who commit crimes against humanity.",
+      bottomCenter: "Democratic nations must support democratic movements abroad and use coordinated sanctions to isolate illegitimate military juntas.",
+      bottomRight: "Allowing hostile dictatorships to crush freedom abroad creates rogue states that eventually threaten our own trade and security."
     },
     intervencao_02: {
-      willBe: "When our vital economic corridors, energy supplies, or democratic partners are under direct threat, our nation must use diplomatic and economic pressure.",
-      cantBe: "Our government's first and only loyalty is looking out for our own country's economic and security interests on the global stage.",
-      mayBe: "Bullying and coercing smaller or poorer nations breeds global resentment and undermines the rules-based international order that protects us all.",
-      wontBe: "Why should our tax dollars and export trade get hammered just because Canberra wants to play sheriff in other countries' disputes?",
-      indifferent: "I don't know / Not sure; we have to defend our interests, but pushing other countries around often blows up in our face."
+      topLeft: "A government's primary duty is to safeguard its own citizens; applying diplomatic and economic pressure abroad is necessary to protect national security.",
+      topCenter: "Use trade leverage, targeted sanctions, and regional diplomatic coalitions to protect critical maritime routes and supply chains.",
+      topRight: "When other countries dump cheap steel, steal our technology, or block our exports, our government should push back hard to protect local jobs.",
+      midLeft: "Defending national interests is reasonable, provided pressure follows international trade rules and doesn't bully smaller, developing neighbours.",
+      center: "I don't know / Not sure — we have to stand up for our interests, but being too aggressive can provoke trade wars that hurt ordinary consumers.",
+      midRight: "Politicians shout about 'national interest' when really they're just doing the bidding of powerful mining and defense lobby groups.",
+      bottomLeft: "Coercive pressure, economic blockades, and sanctions hurt innocent everyday families in foreign countries while corrupt elites remain untouched.",
+      bottomCenter: "International disputes should be resolved through binding WTO arbitration and international law, not unilateral geopolitical pressure.",
+      bottomRight: "Picking fights and imposing aggressive trade pressure backfires immediately when foreign powers retaliate by sanctioning our farmers and miners."
     },
     intervencao_03: {
-      willBe: "Foreign military alliances inevitably drag us into disastrous wars on the other side of the planet that have nothing to do with our defense.",
-      cantBe: "Keep our troops at home to protect our own shores, instead of blindly following big superpowers into every war they start.",
-      mayBe: "Australia cannot defend its massive coastline and trade routes alone; strong security alliances deter major powers from bullying us.",
-      wontBe: "If we ditch our allies, who comes to our aid when a regional superpower decides to cut off our shipping lanes or invade our waters?",
-      indifferent: "I don't know / Not sure; alliances keep us safe from big bullies, but we shouldn't be dragged into dumb foreign wars."
+      topLeft: "Automatic military entanglements drag peaceful countries into catastrophic overseas conflicts that have nothing to do with defending our own shores.",
+      topCenter: "Maintain an independent, self-reliant defense posture focused strictly on territorial defense rather than expeditionary foreign alliances.",
+      topRight: "Our service personnel should only fight to defend our own country, not be used as cannon fodder in superpower proxy wars on the other side of the planet.",
+      midLeft: "Avoiding entanglement in foreign wars is sensible, but standing alongside democratic allies against global aggression provides long-term deterrence.",
+      center: "I don't know / Not sure — alliances can pull us into dumb overseas wars, but going completely alone against major powers could leave us isolated.",
+      midRight: "Major superpowers treat smaller allies as expendable pawns, expecting us to buy their weapons and join their wars with zero genuine loyalty.",
+      bottomLeft: "Collective security alliances like ANZUS or NATO deter rogue states from invading peaceful nations; isolationism invites aggression.",
+      bottomCenter: "Uphold our mutual defense treaties and intelligence-sharing partnerships; a small nation cannot defend vast maritime borders without trusted allies.",
+      bottomRight: "If we abandon our allies when they need us, nobody will come to our rescue when our trade routes or borders are threatened."
     },
 
     // CONTROLE ECONOMICO
     controle_01: {
-      willBe: "Key economic pillars like power generation, domestic gas, and affordable housing need national planning to ensure every citizen has heat and shelter.",
-      cantBe: "State coordination of critical energy and housing resources stops price-gouging corporations from squeezing local households and businesses.",
-      mayBe: "Central state planning is notoriously inefficient, suffocates private innovation, and leads to chronic shortages and bureaucratic waste.",
-      wontBe: "Every time politicians try to 'plan' the economy, taxpayers get stuck with billions in botched projects and massive government debts.",
-      indifferent: "I don't know / Not sure; energy and water need national planning, but leave general industry to the market."
+      topLeft: "National planning in energy, housing, and domestic manufacturing guarantees essential goods and prevents vulnerable citizens from falling into poverty.",
+      topCenter: "Coordinate long-term state investments in power grid upgrades, public home building, and strategic steel and manufacturing production.",
+      topRight: "Government planning in domestic energy and housing stops corporate monopolists from price-gouging our power bills and rent.",
+      midLeft: "Strategic guidance makes sense for national lifelines like power and water, provided general consumer industries remain free to innovate.",
+      center: "I don't know / Not sure — affordable housing and power need government intervention, but central planning often leads to bureaucratic delays.",
+      midRight: "State planning sounds orderly on paper, but government bureaucrats are terrible at forecasting supply and usually create costly white elephants.",
+      bottomLeft: "Heavy-handed state planning suffocates private enterprise, creates chronic shortages, and misallocates billions in taxpayer capital.",
+      bottomCenter: "Let prices, consumer demand, and competitive investment direct capital efficiently rather than politicized five-year plans.",
+      bottomRight: "Every time politicians try to plan economic sectors, taxpayers get stuck paying for botched projects while political cronies walk away with grants."
     },
     controle_02: {
-      willBe: "Market competition naturally balances supply and demand, ensuring goods are priced fairly and wages reflect productivity without bureaucratic price-fixing.",
-      cantBe: "Free markets let businesses and workers negotiate their own contracts without union or government bosses telling them what they can earn.",
-      mayBe: "Unregulated markets lead to corporate cartels price-gouging essentials like rent, fuel, and groceries while driving workers' wages into the ground.",
-      wontBe: "Without government minimum wage laws and price watchdogs, greedy supermarket monopolies will bleed working families completely dry.",
-      indifferent: "I don't know / Not sure; competitive markets work well for consumer goods, but housing and essential groceries need price oversight."
+      topLeft: "Market-driven prices and wages balance supply and demand naturally, rewarding productive work and ensuring goods are priced efficiently for all.",
+      topCenter: "Remove price ceilings and rigid wage indexing so businesses can hire flexibly and prices adjust to real resource scarcity.",
+      topRight: "Skilled workers and competitive small businesses should be free to negotiate their own rates without government caps limiting what they can earn.",
+      midLeft: "Market pricing works best for most goods, but a statutory minimum wage and emergency price caps are necessary during cost-of-living spikes.",
+      center: "I don't know / Not sure — price controls can cause shortages, but without minimum wages and caps, greedy corporations gouge everyday people.",
+      midRight: "Big business bosses love preaching 'free markets' until their own companies face failure, then they run straight to government for bailouts.",
+      bottomLeft: "Unregulated wages and prices leave low-income families at the mercy of monopoly landlords and grocery giants, driving poverty and inequality.",
+      bottomCenter: "Maintain legally binding minimum wages, fair work standards, and consumer price watchdogs to ensure economic stability and dignity.",
+      bottomRight: "Without a strong legal minimum wage, unscrupulous bosses will exploit workers, underpay vulnerable staff, and drive living standards into the dirt."
     },
     controle_03: {
-      willBe: "The central bank sets interest rates that affect every mortgage and job in the nation; it must be accountable to the people we actually elected.",
-      cantBe: "Elected governments should reign in central bank interest rate hikes that are crushing everyday families and small business borrowers.",
-      mayBe: "An independent central bank keeps greedy politicians from printing money to bribe voters before elections, preventing hyperinflation.",
-      wontBe: "If politicians control interest rates, they'll print cash like water to fund their vanity schemes and wreck the value of our savings.",
-      indifferent: "I don't know / Not sure; rate hikes are painful, but giving politicians total control over the money printing press is terrifying."
+      topLeft: "Interest rates directly shape unemployment, housing costs, and national wellbeing; economic policy must be accountable to the elected parliament.",
+      topCenter: "Direct the central bank to coordinate interest rate decisions with national housing, employment, and infrastructure investment goals.",
+      topRight: "Unelected central bankers keep jacking up interest rates and crushing family mortgages; politicians we vote for should rein them in.",
+      midLeft: "Democratic input on long-term monetary goals is healthy, provided politicians don't interfere in monthly technical interest rate decisions.",
+      center: "I don't know / Not sure — central bankers seem out of touch with working families, but giving politicians money-printing powers could trigger hyperinflation.",
+      midRight: "Politicians blame the central bank for high rates, but high interest rates are mostly caused by wasteful government overspending in the first place.",
+      bottomLeft: "Allowing politicians to control interest rates leads to politically-timed rate cuts before elections, causing runaway inflation and currency collapse.",
+      bottomCenter: "Central bank independence is crucial to anchor inflation expectations, maintain credit ratings, and protect the purchasing power of savings.",
+      bottomRight: "If politicians gain control over the money supply, they will print endless cash to buy votes, debasing our hard-earned savings and pensions."
     },
 
     // COMERCIO
     comercio_01: {
-      willBe: "A country that can't manufacture its own steel, food, and medicine is dangerously vulnerable during global disruptions.",
-      cantBe: "Protect local manufacturing and Aussie factories so working blokes like me don't lose our jobs to cheap sweatshop imports.",
-      mayBe: "Tariffs just prop up lazy local companies and end up driving up the cost of tools, groceries, and cars for everyone.",
-      wontBe: "Why should I have to pay through the nose for building supplies or a ute just to bail out some big company that can't run its own business?",
-      indifferent: "I don't know / Not sure; saving jobs is good, but paying higher prices hurts everyone."
+      topLeft: "Safeguarding domestic manufacturing, farming, and green industry with tariffs preserves vital national skills and economic resilience.",
+      topCenter: "Impose strategic tariffs on subsidized foreign imports to maintain domestic steel, agricultural, and component manufacturing capacity.",
+      topRight: "Tariffs protect local factories, farms, and trade jobs from being destroyed by cheap foreign imports made with exploited labor.",
+      midLeft: "Targeted tariffs make sense to protect infant green industries, but broad blanket tariffs risk driving up costs for everyday consumers.",
+      center: "I don't know / Not sure — protecting local manufacturing jobs is vital, but tariffs also make everyday electronics and cars more expensive.",
+      midRight: "Tariffs usually end up propping up lazy local corporate monopolies that charge high prices for shoddy products because they face no competition.",
+      bottomLeft: "Trade protectionism triggers retaliatory tariffs from overseas partners, wrecking our export industries and raising the cost of living for everyone.",
+      bottomCenter: "Support rules-based trade through international agreements, resolving unfair subsidies via anti-dumping tribunals rather than unilateral tariff walls.",
+      bottomRight: "Tariffs are just a hidden sales tax on working families, forcing everyday consumers to pay inflated prices for essentials to protect favored lobby groups."
     },
     comercio_02: {
-      willBe: "Slashing tariffs gives consumers access to the cheapest goods worldwide and forces our industries to become globally competitive.",
-      cantBe: "Cheaper imports mean cheaper building supplies, equipment, and electronics, lowering business overheads and consumer costs.",
-      mayBe: "Unilateral free trade destroys sovereign manufacturing, turns our economy into a helpless raw-materials quarry, and wipes out skilled jobs.",
-      wontBe: "Free trade just hollows out our industrial heartlands, sending our kids' apprenticeship opportunities and manufacturing jobs offshore.",
-      indifferent: "I don't know / Not sure; zero tariffs sounds too extreme, but sensible trade deals can bring prices down."
+      topLeft: "Zero tariffs lower prices on food, technology, and building materials for all citizens, while forcing domestic companies to innovate and compete globally.",
+      topCenter: "Phase out import duties across consumer goods and industrial inputs to lower manufacturing and living costs across the whole economy.",
+      topRight: "Lower tariffs mean cheaper cars, cheaper tools, and cheaper groceries for our households, stretching everyday paychecks further.",
+      midLeft: "Free trade delivers lower prices, provided governments assist workers displaced by foreign competition with retraining and adjustment support.",
+      center: "I don't know / Not sure — cheap imports are great for household budgets, but losing all our local manufacturing capacity feels risky.",
+      midRight: "Free trade deals are negotiated by multinational corporate lobbyists who outsource local jobs to sweatshops while executives pocket massive bonuses.",
+      bottomLeft: "Wiping out domestic manufacturing leaves the nation completely dependent on fragile foreign supply chains that collapse during global crises.",
+      bottomCenter: "Maintain strategic industrial capabilities in food, defense, and medicine; a country that cannot feed or equip itself cannot defend its sovereignty.",
+      bottomRight: "Unchecked unilateral free trade throws local blue-collar workers onto the scrapheap, gutting regional communities so big retailers can maximize margins."
     },
     comercio_03: {
-      willBe: "Prioritising local production keeps wages circulating within our own communities, strengthening economic resilience over cheap consumerism.",
-      cantBe: "I'd rather buy Australian-made and support our local workers, even if it costs a couple of extra bucks at the counter.",
-      mayBe: "Artificial import quotas trigger foreign retaliation, destroy export markets for our farmers and miners, and spark runaway consumer inflation.",
-      wontBe: "With the cost of living through the roof, working families can't afford higher prices just to block foreign competition.",
-      indifferent: "I don't know / Not sure; I want to buy local, but everything is already so bloody expensive."
+      topLeft: "Supporting local workers and domestic manufacturing builds social cohesion and stable communities, which is worth paying slightly more for.",
+      topCenter: "Apply targeted import quotas and government procurement rules that mandate buying locally made steel, concrete, and uniforms.",
+      topRight: "I'd rather pay an extra few dollars for goods if it means our mates and our kids can get secure manufacturing apprenticeships and jobs.",
+      midLeft: "Protecting key industries is noble, but price inflation must be monitored so poorer families aren't priced out of basic everyday goods.",
+      center: "I don't know / Not sure — keeping local jobs is important, but with inflation already crushing households, deliberately raising prices hurts.",
+      midRight: "Politicians promise import limits will save jobs, but local factory owners usually pocket the protected profits and automate the assembly line anyway.",
+      bottomLeft: "Artificially restricting imports drives up inflation, increases construction costs for hospitals and schools, and triggers retaliatory trade bans.",
+      bottomCenter: "Support industrial competitiveness through research, cheap domestic energy, and skilled training rather than closing borders to trade.",
+      bottomRight: "Working families are already struggling to afford groceries and rent; forcing them to pay higher prices for protected goods is completely unfair."
     },
 
     // RELIGIAO
     religiao_01: {
-      willBe: "A secular state guarantees that citizens of all faiths and no faith live as equals under the law, preventing religious conflict.",
-      cantBe: "Religious dogmas shouldn't dictate what laws I have to live by, what I can read, or how I choose to conduct my personal life.",
-      mayBe: "Religious teachings provide the moral foundations of Western civilisation—justice, charity, and human dignity—which secularism erodes.",
-      wontBe: "Militant secularism is trying to cancel our Christian traditions, ban prayers, and marginalise believers from public life.",
-      indifferent: "I don't know / Not sure; keep religion out of politics, but people should be free to practice their faith in peace."
+      topLeft: "A secular state guarantees that citizens of all faiths and backgrounds are treated equally under the law without religious favoritism.",
+      topCenter: "Enact strict separation of church and state so public policy, healthcare, and education are decided purely by evidence and civic need.",
+      topRight: "Religious dogmas shouldn't dictate how I live my life, what medical care I receive, or how my family chooses to live.",
+      midLeft: "Faith communities do great charitable work, but their private beliefs shouldn't be imposed as universal law on everyone else.",
+      center: "I don't know / Not sure — keeping religion out of government makes sense, but many people's deepest moral values come from their faith.",
+      midRight: "Politicians and lobbyists only trot out religious talk to divide voters and dodge real questions about public services and cost of living.",
+      bottomLeft: "Erasing religious principles from public life discards centuries of moral wisdom on charity, human dignity, and care for the vulnerable.",
+      bottomCenter: "Preserve our constitutional traditions and legal heritage, which were built on shared moral values, without discriminating against minorities.",
+      bottomRight: "Aggressive secularism is just trying to push traditional believers out of the public square and silence people who hold deep moral convictions."
     },
     religiao_02: {
-      willBe: "Spiritual and moral teachings provide an objective compass for compassion, honesty, and family values that guide good governance.",
-      cantBe: "My personal faith gives me the integrity and moral clarity to stand up for what's right against corrupt secular trends.",
-      mayBe: "Imposing religious beliefs on a diverse public leads to intolerance, sectarian division, and the oppression of minority groups.",
-      wontBe: "I don't want religious leaders or self-righteous moralisers telling me how to vote, who to love, or how to raise my family.",
-      indifferent: "I don't know / Not sure; faith can inspire good morals in leaders, but it shouldn't be made into compulsory law."
+      topLeft: "When public leaders are guided by deep spiritual morality, they govern with genuine humility, compassion, and concern for the weak.",
+      topCenter: "Encourage faith-based charities, community groups, and moral leaders to take an active role in shaping social programs and public welfare.",
+      topRight: "My religious faith gives me an unshakeable moral compass to protect my family and community from corruption and moral decay.",
+      midLeft: "Personal faith is a great foundation for personal integrity, provided leaders still govern fairly for people of all beliefs.",
+      center: "I don't know / Not sure — faith inspires people to do good, but using religion to decide politics often leads to conflict.",
+      midRight: "Too many politicians wrap themselves in religion just to look righteous while voting against the interests of working people.",
+      bottomLeft: "Using religious doctrine to dictate public policy creates sectarian division, intolerance, and exclusion in a diverse society.",
+      bottomCenter: "Democratic governance must be based on universal human rights, scientific evidence, and secular law, not religious dogma.",
+      bottomRight: "I don't want religious zealots or church hierarchies telling me how to vote, how to raise my kids, or how to live my life."
     },
     religiao_03: {
-      willBe: "Democratic laws must be grounded in universal human rights and objective facts, not the scriptures of any single faith.",
-      cantBe: "Neutral laws ensure that no religious sect can use government power to discriminate against me or enforce their dietary or social rules.",
-      mayBe: "No law is truly 'neutral'—secular laws just replace traditional religious morality with radical state ideologies.",
-      wontBe: "Stripping religious values out of our legal system destroys the traditional protections for faith-based schools and charities.",
-      indifferent: "I don't know / Not sure; laws should be fair to everyone regardless of whether they believe in God or not."
+      topLeft: "Laws must protect every citizen equally, ensuring that no single religious group can use state power to dominate others.",
+      topCenter: "Draft legislation and judicial standards solely on secular human rights, constitutional principles, and objective public benefit.",
+      topRight: "Neutral laws protect my freedom of conscience so nobody else can force their dietary, cultural, or religious rules on my household.",
+      midLeft: "Religious traditions helped shape our basic concepts of justice, but statutory laws today need to be neutral for everyone.",
+      center: "I don't know / Not sure — laws should be fair to all, but whether any law can ever be completely neutral on moral questions is debatable.",
+      midRight: "Claiming laws are neutral is usually an excuse for corporate and bureaucratic elites to replace traditional ethics with whatever suits their interests.",
+      bottomLeft: "Pretending laws are value-neutral erodes the moral duties we owe each other, reducing society to cold legal contracts and commercial transactions.",
+      bottomCenter: "Respect our common law foundations, which developed out of Christian traditions of justice and individual accountability, while protecting civil liberties.",
+      bottomRight: "Neutral laws often end up trampling on religious freedoms, forcing faith-based schools, hospitals, and charities to violate their own beliefs."
     },
 
     // MORAL
     moral_01: {
-      willBe: "Every child deserves a loving, stable home; denying fit same-sex couples the right to adopt hurts vulnerable kids trapped in state care.",
-      cantBe: "Loving gay couples have every right to build a family and adopt children without the state treating them as second-class citizens.",
-      mayBe: "A child has an innate developmental need for both a mother and a father; adoption policy should prioritize the traditional family model.",
-      wontBe: "Redefining adoption undermines our traditional family values and denies children their natural right to a mother and father.",
-      indifferent: "I don't know / Not sure; the only thing that should matter is whether the parents provide a safe, loving home."
+      topLeft: "Every child in foster care deserves a loving, stable home; giving loving same-sex couples equal adoption rights gives more kids a chance at a great life.",
+      topCenter: "Update adoption regulations and screening processes to evaluate prospective parents strictly on safety, love, and stability, regardless of sexual orientation.",
+      topRight: "Loving couples have an equal right to build a family through adoption without facing discrimination from the government.",
+      midLeft: "What matters most is a safe and supportive home, though adoption services must always keep the child's individual needs as the top priority.",
+      center: "I don't know / Not sure — providing loving homes for orphans is essential, but people hold strong views about the traditional family structure.",
+      midRight: "Adoption agencies should focus purely on the welfare of vulnerable kids rather than getting caught up in cultural culture wars.",
+      bottomLeft: "Children have a natural right and developmental need for both a mother and a father; adoption policy should preserve this balance wherever possible.",
+      bottomCenter: "Preserve the traditional family model in family law and adoption policy as the proven historical foundation for raising children.",
+      bottomRight: "Forcing faith-based adoption agencies to violate their religious tenets or shut down deprives vulnerable children of experienced care."
     },
     moral_02: {
-      willBe: "Strong, stable two-parent families provide the most resilient foundation for raising healthy, emotionally secure children and sustaining society.",
-      cantBe: "Upholding the traditional family model protects the generational heritage, stability, and moral standards of our community.",
-      mayBe: "Insisting on a single rigid family model stigmatises single parents, foster carers, and blended families who do incredible jobs raising kids.",
-      wontBe: "Real life is messy; plenty of people thrive in single-parent or non-traditional households without the government preaching to them.",
-      indifferent: "I don't know / Not sure; traditional families are great, but whatever works to raise good kids is what matters."
+      topLeft: "Strong, stable two-parent families provide the most resilient environment for raising happy, healthy children and building a stable society.",
+      topCenter: "Provide targeted family tax benefits, parental leave, and marriage support programs to help couples stay together and raise children.",
+      topRight: "Preserving traditional family values gives my kids stability, moral boundaries, and strong roots to rely on throughout life.",
+      midLeft: "A stable two-parent household is a wonderful ideal, provided we don't look down on or penalize single parents doing their absolute best.",
+      center: "I don't know / Not sure — strong families are the bedrock of any community, but families come in all shapes and sizes today.",
+      midRight: "Politicians lecture working people about family values while passing economic policies that make housing and childcare completely unaffordable.",
+      bottomLeft: "Insisting on a rigid traditional family model alienates single parents, foster carers, and blended families who do incredible work raising kids.",
+      bottomCenter: "Support all families through equal access to healthcare, education, and childcare, without judging family structures.",
+      bottomRight: "Governments and moralizers have no business telling people what their households should look like or meddling in private family lives."
     },
     moral_03: {
-      willBe: "Treating every person with basic human dignity and respecting their declared gender identity is fundamental to a compassionate society.",
-      cantBe: "People should be able to live authentically without facing discrimination, harassment, or administrative barriers in their daily lives.",
-      mayBe: "Replacing biological reality with gender identity undermines women's private spaces, fair sporting competitions, and medical safeguards for youth.",
-      wontBe: "Biological sex is an undeniable scientific fact; people shouldn't be forced by law or HR departments to use manufactured pronouns.",
-      indifferent: "I don't know / Not sure; live and let live, but preserve fairness in women's sports and protect kids from rushed decisions."
+      topLeft: "Treating every person with basic human dignity and accepting who they are creates a kinder, safer, and more inclusive community for all.",
+      topCenter: "Update identification documents, anti-discrimination laws, and public facilities to respect individuals' declared gender identity.",
+      topRight: "People should be free to live their authentic lives without being harassed, bullied, or denied everyday services by strangers.",
+      midLeft: "Everyone deserves courtesy and respect in daily life, though balancing this with fair competition in sports and privacy requires care.",
+      center: "I don't know / Not sure — treating people with respect is basic decency, but there are complex debates around sports categories and young people.",
+      midRight: "Corporate HR departments and politicians push performative identity campaigns to look progressive while ignoring wages and job security.",
+      bottomLeft: "Ignoring biological sex undermines hard-won protections for women's sports, female-only spaces, and evidence-based medicine.",
+      bottomCenter: "Base public records, athletic categories, and medical regulations on biological sex, while ensuring legal protections against unjust discrimination.",
+      bottomRight: "Nobody should be threatened with fines or losing their job by bureaucratic speech codes just for stating biological facts."
     },
 
     // TECNOLOGIA
     tecnologia_01: {
-      willBe: "Scientific breakthrough and industrial innovation are the true engines that cure diseases, lift living standards, and solve environmental crises.",
-      cantBe: "Investing in advanced technology and modern manufacturing creates high-wage, high-skill careers for our kids and builds national wealth.",
-      mayBe: "Unchecked industrial growth plunders finite natural ecosystems, generates toxic pollution, and accelerates dangerous climate disruptions.",
-      wontBe: "Endless industrial expansion just turns our beautiful countryside into concrete jungles and open-cut mines for corporate profit.",
-      indifferent: "I don't know / Not sure; we need technology and industry, but we can't trash our natural environment to get it."
+      topLeft: "Technological breakthroughs and industrial capabilities are what cure diseases, lift people out of poverty, and solve global challenges like clean energy.",
+      topCenter: "Invest heavily in national research facilities, advanced manufacturing, and engineering training to drive rapid technological progress.",
+      topRight: "Building high-tech industries creates high-paying trade and engineering jobs for our kids, keeping our local economy competitive.",
+      midLeft: "Innovation drives human progress, but we need guardrails so fast development doesn't destroy natural ecosystems or local communities.",
+      center: "I don't know / Not sure — technological advancement has made life much easier, but unchecked industrial growth creates serious pollution and stress.",
+      midRight: "Tech hype usually promises a futuristic paradise, but mostly delivers apps that track our data and gadgets designed to break in two years.",
+      bottomLeft: "Obsessive industrial expansion exploits finite natural resources, pollutes water and air, and accelerates catastrophic climate destruction.",
+      bottomCenter: "Balance technological investment with strict environmental protection, preserving our natural heritage and biodiversity for future generations.",
+      bottomRight: "Mega-industrial projects usually tear up rural communities and pollute local waterways while multinational corporations ship all the profits overseas."
     },
     tecnologia_02: {
-      willBe: "A simpler, balanced life grounded in nature, local community, and manual crafts nurtures genuine mental health and ecological harmony.",
-      cantBe: "Escaping the exhausting tech-treadmill and living self-reliantly gives my family real freedom and peace of mind.",
-      mayBe: "Romanticising primitive living ignores the fact that modern technology gave us clean water, antibiotics, electricity, and long lifespans.",
-      wontBe: "Going back to a primitive lifestyle is fantasy nonsense; working people depend on modern technology, tractors, and power grids to survive.",
-      indifferent: "I don't know / Not sure; taking a break from screens is great, but nobody actually wants to live without modern plumbing and hospitals."
+      topLeft: "A lifestyle grounded in nature, physical activity, and close community promotes genuine mental wellbeing and ecological harmony for society.",
+      topCenter: "Encourage regenerative local farming, outdoor recreation, and screen-free community spaces to reconnect people with the natural world.",
+      topRight: "Stepping off the digital treadmill to live simply and spend time outdoors gives me and my family real peace of mind and health.",
+      midLeft: "Spending more time in nature is great for everyone's health, though modern medicine and communication are still lifesavers.",
+      center: "I don't know / Not sure — slowing down and getting away from screens sounds wonderful, but modern amenities make daily life so much easier.",
+      midRight: "Romanticizing off-grid living is an expensive luxury for wealthy influencers who don't have to worry about earning a real living.",
+      bottomLeft: "Abandoning technological development would reverse modern sanitation, disease prevention, and agricultural yields, causing mass hardship.",
+      bottomCenter: "Rely on modern infrastructure, high-tech power grids, and advanced logistics to maintain the living standards and security of the entire population.",
+      bottomRight: "Anti-tech nostalgia ignores the fact that working families rely on modern tools, affordable electricity, and vehicles just to make ends meet."
     },
     tecnologia_03: {
-      willBe: "Having machines do the dangerous, backbreaking grunt work makes life safer and easier, and makes the whole country wealthier in the long run.",
-      cantBe: "If you use new tech to get jobs done quicker and cheaper, you can run rings around the competition and get your weekends back.",
-      mayBe: "Replacing human workers with machines guts whole towns, puts good people on the scrapheap, and hands all the cash to a few tech billionaires.",
-      wontBe: "Big tech and corporate bosses are just using AI to axe our jobs and line their own pockets while leaving workers with nothing.",
-      indifferent: "I don't know / Not sure; tech has always created new jobs before, but this time feels pretty bloody unpredictable."
+      topLeft: "Automating dangerous, dull, and repetitive labor increases national productivity, lowers costs for essentials, and frees people to do meaningful creative work.",
+      topCenter: "Accelerate automation in manufacturing and logistics while funding worker retraining and sharing productivity dividends through public services.",
+      topRight: "Adopting AI tools and smart machinery lets our local businesses work faster, stay competitive, and cut down on tedious busywork.",
+      midLeft: "AI and automation can do wonders for productivity, provided displaced workers are given genuine support rather than tossed aside.",
+      center: "I don't know / Not sure — previous technology created more jobs than it replaced, but AI is advancing so fast that it's hard to predict the impact.",
+      midRight: "Corporate executives don't care about human progress; they are rushing to deploy AI simply to slash payrolls and pump their stock options.",
+      bottomLeft: "Mass automation threatens to destroy middle-class careers, gut local economies, and concentrate obscene wealth in the hands of a few tech monopolies.",
+      bottomCenter: "Regulate AI and automation deployment with strict labor protections, transition timelines, and licensing safeguards to preserve social stability.",
+      bottomRight: "Working people shouldn't have their livelihoods stolen by algorithms so tech billionaires can get even richer while leaving the rest of us with nothing."
     }
   },
 

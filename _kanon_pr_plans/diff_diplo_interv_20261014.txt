@@ -1,0 +1,108 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\data\hegemonicScenarios.ts. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -241,25 +241,37 @@
+ 
+     // DIPLOMACIA
+     diplomacia_01: {
+-      willBe: "If you want peace, prepare for defense; rogue regimes and dictators only respect military strength, not polite diplomatic speeches.",
+-      cantBe: "A powerful military keeps foreign aggressors from threatening our sea lanes, our resources, and our national sovereignty.",
+-      mayBe: "Stockpiling massive arsenals fuels an arms race, wastes billions that should go to healthcare and education, and makes war more likely.",
+-      wontBe: "Billions spent on shiny submarines and fighter jets is just pork-barrelling for foreign arms contractors while our local hospitals are crumbling.",
+-      indifferent: "I don't know / Not sure; we need defense forces, but we shouldn't be wasting money picking fights abroad."
++      topLeft: "A credible defense force deters aggressive authoritarian regimes and secures peaceful international shipping lanes for everyone.",
++      topCenter: "Equip our military with modern defensive capabilities, naval patrol vessels, and domestic cyber defenses.",
++      topRight: "A strong defense force stops foreign powers from pushing us around and protects our national resources and trade routes.",
++      midLeft: "Maintaining a competent military is a necessary insurance policy, but true international respect comes from humanitarian aid, trade, and diplomacy.",
++      center: "I don't know / Not sure — we obviously need to defend our borders, but pouring billions into shiny weapons while hospitals struggle feels wrong.",
++      midRight: "Defense budgets always blow out, enriching foreign arms contractors without making our everyday communities any safer.",
++      bottomLeft: "Stockpiling massive offensive arsenals fuels regional arms races, escalates tensions, and diverts billions away from schools and healthcare.",
++      bottomCenter: "Security is built through multilateral treaties, international law, and regional cooperation, not sabre-rattling.",
++      bottomRight: "We shouldn't waste our taxes playing deputy sheriff in overseas arms races that only benefit overseas weapons manufacturers."
+     },
+     diplomacia_02: {
+-      willBe: "War is a catastrophic tragedy that destroys lives and economies; every diplomatic avenue must be exhausted before a single shot is fired.",
+-      cantBe: "I don't want our sons and daughters coming home in body bags when conflicts could have been settled around a negotiating table.",
+-      mayBe: "Endless diplomatic talks just buy time for aggressive tyrants and terrorists to build up weapons and strike us when our guard is down.",
+-      wontBe: "Negotiating with hostile bullies who don't play by the rules is a sign of weakness that puts our country directly in their crosshairs.",
+-      indifferent: "I don't know / Not sure; diplomacy is always first, but you can't reason with an enemy that wants you wiped out."
++      topLeft: "War brings catastrophic human devastation; every single diplomatic avenue must be exhausted to protect human life and regional stability.",
++      topCenter: "Engage multilateral diplomats, independent mediators, and targeted diplomatic pressure to resolve conflicts before considering military force.",
++      topRight: "Exhausting diplomacy stops our sons and daughters in uniform from being sent to die in unnecessary overseas quagmires.",
++      midLeft: "Diplomacy should always be the default approach, but negotiations must be backed by credible resolve if the other side acts in bad faith.",
++      center: "I don't know / Not sure — diplomacy should be tried first, but when facing a ruthless dictator, endless talking can just buy them time to attack.",
++      midRight: "Endless diplomatic summits are mostly photo-ops for politicians while hostile forces prepare on the ground anyway.",
++      bottomLeft: "Hesitating and negotiating endlessly with aggressive invaders gives them time to build military footholds and commit mass atrocities.",
++      bottomCenter: "Credible military readiness and rapid counter-action are essential; an enemy preparing a strike won't be stopped by polite diplomatic letters.",
++      bottomRight: "Naive appeasement only emboldens hostile regimes; standing down our defenses leaves our nation vulnerable to economic and military extortion."
+     },
+     diplomacia_03: {
+-      willBe: "Waiting to absorb a devastating first strike could wipe out our defense forces; taking out an imminent threat saves innocent lives.",
+-      cantBe: "Hit them before they hit us; our government's primary duty is protecting our people, not waiting around to be attacked.",
+-      mayBe: "Preemptive strikes violate international law, create endless cycles of retaliation, and are often based on flawed or fabricated intelligence.",
+-      wontBe: "Politicians love claiming an attack is 'imminent' just to drag us into illegal foreign quagmires that cost working families billions.",
+-      indifferent: "I don't know / Not sure; if an attack is genuinely hours away you have to act, but history shows leaders lie about threats."
++      topLeft: "Neutralizing a confirmed imminent attack before missiles or forces launch protects millions of innocent civilian lives from catastrophic destruction.",
++      topCenter: "Authorize targeted strikes strictly against confirmed imminent launch sites or aggressive staging operations under rigorous intelligence proof.",
++      topRight: "If an enemy is openly aiming weapons at our cities, I want our forces to hit them first rather than sitting back and absorbing the hit.",
++      midLeft: "Self-defense against an imminent attack is legitimate, but launching strikes without international consensus sets a dangerous global precedent.",
++      center: "I don't know / Not sure — hitting a missile before it fires makes sense, but intelligence can be dead wrong and trigger an unnecessary war.",
++      midRight: "Governments frequently fabricate intelligence about 'imminent threats' just to justify illegal regime-change invasions.",
++      bottomLeft: "Preemptive strikes normalize aggression, tear up the UN Charter, and drag nations into uncontrollable, bloody conflicts based on flawed intelligence.",
++      bottomCenter: "Military force is only lawful in response to an actual armed attack or with explicit UN Security Council authorization.",
++      bottomRight: "Warmongering politicians shouldn't be allowed to drag our country into foreign wars based on dodgy dossiers that our soldiers have to die for."
+     },
+ 
+     // INTERVENCAO
+@@ -266,22 +266,34 @@
+-      willBe: "Every nation has the sovereign right to determine its own future; foreign regime changes always create chaos, refugee crises, and devastation.",
+-      cantBe: "We should mind our own bloody business and fix our own backyard instead of spending our blood and treasure trying to fix other countries.",
+-      mayBe: "Standing by while brutal dictators butcher their own citizens or commit genocide makes the international community complicit in mass murder.",
+-      wontBe: "If rogue regimes with weapons of mass destruction threaten global stability and our trade routes, we can't just stick our heads in the sand.",
+-      indifferent: "I don't know / Not sure; foreign wars usually make things worse, but letting genocidal maniacs run riot is horrible too."
++      topLeft: "Every nation has the sovereign right to self-determination; foreign-sponsored coups and invasions always cause chaos and destroy civilian lives.",
++      topCenter: "Enforce strict non-intervention treaties and ban covert foreign funding or paramilitary meddling in other nations' political affairs.",
++      topRight: "Our country should mind its own business and fix problems at home rather than wasting our blood and treasure trying to fix other countries.",
++      midLeft: "Non-intervention is the correct baseline, but there must be rare exceptions when a regime is actively committing genocide against its own people.",
++      center: "I don't know / Not sure — foreign meddling usually backfires, but watching a brutal dictator slaughter civilians without lifting a finger feels wrong.",
++      midRight: "Superpowers never intervene for democracy; they only overthrow governments to grab oil, minerals, and lucrative corporate contracts.",
++      bottomLeft: "The international community has a moral responsibility to protect civilians and remove tyrants who commit crimes against humanity.",
++      bottomCenter: "Democratic nations must support democratic movements abroad and use coordinated sanctions to isolate illegitimate military juntas.",
++      bottomRight: "Allowing hostile dictatorships to crush freedom abroad creates rogue states that eventually threaten our own trade and security."
+     },
+     intervencao_02: {
+-      willBe: "When our vital economic corridors, energy supplies, or democratic partners are under direct threat, our nation must use diplomatic and economic pressure.",
+-      cantBe: "Our government's first and only loyalty is looking out for our own country's economic and security interests on the global stage.",
+-      mayBe: "Bullying and coercing smaller or poorer nations breeds global resentment and undermines the rules-based international order that protects us all.",
+-      wontBe: "Why should our tax dollars and export trade get hammered just because Canberra wants to play sheriff in other countries' disputes?",
+-      indifferent: "I don't know / Not sure; we have to defend our interests, but pushing other countries around often blows up in our face."
++      topLeft: "A government's primary duty is to safeguard its own citizens; applying diplomatic and economic pressure abroad is necessary to protect national security.",
++      topCenter: "Use trade leverage, targeted sanctions, and regional diplomatic coalitions to protect critical maritime routes and supply chains.",
++      topRight: "When other countries dump cheap steel, steal our technology, or block our exports, our government should push back hard to protect local jobs.",
++      midLeft: "Defending national interests is reasonable, provided pressure follows international trade rules and doesn't bully smaller, developing neighbours.",
++      center: "I don't know / Not sure — we have to stand up for our interests, but being too aggressive can provoke trade wars that hurt ordinary consumers.",
++      midRight: "Politicians shout about 'national interest' when really they're just doing the bidding of powerful mining and defense lobby groups.",
++      bottomLeft: "Coercive pressure, economic blockades, and sanctions hurt innocent everyday families in foreign countries while corrupt elites remain untouched.",
++      bottomCenter: "International disputes should be resolved through binding WTO arbitration and international law, not unilateral geopolitical pressure.",
++      bottomRight: "Picking fights and imposing aggressive trade pressure backfires immediately when foreign powers retaliate by sanctioning our farmers and miners."
+     },
+     intervencao_03: {
+-      willBe: "Foreign military alliances inevitably drag us into disastrous wars on the other side of the planet that have nothing to do with our defense.",
+-      cantBe: "Keep our troops at home to protect our own shores, instead of blindly following big superpowers into every war they start.",
+-      mayBe: "Australia cannot defend its massive coastline and trade routes alone; strong security alliances deter major powers from bullying us.",
+-      wontBe: "If we ditch our allies, who comes to our aid when a regional superpower decides to cut off our shipping lanes or invade our waters?",
+-      indifferent: "I don't know / Not sure; alliances keep us safe from big bullies, but we shouldn't be dragged into dumb foreign wars."
++      topLeft: "Automatic military entanglements drag peaceful countries into catastrophic overseas conflicts that have nothing to do with defending our own shores.",
++      topCenter: "Maintain an independent, self-reliant defense posture focused strictly on territorial defense rather than expeditionary foreign alliances.",
++      topRight: "Our service personnel should only fight to defend our own country, not be used as cannon fodder in superpower proxy wars on the other side of the planet.",
++      midLeft: "Avoiding entanglement in foreign wars is sensible, but standing alongside democratic allies against global aggression provides long-term deterrence.",
++      center: "I don't know / Not sure — alliances can pull us into dumb overseas wars, but going completely alone against major powers could leave us isolated.",
++      midRight: "Major superpowers treat smaller allies as expendable pawns, expecting us to buy their weapons and join their wars with zero genuine loyalty.",
++      bottomLeft: "Collective security alliances like ANZUS or NATO deter rogue states from invading peaceful nations; isolationism invites aggression.",
++      bottomCenter: "Uphold our mutual defense treaties and intelligence-sharing partnerships; a small nation cannot defend vast maritime borders without trusted allies.",
++      bottomRight: "If we abandon our allies when they need us, nobody will come to our rescue when our trade routes or borders are threatened."
+     },
+ 
+     // CONTROLE ECONOMICO
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

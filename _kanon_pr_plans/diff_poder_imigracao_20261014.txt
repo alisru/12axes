@@ -1,0 +1,108 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\data\hegemonicScenarios.ts. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -171,25 +171,37 @@
+ 
+     // PODER / LEI E ORDEM
+     poder_01: {
+-      willBe: "Law-abiding families and shopkeepers deserve safety; letting violent criminal gangs take over streets destroys the entire community.",
+-      cantBe: "Smash the gangs and clear out the thugs so my family can walk down our own street in peace without getting mugged or threatened.",
+-      mayBe: "Going in all guns blazing terrorises ordinary families, leads to dodgy cops abusing their power, and never fixes the real reasons kids turn to crime in the first place.",
+-      wontBe: "Whenever cops go on a rampage, innocent working blokes in an old ute get pulled over and harassed for doing nothing wrong.",
+-      indifferent: "I don't know / Not sure; you need to stop violent crime, but nobody wants innocent people caught in the crossfire."
++      topLeft: "Law-abiding families and local businesses deserve safety; allowing violent gangs to control suburbs destroys the entire community.",
++      topCenter: "Deploy coordinated police taskforces to dismantle organized crime syndicates and seize illegal weapons.",
++      topRight: "Clean out violent criminals so my family can walk down our own street in peace without getting mugged or threatened.",
++      midLeft: "Strong policing is needed against violent crime, but officers must maintain community trust and respect basic human rights.",
++      center: "I don't know / Not sure — gangs need to be stopped, but aggressive raids often catch innocent bystanders in the crossfire.",
++      midRight: "Heavy-handed raids make good headlines, but cops usually just harass petty offenders while the real gang bosses walk away clean.",
++      bottomLeft: "Militarized police operations terrorize marginalized neighbourhoods, cause wrongful deaths, and don't fix the underlying poverty driving crime.",
++      bottomCenter: "Rely on judicial oversight, intelligence-led investigations, and youth programs rather than unchecked paramilitary policing.",
++      bottomRight: "Whenever police get blank-check powers, innocent working people get pulled over, searched, and treated like suspects on their way to work."
+     },
+     poder_02: {
+-      willBe: "Adults should have the personal freedom to choose, and legalising it stops wasting police time so they can focus on violent crime.",
+-      cantBe: "I should be able to unwind with a joint or an edible after a hard week's work without fear of cops, criminal records, or losing my ticket.",
+-      mayBe: "Legalising drugs damages public health, worsens youth mental health, and puts massive strain on emergency departments and families.",
+-      wontBe: "Keep that reeking crap away from my kids, my front gate, and people driving on our local roads.",
+-      indifferent: "I don't know / Not sure; don't care what people do at home, but don't want it causing chaos in public."
++      topLeft: "Adults should have the personal freedom to choose what they consume; decriminalisation ends pointless arrests and redirects police to violent crime.",
++      topCenter: "Regulate and tax adult cannabis like alcohol and tobacco, using the tax revenue to fund public healthcare and mental health services.",
++      topRight: "I should be able to unwind after a hard week's work without fear of cops, criminal records, or losing my employment.",
++      midLeft: "Decriminalising possession makes sense to stop ruining young lives, provided drug driving and public nuisance are strictly policed.",
++      center: "I don't know / Not sure — treating it as a crime seems excessive, but commercialising it might increase youth dependency.",
++      midRight: "Politicians claim legalisation brings tax revenue, but it usually just creates corporate drug cartels and more public health problems.",
++      bottomLeft: "Widespread cannabis use increases youth psychosis and mental illness, putting massive extra pressure on hospitals and family carers.",
++      bottomCenter: "Maintain prohibition to send a clear message that drug abuse is harmful to public health and social order.",
++      bottomRight: "Keep drug culture and smoke away from our children, our front gates, and people driving on our local suburban roads."
+     },
+     poder_03: {
+-      willBe: "Targeted digital monitoring helps police intercept terrorist plots, drug syndicates, and child exploitation networks before innocent people get hurt.",
+-      cantBe: "If you've got nothing to hide from the cops and it catches violent crims targeting our suburbs, the state should use whatever tools it takes.",
+-      mayBe: "Mass government surveillance violates basic privacy rights and creates a police state where every citizen is treated as a suspect.",
+-      wontBe: "Government agencies can't even keep our Medicare data safe; giving them access to our private texts is an open invitation for blackmail and abuse.",
+-      indifferent: "I don't know / Not sure; tracking serious crims is fine, but spying on everyday citizens is a bridge too far."
++      topLeft: "Targeted digital surveillance helps intelligence agencies intercept terrorist plots, drug cartels, and child exploitation networks before innocent people get hurt.",
++      topCenter: "Require judicial warrants and strict oversight for security agencies to monitor encrypted criminal communications.",
++      topRight: "If law enforcement has the tools to stop violent predators and organized gangs targeting our communities, they should use them.",
++      midLeft: "Tracking dangerous extremists makes sense, but surveillance powers must be strictly confined to serious crimes with independent judicial oversight.",
++      center: "I don't know / Not sure — catching terrorists is essential, but mass automated snooping feels like an invasion of privacy.",
++      midRight: "Government agencies claim surveillance is for public safety, but they always end up using it to monitor peaceful dissenters and political rivals.",
++      bottomLeft: "Mass digital monitoring destroys personal privacy and creates a surveillance state where every citizen is treated as a guilty suspect.",
++      bottomCenter: "Protect constitutional privacy and encryption; undermining secure digital communications exposes national infrastructure to foreign hackers.",
++      bottomRight: "Government departments can't even stop basic data leaks; giving them access to our private messages is an open invitation for blackmail and abuse."
+     },
+ 
+     // IMIGRACAO
+@@ -196,22 +196,34 @@
+-      willBe: "If we don't all speak the same language and share basic Aussie values, the country just splits into separate tribes that don't talk to each other.",
+-      cantBe: "If you come here to live, respect our way of life and speak English like the rest of us instead of expecting us to change for you.",
+-      mayBe: "Forcing everyone into the same mould ruins what makes Australia great; you can be a proud Aussie and still keep your family's heritage and language.",
+-      wontBe: "Don't tell my family or mates to erase who we are or abandon our cultural roots just to get a fair go.",
+-      indifferent: "I don't know / Not sure; speaking the lingo is essential to get by, but keeping your culture is fair enough too."
++      topLeft: "A shared common language and mutual civic values are the bedrock of social cohesion and mutual trust in a successful democracy.",
++      topCenter: "Provide free, mandatory language and civics classes for all new arrivals so they can integrate quickly into the workforce and community.",
++      topRight: "If you choose to move here to work and build a life, learning the language and fitting in with local customs makes daily work and neighborhood life easy for everyone.",
++      midLeft: "Learning the national language is practical for work and civic life, but families should be free to maintain their heritage and cultural traditions at home.",
++      center: "I don't know / Not sure — knowing the language is essential for jobs, but forcing people to abandon their cultural customs feels wrong.",
++      midRight: "Politicians push integration slogans, but they don't provide the language classes or support needed for migrants to actually assimilate.",
++      bottomLeft: "Forcing cultural conformity suppresses rich diverse heritages and alienates migrant communities instead of welcoming their contribution.",
++      bottomCenter: "The law must protect freedom of cultural expression and cultural diversity, not enforce state-sanctioned lifestyle conformity.",
++      bottomRight: "Nobody should have their language or cultural heritage dictated by narrow-minded politicians looking to score cheap nationalist points."
+     },
+     imigracao_02: {
+-      willBe: "A multilingual society enriches our culture, connects our economy to global trade, and makes people from all backgrounds feel genuinely welcome.",
+-      cantBe: "Embracing diverse languages helps my community preserve our ancestral tongue and trade with partners abroad without feeling like second-class citizens.",
+-      mayBe: "A functioning democracy requires a single common language for laws, public debates, and workplaces; fracturing into languages undermines unity.",
+-      wontBe: "When signs, public services, and jobs start demanding other languages, locals who only speak English get shut out in our own country.",
+-      indifferent: "I don't know / Not sure; learning languages is great, but having one common language keeps everyone on the same page."
++      topLeft: "Multilingualism enriches our national culture, deepens global connections, and ensures non-English speakers can access essential services with dignity.",
++      topCenter: "Fund bilingual translation in hospitals, courts, and emergency communications so vital public services remain accessible to everyone.",
++      topRight: "Being multilingual gives our children and local businesses massive commercial advantages in international trade and tourism.",
++      midLeft: "Embracing multiple languages is culturally vibrant, provided there is still a shared common language that unites the country in civic life.",
++      center: "I don't know / Not sure — multilingual services are helpful in emergencies, but not having a single shared language could divide communities.",
++      midRight: "Multilingual signage and services sound nice, but government agencies waste huge sums on tokenistic translation rather than teaching people English.",
++      bottomLeft: "Without a shared common language, society fractures into isolated language enclaves with little communication or mutual trust between groups.",
++      bottomCenter: "Maintain the national language as the sole standard for official government business, courts, and schooling to safeguard unified national identity.",
++      bottomRight: "I shouldn't have to navigate public services or street signs in foreign languages in my own hometown; everyone here should speak the common tongue."
+     },
+     imigracao_03: {
+-      willBe: "Pausing immigration gives our housing, hospitals, roads, and environment a breather to catch up before quality of life degrades for everyone.",
+-      cantBe: "Cut immigration right now so our kids can actually afford to buy a house and local workers aren't undercut by cheap imported labour.",
+-      mayBe: "Australia was built on migration; closing borders starves our hospitals, farms, and aged care of vital workers and harms our standing in the world.",
+-      wontBe: "Closing the border stops our family members from reuniting and cuts off our businesses from hiring the skilled workers we desperately need.",
+-      indifferent: "I don't know / Not sure; high numbers are putting pressure on rent, but our economy still needs skilled workers."
++      topLeft: "Rapid population growth strains public infrastructure and dilutes local cultural cohesion; pausing intake allows existing communities to integrate.",
++      topCenter: "Temporarily cap immigration numbers and tie annual intakes strictly to local housing supply and hospital capacity.",
++      topRight: "Pausing high migration stops landlords from jacking up rents and protects local working people from having their wages undercut.",
++      midLeft: "Slowing down intake makes practical sense while housing is in crisis, but completely shutting borders to refugees and skilled workers is unfeasible.",
++      center: "I don't know / Not sure — current migration levels are straining housing and roads, but completely shutting the door could hurt hospitals and farms.",
++      midRight: "Politicians blame cultural identity for border issues, but really big corporations lobby for high migration just to suppress domestic wages.",
++      bottomLeft: "Completely closing borders strangles our universities, deprives healthcare of nurses, and abandons humanitarian commitments to desperate refugees.",
++      bottomCenter: "A modern economy depends on international talent and dynamic global engagement; shutting borders leads directly to cultural and economic stagnation.",
++      bottomRight: "Stoking paranoia about foreign cultures is a cynical distraction used by politicians to avoid fixing housing shortages and health funding."
+     },
+ 
+     // DIPLOMACIA
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

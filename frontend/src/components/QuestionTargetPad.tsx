@@ -1255,57 +1255,81 @@ function getContextualScenarios(
   if (question.help) {
     if (lang === 'pt') {
       return {
-        willBe: `Concordo porque "${question.help.agree}" fortalece o bem comum e a estabilidade social de todos.`,
-        cantBe: `Concordo porque "${question.help.agree}" traz benefícios materiais ou vantagens diretas para mim ou meu grupo.`,
-        mayBe: `Oponho-me porque "${question.help.disagree}" protege os direitos gerais e impede danos sistêmicos à população.`,
-        wontBe: `Oponho-me porque "${question.help.disagree}" evita impostos, regulações ou perdas que recairiam sobre mim ou meu setor.`,
-        indifferent: 'Não sei / Em dúvida (Sem opinião formada ou faltam dados sobre a questão)'
+        topLeft: `Concordo porque "${question.help.agree}" fortalece o bem comum e a estabilidade social de todos.`,
+        topCenter: `Adotar ações práticas e diretas para aplicar "${question.help.agree}" nas instituições públicas.`,
+        topRight: `Concordo porque "${question.help.agree}" traz benefícios materiais ou vantagens diretas para mim ou meu grupo.`,
+        midLeft: `Apoiar "${question.help.agree}" é correto em princípio, mas a aplicação prática exige ponderação e limites.`,
+        center: `Não sei / Em dúvida — existem pontos válidos e desafios reais em relação a "${question.help.agree}".`,
+        midRight: `Discursos sobre "${question.help.agree}" soam bem na teoria, mas na prática costumam ser distorcidos.`,
+        bottomLeft: `Oponho-me porque "${question.help.disagree}" protege os direitos gerais e impede danos sistêmicos à população.`,
+        bottomCenter: `Manter as salvaguardas institucionais e a estabilidade legal antes de impor mudanças bruscas.`,
+        bottomRight: `Oponho-me porque "${question.help.disagree}" evita impostos, regulações ou perdas que recairiam sobre mim ou meu setor.`
       };
     }
     if (lang === 'es') {
       return {
-        willBe: `De acuerdo porque "${question.help.agree}" fortalece el bienestar común y la justicia para todos.`,
-        cantBe: `De acuerdo porque "${question.help.agree}" aporta ventajas materiales directas para mí o mi sector.`,
-        mayBe: `En desacuerdo porque "${question.help.disagree}" previene daños colectivos e injusticias para la sociedad.`,
-        wontBe: `En desacuerdo porque "${question.help.disagree}" evita cargas o regulaciones perjudiciales para mi grupo.`,
-        indifferent: 'No lo sé / No estoy seguro (Sin opinión formada o faltan datos)'
+        topLeft: `De acuerdo porque "${question.help.agree}" fortalece el bienestar común y la justicia para todos.`,
+        topCenter: `Tomar medidas prácticas y directas para implementar "${question.help.agree}" en las instituciones públicas.`,
+        topRight: `De acuerdo porque "${question.help.agree}" aporta ventajas materiales directas para mí o mi sector.`,
+        midLeft: `Apoyar "${question.help.agree}" es positivo en principio, aunque su aplicación real requiere cautela y equilibrio.`,
+        center: `No lo sé / No estoy seguro — existen argumentos razonables y dilemas complejos en torno a "${question.help.agree}".`,
+        midRight: `Las propuestas sobre "${question.help.agree}" suenan bien en el papel, pero en la realidad suelen defraudar.`,
+        bottomLeft: `En desacuerdo porque "${question.help.disagree}" previene daños colectivos e injusticias para la sociedad.`,
+        bottomCenter: `Mantener la estabilidad institucional y el marco legal vigente frente a cambios precipitados.`,
+        bottomRight: `En desacuerdo porque "${question.help.disagree}" evita cargas o regulaciones perjudiciales para mi grupo.`
       };
     }
     return {
-      willBe: `I agree because "${question.help.agree}" strengthens the common good, fairness, and society as a whole.`,
-      cantBe: `I agree because "${question.help.agree}" secures practical advantages or protection for me or my group.`,
-      mayBe: `I oppose this because "${question.help.disagree}" protects the broader public from systemic harm or imbalance.`,
-      wontBe: `I oppose this because "${question.help.disagree}" prevents unfair burdens, costs, or restrictions on my group or me.`,
-      indifferent: "I don't know / Not sure (No clear opinion or need more information)"
+      topLeft: `I support this because "${question.help.agree}" strengthens the common good, fairness, and society as a whole.`,
+      topCenter: `Take decisive practical action to implement "${question.help.agree}" across public institutions.`,
+      topRight: `I support this because "${question.help.agree}" secures practical advantages or protection for me or my group.`,
+      midLeft: `Supporting "${question.help.agree}" is good in principle, though practical implementation requires careful balance.`,
+      center: `I don't know / Not sure — there are valid points and real dilemmas surrounding "${question.help.agree}".`,
+      midRight: `Proposals claiming "${question.help.agree}" often sound good on paper but fail to deliver in real life.`,
+      bottomLeft: `I oppose this because "${question.help.disagree}" protects the broader public from systemic harm or imbalance.`,
+      bottomCenter: `Maintain institutional stability and existing legal safeguards rather than rushing into disruptive changes.`,
+      bottomRight: `I oppose this because "${question.help.disagree}" prevents unfair burdens, costs, or restrictions on my group or me.`
     };
   }
 
   // Padrão universal limpo e natural (sem interpolação de palavras quebradas)
   if (lang === 'pt') {
     return {
-      willBe: 'Apoio porque fortalece o bem comum, a igualdade de direitos e a estabilidade de toda a sociedade.',
-      cantBe: 'Apoio porque traz vantagens diretas, liberdade ou proteção prática para mim ou meu grupo.',
-      mayBe: 'Oponho-me porque prejudica a sociedade, gera instabilidade sistêmica ou injustiça coletiva.',
-      wontBe: 'Oponho-me porque impõe custos, regulações ou perdas injustas sobre mim ou meu setor.',
-      indifferent: 'Não sei / Em dúvida (Sem opinião formada ou faltam informações)'
+      topLeft: 'Apoio porque fortalece o bem comum, a igualdade de direitos e a estabilidade de toda a sociedade.',
+      topCenter: 'Adotar medidas práticas e diretas para concretizar essa diretriz nas políticas públicas.',
+      topRight: 'Apoio porque traz vantagens diretas, liberdade ou proteção prática para mim ou meu grupo.',
+      midLeft: 'Concordo com o princípio geral desta medida, desde que aplicada com moderação e bom senso.',
+      center: 'Não sei / Em dúvida — existem argumentos legítimos e dilemas complexos de ambos os lados.',
+      midRight: 'Parece positivo na teoria, mas na prática corre sério risco de gerar ineficiência e abusos.',
+      bottomLeft: 'Oponho-me porque prejudica a sociedade, gera instabilidade sistêmica ou injustiça coletiva.',
+      bottomCenter: 'Preservar as instituições e regras existentes em vez de adotar intervenções arriscadas.',
+      bottomRight: 'Oponho-me porque impõe custos, regulações ou perdas injustas sobre mim ou meu setor.'
     };
   }
 
   if (lang === 'es') {
     return {
-      willBe: 'Apoyo esto porque fortalece el bien común, la igualdad y la estabilidad de toda la sociedad.',
-      cantBe: 'Apoyo esto porque aporta ventajas directas, libertad o protección práctica para mí o mi grupo.',
-      mayBe: 'Me opongo porque perjudica a la sociedad, genera inestabilidad sistémica o injusticia colectiva.',
-      wontBe: 'Me opongo porque impone costes, regulaciones o cargas injustas sobre mí o mi sector.',
-      indifferent: 'No lo sé / No estoy seguro (Sin opinión formada o faltan datos)'
+      topLeft: 'Apoyo esto porque fortalece el bien común, la igualdad y la estabilidad de toda la sociedad.',
+      topCenter: 'Tomar acciones directas y eficaces para aplicar esta directriz en las políticas públicas.',
+      topRight: 'Apoyo esto porque aporta ventajas directas, libertad o protección práctica para mí o mi grupo.',
+      midLeft: 'Comparto el principio de fondo, siempre que se ejecute con prudencia y respeto a la realidad.',
+      center: 'No lo sé / No estoy seguro — existen argumentos atendibles e incertidumbres en ambas posturas.',
+      midRight: 'Suena bien en el discurso, pero en la práctica suele generar burocracia inútil y arbitrariedades.',
+      bottomLeft: 'Me opongo porque perjudica a la sociedad, genera inestabilidad sistémica o injusticia colectiva.',
+      bottomCenter: 'Preservar las instituciones y normativas existentes antes de emprender cambios drásticos.',
+      bottomRight: 'Me opongo porque impone costes, regulaciones o cargas injustas sobre mí o mi sector.'
     };
   }
 
   return {
-    willBe: 'I support this because it strengthens the public good, fairness, and stability for society as a whole.',
-    cantBe: 'I support this because it provides direct advantages, freedom, or protection for me and my group.',
-    mayBe: 'I oppose this because it harms society, causes systemic instability, or creates collective injustice.',
-    wontBe: 'I oppose this because it imposes unfair costs, regulations, or burdens on me and my group.',
-    indifferent: "I don't know / Not sure (No clear opinion or need more information)"
+    topLeft: 'I support this because it strengthens the public good, fairness, and stability for society as a whole.',
+    topCenter: 'Take decisive practical action to implement this standard across key institutions.',
+    topRight: 'I support this because it provides direct advantages, freedom, or protection for me and my group.',
+    midLeft: 'I agree with the broad principle here, provided practical tradeoffs are handled sensibly.',
+    center: "I don't know / Not sure — there are valid arguments and real complexities on both sides.",
+    midRight: 'It sounds noble in theory, but in reality it is prone to inefficiency, corruption, or unintended harm.',
+    bottomLeft: 'I oppose this because it harms society, causes systemic instability, or creates collective injustice.',
+    bottomCenter: 'Preserve existing constitutional safeguards and institutional stability rather than rushing into changes.',
+    bottomRight: 'I oppose this because it imposes unfair costs, regulations, or burdens on me and my group.'
   };
 }
