@@ -1,0 +1,182 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\components\QuestionTargetPad.tsx. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -528,36 +528,149 @@
+     onSelect(vector.derived1D, vector);
+   }
+ 
+-  function getStanceLabel(): string {
++  function getStanceSentence(): string {
+     if (is9Grid) {
+-      const activeShares = Object.values(shares)
+-        .filter((sh) => sh.pct >= 4)
+-        .sort((a, b) => b.pct - a.pct);
+-
+-      if (activeShares.length === 0) {
+-        return s.centerNeutral;
+-      }
+-
+-      if (activeShares.length === 1) {
+-        return `${activeShares[0].pct}% ${activeShares[0].name}`;
+-      }
+-
+-      if (activeShares.length === 2) {
+-        return `${activeShares[0].pct}% ${activeShares[0].name} + ${activeShares[1].pct}% ${activeShares[1].name}`;
+-      }
+-
+-      return `${activeShares[0].pct}% ${activeShares[0].name} + ${activeShares[1].pct}% ${activeShares[1].name} (+${100 - activeShares[0].pct - activeShares[1].pct}%)`;
+-    }
++      const sorted = Object.values(shares).sort((a, b) => b.pct - a.pct);
++      const top1 = sorted[0];
++      const top2 = sorted[1];
++
++      // 1. Centro dominante
++      if (top1.key === 'mid-center' && top1.pct >= 55) {
++        if (activeLang === 'pt') return 'Você está atualmente indeciso ou em dúvida sobre esta questão.';
++        if (activeLang === 'es') return 'Actualmente estás indeciso o con dudas sobre este tema.';
++        return 'You are currently undecided or unsure about this issue.';
++      }
++
++      // 2. Inclinando para uma postura, mas com incerteza central
++      if (top1.key !== 'mid-center' && top2.key === 'mid-center' && top2.pct >= 28) {
++        if (activeLang === 'pt') {
++          switch (top1.key) {
++            case 'top-left': return 'Você tende a concordar em prol de todos, mas mantém certas dúvidas.';
++            case 'top-center': return 'Você tende a apoiar uma ação prática direta, mas mantém dúvidas.';
++            case 'top-right': return 'Você tende a concordar por autonomia pessoal, mas mantém dúvidas.';
++            case 'mid-left': return 'Você tende a concordar em princípio, mas tem ressalvas práticas.';
++            case 'mid-right': return 'Você tende ao ceticismo, priorizando sua própria segurança.';
++            case 'bottom-left': return 'Você tende a discordar para proteger o público, mas mantém dúvidas.';
++            case 'bottom-center': return 'Você tende a discordar por estabilidade institucional, com dúvidas.';
++            case 'bottom-right': return 'Você tende a discordar para não ser lesado, mas mantém dúvidas.';
++          }
++        }
++        if (activeLang === 'es') {
++          switch (top1.key) {
++            case 'top-left': return 'Te inclinas por estar de acuerdo para todos, pero mantienes dudas.';
++            case 'top-center': return 'Te inclinas por apoyar la acción directa, pero mantienes dudas.';
++            case 'top-right': return 'Te inclinas por la autonomía personal, pero mantienes dudas.';
++            case 'mid-left': return 'Te inclinas a estar de acuerdo en principio, con ciertas reservas.';
++            case 'mid-right': return 'Te inclinas hacia el escepticismo, priorizando tu seguridad.';
++            case 'bottom-left': return 'Te inclinas por rechazar esto para proteger al público, con dudas.';
++            case 'bottom-center': return 'Te inclinas por rechazar esto por estabilidad institucional, con dudas.';
++            case 'bottom-right': return 'Te inclinas por rechazar esto para no ser perjudicado, con dudas.';
++          }
++        }
++        switch (top1.key) {
++          case 'top-left': return 'You lean toward agreeing for everyone, but remain somewhat undecided.';
++          case 'top-center': return 'You lean toward direct practical action, but remain somewhat undecided.';
++          case 'top-right': return 'You lean toward personal freedom and self-interest, but remain somewhat undecided.';
++          case 'mid-left': return 'You lean toward agreeing in principle, but have practical reservations.';
++          case 'mid-right': return 'You lean toward skepticism in principle, prioritizing personal self-reliance.';
++          case 'bottom-left': return 'You lean toward defending public welfare, but remain somewhat undecided.';
++          case 'bottom-center': return 'You lean toward institutional defense, but remain somewhat undecided.';
++          case 'bottom-right': return 'You lean toward protecting yourself from exploitation, but remain somewhat undecided.';
++        }
++      }
++
++      // 3. Postura única firme (>= 60%)
++      if (top1.pct >= 60) {
++        if (activeLang === 'pt') {
++          switch (top1.key) {
++            case 'top-left': return 'Você concorda firmemente que isto deve ser apoiado para o bem de todos.';
++            case 'top-center': return 'Você apoia ação decisiva e direta para implementar esta medida.';
++            case 'top-right': return 'Você concorda, priorizando a liberdade pessoal e autonomia financeira.';
++            case 'mid-left': return 'Você concorda em princípio com o ideal, sem exigir coerção estatal pesada.';
++            case 'mid-right': return 'Você é cético em princípio, priorizando independência e autossuficiência.';
++            case 'bottom-left': return 'Você discorda firmemente para defender os serviços públicos e a comunidade.';
++            case 'bottom-center': return 'Você discorda diretamente através de regras institucionais e estabilidade legal.';
++            case 'bottom-right': return 'Você rejeita isto para não ser lesado nem carregar o fardo alheio.';
++            case 'mid-center': return 'Você está atualmente indeciso ou vê razões válidas em ambos os lados.';
++          }
++        }
++        if (activeLang === 'es') {
++          switch (top1.key) {
++            case 'top-left': return 'Estás firmemente de acuerdo en apoyar esto por el bien común de todos.';
++            case 'top-center': return 'Apoyas una acción directa y decisiva para implementar esta política.';
++            case 'top-right': return 'Estás de acuerdo, priorizando la libertad personal y la autonomía financiera.';
++            case 'mid-left': return 'Estás de acuerdo en principio con la idea, sin exigir imposición estatal severa.';
++            case 'mid-right': return 'Eres escéptico en principio, priorizando la independencia y la autosuficiencia.';
++            case 'bottom-left': return 'Rechazas firmemente esto para defender los servicios públicos y la comunidad.';
++            case 'bottom-center': return 'Te opones directamente mediante normas institucionales y estabilidad legal.';
++            case 'bottom-right': return 'Rechazas esto para evitar ser perjudicado o cargar con costes ajenos.';
++            case 'mid-center': return 'Actualmente estás indeciso o ves razones válidas en ambas posturas.';
++          }
++        }
++        switch (top1.key) {
++          case 'top-left': return 'You firmly agree that this should be supported for the common good of everyone.';
++          case 'top-center': return 'You favor direct, decisive action to implement this policy.';
++          case 'top-right': return 'You agree, prioritizing personal freedom and financial autonomy.';
++          case 'mid-left': return 'You agree in principle for everyone, without favoring heavy state enforcement.';
++          case 'mid-right': return 'You are skeptical in principle, prioritizing personal and financial self-reliance.';
++          case 'bottom-left': return 'You firmly oppose this to protect public services and community welfare.';
++          case 'bottom-center': return 'You oppose this directly through institutional rules and stability.';
++          case 'bottom-right': return 'You reject this to avoid being exploited or footing the bill for others.';
++          case 'mid-center': return 'You are currently undecided or unsure about this issue.';
++        }
++      }
++
++      // 4. Postura dividida entre dois âncoras perimétricos (ex: mid-left + bottom-left)
++      const pair = [top1.key, top2.key].sort().join('+');
++      if (activeLang === 'pt') {
++        switch (pair) {
++          case 'bottom-left+mid-left': return 'Você concorda com o princípio em teoria, mas rejeita a medida para proteger o bem público.';
++          case 'mid-left+top-left': return 'Você apoia o bem público, equilibrando o princípio com respaldo ativo da comunidade.';
++          case 'top-center+top-left': return 'Você defende ação decisiva que beneficie diretamente toda a comunidade.';
++          case 'top-center+top-right': return 'Você apoia ação prática direta, guiada pela liberdade pessoal e autossuficiência.';
++          case 'mid-right+top-right': return 'Você valoriza a autonomia pessoal, combinando concordância prática com ceticismo.';
++          case 'bottom-right+mid-right': return 'Você é cético quanto à política e rejeita carregar um fardo injusto.';
++          case 'bottom-center+bottom-right': return 'Você discorda firmemente para evitar exploração e proteger seu patrimônio.';
++          case 'bottom-center+bottom-left': return 'Você se opõe a esta medida para resguardar as instituições e serviços públicos.';
++        }
++      } else if (activeLang === 'es') {
++        switch (pair) {
++          case 'bottom-left+mid-left': return 'Estás de acuerdo con el principio en teoría, pero te opones para proteger el bien público.';
++          case 'mid-left+top-left': return 'Apoyas el bien común, combinando el principio con respaldo activo de la comunidad.';
++          case 'top-center+top-left': return 'Defiendes una acción decisiva que beneficie directamente a toda la comunidad.';
++          case 'top-center+top-right': return 'Apoyas la acción práctica directa, impulsada por la autonomía personal.';
++          case 'mid-right+top-right': return 'Valoras la autonomía personal, combinando acuerdo práctico con escepticismo.';
++          case 'bottom-right+mid-right': return 'Eres escéptico ante la política y rechazas asumir una carga injusta.';
++          case 'bottom-center+bottom-right': return 'Te opones firmemente para evitar la explotación y proteger a tu familia.';
++          case 'bottom-center+bottom-left': return 'Te opones para resguardar los servicios públicos y la estabilidad institucional.';
++        }
++      } else {
++        switch (pair) {
++          case 'bottom-left+mid-left': return 'You agree with the principle in theory, but oppose the policy to protect the public good.';
++          case 'mid-left+top-left': return 'You support the public good, balancing principle with active community backing.';
++          case 'top-center+top-left': return 'You favor decisive, direct action that benefits the entire community.';
++          case 'top-center+top-right': return 'You support direct action, driven by personal and practical autonomy.';
++          case 'mid-right+top-right': return 'You favor personal independence, balancing agreement with practical skepticism.';
++          case 'bottom-right+mid-right': return 'You are skeptical of this policy and reject carrying an unfair burden.';
++          case 'bottom-center+bottom-right': return 'You firmly oppose this to prevent exploitation and protect your household.';
++          case 'bottom-center+bottom-left': return 'You oppose this measure to defend public services and institutional stability.';
++        }
++      }
++
++      // Fallback genérico caso seja uma combinação atípica
++      return activeLang === 'pt'
++        ? `Você equilibra posições entre ${top1.name} e ${top2.name}.`
++        : activeLang === 'es'
++        ? `Equilibras tu postura entre ${top1.name} y ${top2.name}.`
++        : `You balance your position between ${top1.name} and ${top2.name}.`;
++    }
++
+     if (!activeQuadrant || activeQuadrant === 'INDIFFERENT') return s.centerNeutral;
+     switch (activeQuadrant) {
+-      case 'WILL_BE':
+-        return s.agreeEveryone;
+-      case 'CANT_BE':
+-        return s.agreeSelf;
+-      case 'MAY_BE':
+-        return s.disagreeEveryone;
+-      case 'WONT_BE':
+-        return s.disagreeSelf;
++      case 'WILL_BE': return s.agreeEveryone;
++      case 'CANT_BE': return s.agreeSelf;
++      case 'MAY_BE': return s.disagreeEveryone;
++      case 'WONT_BE': return s.disagreeSelf;
+     }
+   }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
