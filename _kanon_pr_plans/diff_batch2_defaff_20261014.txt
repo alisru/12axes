@@ -1,0 +1,216 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\data\hegemonicScenarios.ts. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -147,26 +147,26 @@
+       bottomRight: "Uninformed mobs repeatedly vote in reckless governments that run up debts and jack up taxes on workers."
+     },
+     representacao_02: {
+-      topLeft: "During catastrophic emergencies, wars, or natural disasters, decisive executive leadership is vital to protect the population without paralysis.",
+-      topCenter: "Allow time-limited emergency executive powers to coordinate disaster relief, rescue efforts, and supply chains rapidly.",
+-      topRight: "In a crisis, I want a leader who can cut straight through bureaucratic red tape and protect my community without endless political debates.",
+-      midLeft: "Quick executive decisions are necessary in a flash crisis, but they must face mandatory parliamentary review as soon as the danger passes.",
+-      center: "I don't know / Not sure — speed matters in a disaster, but giving a single politician unchecked power is dangerous.",
+-      midRight: "Politicians routinely hype up fake crises just to grab emergency powers that they never willingly give back.",
+-      bottomLeft: "Concentrating unchecked power in one person's hands invites tyranny; parliamentary oversight and public debate exist precisely to prevent abuses.",
+-      bottomCenter: "The constitution and legislature must never be sidelined; democratic laws and judicial checks are our most important defense against autocracy.",
+-      bottomRight: "Once a leader starts ruling by decree, ordinary citizens lose their civil liberties and anyone who speaks out gets crushed."
++      topLeft: "In catastrophic emergencies, decisive leadership is vital to protect lives without paralysis.",
++      topCenter: "Grant temporary emergency powers to coordinate disaster relief and rescue rapidly.",
++      topRight: "In a crisis, a leader must cut red tape to protect our community.",
++      midLeft: "Fast executive action is needed in a crisis, but requires parliamentary review afterward.",
++      center: "Speed matters in a disaster, but giving one leader unchecked power is risky.",
++      midRight: "Politicians routinely hype up emergencies just to grab powers they never give back.",
++      bottomLeft: "Concentrating power in one person invites tyranny; parliamentary oversight exists to prevent abuses.",
++      bottomCenter: "The constitution must never be sidelined; judicial checks are our main defense against autocracy.",
++      bottomRight: "When leaders rule by decree, ordinary people lose rights and dissent gets crushed."
+     },
+     representacao_03: {
+-      topLeft: "The freedom to criticize leaders in public is essential to a free society; exposing government incompetence and corruption keeps leaders honest.",
+-      topCenter: "Protect open debate and investigative journalism so ministers are questioned aggressively on their policy records.",
+-      topRight: "I have a fundamental right to call out bad government decisions that hurt my family or livelihood without fear of police harassment.",
+-      midLeft: "Constructive opposition criticism is healthy, but constant partisan smear campaigns erode public trust in national institutions.",
+-      center: "I don't know / Not sure — freedom of speech is vital, but politicians often use it just to spread toxic rumors and division.",
+-      midRight: "Opposition parties don't actually care about accountability; they just criticize whatever the government does to score cheap political points.",
+-      bottomLeft: "During wartime or national emergencies, destructive political attacks undermine national morale and jeopardize public security.",
+-      bottomCenter: "Public opposition should follow orderly parliamentary rules; reckless disinformation campaigns that undermine state institutions must be restrained.",
+-      bottomRight: "Hostile political factions shouldn't be allowed to weaponize lies and slander to destabilize the country and disrupt everyday life."
++      topLeft: "Criticizing leaders in public exposes incompetence and keeps government honest.",
++      topCenter: "Protect investigative journalism so ministers face hard questions on their records.",
++      topRight: "I have every right to call out bad policies that hurt my family.",
++      midLeft: "Criticism is healthy for democracy, though constant smear campaigns erode public trust.",
++      center: "Free speech is vital, but politicians often use it to spread division.",
++      midRight: "Opposition politicians don't care about accountability; they just score cheap political points.",
++      bottomLeft: "During wartime or national emergencies, destructive political attacks undermine national security.",
++      bottomCenter: "Opposition must follow parliamentary rules; reckless disinformation that undermines institutions should be checked.",
++      bottomRight: "Hostile factions shouldn't be allowed to weaponize slander to destabilize the country."
+     },
+ 
+     // PODER / LEI E ORDEM
+@@ -173,34 +173,34 @@
+-      topLeft: "Law-abiding families and local businesses deserve safety; allowing violent gangs to control suburbs destroys the entire community.",
+-      topCenter: "Deploy coordinated police taskforces to dismantle organized crime syndicates and seize illegal weapons.",
+-      topRight: "Clean out violent criminals so my family can walk down our own street in peace without getting mugged or threatened.",
+-      midLeft: "Strong policing is needed against violent crime, but officers must maintain community trust and respect basic human rights.",
+-      center: "I don't know / Not sure — gangs need to be stopped, but aggressive raids often catch innocent bystanders in the crossfire.",
+-      midRight: "Heavy-handed raids make good headlines, but cops usually just harass petty offenders while the real gang bosses walk away clean.",
+-      bottomLeft: "Militarized police operations terrorize marginalized neighbourhoods, cause wrongful deaths, and don't fix the underlying poverty driving crime.",
+-      bottomCenter: "Rely on judicial oversight, intelligence-led investigations, and youth programs rather than unchecked paramilitary policing.",
+-      bottomRight: "Whenever police get blank-check powers, innocent working people get pulled over, searched, and treated like suspects on their way to work."
++      topLeft: "Communities deserve safety; stopping violent gangs protects local families and businesses.",
++      topCenter: "Deploy coordinated police taskforces to dismantle crime syndicates and seize weapons.",
++      topRight: "Clean out violent thugs so my family can walk our streets in peace.",
++      midLeft: "Strong policing against crime is necessary, but officers must respect basic human rights.",
++      center: "Gangs must be stopped, but aggressive raids often catch innocent bystanders.",
++      midRight: "Heavy-handed raids make headlines, but cops usually harass petty offenders while bosses walk.",
++      bottomLeft: "Militarized police terrorize suburbs and don't fix the underlying poverty driving crime.",
++      bottomCenter: "Rely on judicial oversight, intelligence investigations, and youth programs rather than paramilitary policing.",
++      bottomRight: "With blank-check powers, innocent working people get pulled over and treated like criminals."
+     },
+     poder_02: {
+-      topLeft: "Adults should have the personal freedom to choose what they consume; decriminalisation ends pointless arrests and redirects police to violent crime.",
+-      topCenter: "Regulate and tax adult cannabis like alcohol and tobacco, using the tax revenue to fund public healthcare and mental health services.",
+-      topRight: "I should be able to unwind after a hard week's work without fear of cops, criminal records, or losing my employment.",
+-      midLeft: "Decriminalising possession makes sense to stop ruining young lives, provided drug driving and public nuisance are strictly policed.",
+-      center: "I don't know / Not sure — treating it as a crime seems excessive, but commercialising it might increase youth dependency.",
+-      midRight: "Politicians claim legalisation brings tax revenue, but it usually just creates corporate drug cartels and more public health problems.",
+-      bottomLeft: "Widespread cannabis use increases youth psychosis and mental illness, putting massive extra pressure on hospitals and family carers.",
+-      bottomCenter: "Maintain prohibition to send a clear message that drug abuse is harmful to public health and social order.",
+-      bottomRight: "Keep drug culture and smoke away from our children, our front gates, and people driving on our local suburban roads."
++      topLeft: "Adults should be free to choose; decriminalisation redirects police to violent crime.",
++      topCenter: "Tax and regulate adult cannabis like alcohol, funding healthcare and mental health.",
++      topRight: "I should be able to unwind after work without fear of criminal records.",
++      midLeft: "Decriminalising personal use makes sense, provided drug driving is strictly policed.",
++      center: "Treating cannabis as a crime seems excessive, but commercial sales could increase dependency.",
++      midRight: "Legalisation mostly creates corporate drug cartels and more public health bills.",
++      bottomLeft: "Widespread cannabis use increases youth mental illness, putting massive pressure on hospitals.",
++      bottomCenter: "Maintain prohibition to send a clear message that illicit drugs harm public health.",
++      bottomRight: "Keep drug smoke and dealers away from our kids and local parks."
+     },
+     poder_03: {
+-      topLeft: "Targeted digital surveillance helps intelligence agencies intercept terrorist plots, drug cartels, and child exploitation networks before innocent people get hurt.",
+-      topCenter: "Require judicial warrants and strict oversight for security agencies to monitor encrypted criminal communications.",
+-      topRight: "If law enforcement has the tools to stop violent predators and organized gangs targeting our communities, they should use them.",
+-      midLeft: "Tracking dangerous extremists makes sense, but surveillance powers must be strictly confined to serious crimes with independent judicial oversight.",
+-      center: "I don't know / Not sure — catching terrorists is essential, but mass automated snooping feels like an invasion of privacy.",
+-      midRight: "Government agencies claim surveillance is for public safety, but they always end up using it to monitor peaceful dissenters and political rivals.",
+-      bottomLeft: "Mass digital monitoring destroys personal privacy and creates a surveillance state where every citizen is treated as a guilty suspect.",
+-      bottomCenter: "Protect constitutional privacy and encryption; undermining secure digital communications exposes national infrastructure to foreign hackers.",
+-      bottomRight: "Government departments can't even stop basic data leaks; giving them access to our private messages is an open invitation for blackmail and abuse."
++      topLeft: "Targeted surveillance stops terrorist plots and child abuse networks before innocents get hurt.",
++      topCenter: "Require judicial warrants for security agencies to intercept encrypted criminal communications.",
++      topRight: "Law enforcement should have the tools to track down violent predators in our communities.",
++      midLeft: "Tracking extremists is reasonable, but surveillance must be limited to serious crimes.",
++      center: "Catching serious criminals is essential, but mass automated snooping invades privacy.",
++      midRight: "Agencies say surveillance protects us, but always end up monitoring political rivals.",
++      bottomLeft: "Mass digital snooping destroys privacy and treats every law-abiding citizen as a suspect.",
++      bottomCenter: "Protect encryption and constitutional privacy; undermining secure communication exposes national infrastructure.",
++      bottomRight: "Government departments leak data constantly; giving them our private messages invites blackmail."
+     },
+ 
+     // IMIGRACAO
+@@ -207,34 +207,34 @@
+-      topLeft: "A shared common language and mutual civic values are the bedrock of social cohesion and mutual trust in a successful democracy.",
+-      topCenter: "Provide free, mandatory language and civics classes for all new arrivals so they can integrate quickly into the workforce and community.",
+-      topRight: "If you choose to move here to work and build a life, learning the language and fitting in with local customs makes daily work and neighborhood life easy for everyone.",
+-      midLeft: "Learning the national language is practical for work and civic life, but families should be free to maintain their heritage and cultural traditions at home.",
+-      center: "I don't know / Not sure — knowing the language is essential for jobs, but forcing people to abandon their cultural customs feels wrong.",
+-      midRight: "Politicians push integration slogans, but they don't provide the language classes or support needed for migrants to actually assimilate.",
+-      bottomLeft: "Forcing cultural conformity suppresses rich diverse heritages and alienates migrant communities instead of welcoming their contribution.",
+-      bottomCenter: "The law must protect freedom of cultural expression and cultural diversity, not enforce state-sanctioned lifestyle conformity.",
+-      bottomRight: "Nobody should have their language or cultural heritage dictated by narrow-minded politicians looking to score cheap nationalist points."
++      topLeft: "A shared language and common values build trust and social cohesion in a democracy.",
++      topCenter: "Provide free language and civics classes so new arrivals can integrate into work.",
++      topRight: "Learning the language and local customs makes daily work and neighborhood life easy.",
++      midLeft: "Learning the common language is practical, but families should maintain their heritage at home.",
++      center: "Speaking the common language helps with work, but forcing cultural conformity feels wrong.",
++      midRight: "Politicians demand integration while failing to fund basic English classes for migrants.",
++      bottomLeft: "Forcing cultural conformity erases rich heritages and alienates migrant communities.",
++      bottomCenter: "Laws should protect cultural freedom and diversity, not enforce state-mandated conformity.",
++      bottomRight: "Nobody should have their culture or traditions dictated by politicians scoring nationalist points."
+     },
+     imigracao_02: {
+-      topLeft: "Multilingualism enriches our national culture, deepens global connections, and ensures non-English speakers can access essential services with dignity.",
+-      topCenter: "Fund bilingual translation in hospitals, courts, and emergency communications so vital public services remain accessible to everyone.",
+-      topRight: "Being multilingual gives our children and local businesses massive commercial advantages in international trade and tourism.",
+-      midLeft: "Embracing multiple languages is culturally vibrant, provided there is still a shared common language that unites the country in civic life.",
+-      center: "I don't know / Not sure — multilingual services are helpful in emergencies, but not having a single shared language could divide communities.",
+-      midRight: "Multilingual signage and services sound nice, but government agencies waste huge sums on tokenistic translation rather than teaching people English.",
+-      bottomLeft: "Without a shared common language, society fractures into isolated language enclaves with little communication or mutual trust between groups.",
+-      bottomCenter: "Maintain the national language as the sole standard for official government business, courts, and schooling to safeguard unified national identity.",
+-      bottomRight: "I shouldn't have to navigate public services or street signs in foreign languages in my own hometown; everyone here should speak the common tongue."
++      topLeft: "Multilingual public services ensure non-English speakers can access courts and healthcare with dignity.",
++      topCenter: "Fund translation in hospitals and courts so vital emergency services remain accessible to all.",
++      topRight: "Multilingual skills give our kids and local businesses huge advantages in world trade.",
++      midLeft: "Multilingual services help people in need, provided a shared national language unites civic life.",
++      center: "Translating emergency services is vital, but having no common language could divide communities.",
++      midRight: "Agencies waste millions on token translation rather than helping people learn the common language.",
++      bottomLeft: "Without a common language, society fractures into isolated enclaves with little mutual trust.",
++      bottomCenter: "Maintain one official language for courts, schools, and government to safeguard national unity.",
++      bottomRight: "Public services and signs should be in our common language so everyone can understand."
+     },
+     imigracao_03: {
+-      topLeft: "Rapid population growth strains public infrastructure and dilutes local cultural cohesion; pausing intake allows existing communities to integrate.",
+-      topCenter: "Temporarily cap immigration numbers and tie annual intakes strictly to local housing supply and hospital capacity.",
+-      topRight: "Pausing high migration stops landlords from jacking up rents and protects local working people from having their wages undercut.",
+-      midLeft: "Slowing down intake makes practical sense while housing is in crisis, but completely shutting borders to refugees and skilled workers is unfeasible.",
+-      center: "I don't know / Not sure — current migration levels are straining housing and roads, but completely shutting the door could hurt hospitals and farms.",
+-      midRight: "Politicians blame cultural identity for border issues, but really big corporations lobby for high migration just to suppress domestic wages.",
+-      bottomLeft: "Completely closing borders strangles our universities, deprives healthcare of nurses, and abandons humanitarian commitments to desperate refugees.",
+-      bottomCenter: "A modern economy depends on international talent and dynamic global engagement; shutting borders leads directly to cultural and economic stagnation.",
+-      bottomRight: "Stoking paranoia about foreign cultures is a cynical distraction used by politicians to avoid fixing housing shortages and health funding."
++      topLeft: "Pausing rapid immigration relieves strain on housing, hospitals, and schools.",
++      topCenter: "Cap migration numbers and tie annual intakes directly to housing and hospital capacity.",
++      topRight: "Pausing high migration stops landlords hiking rents and protects wages from being undercut.",
++      midLeft: "Slowing intake makes sense during a housing crisis, though skilled workers are needed.",
++      center: "High migration strains housing, but shutting the border could hurt hospitals and farms.",
++      midRight: "Corporations lobby for high migration simply to keep wages low and rents high.",
++      bottomLeft: "Shutting borders deprives hospitals of nurses and abandons our humanitarian commitments to refugees.",
++      bottomCenter: "Modern economies depend on global talent; closed borders lead to economic stagnation.",
++      bottomRight: "Blaming migrants for housing shortages is a cheap distraction from government underfunding."
+     },
+ 
+     // DIPLOMACIA
+@@ -241,23 +241,23 @@
+-      topLeft: "A credible defense force deters aggressive authoritarian regimes and secures peaceful international shipping lanes for everyone.",
+-      topCenter: "Equip our military with modern defensive capabilities, naval patrol vessels, and domestic cyber defenses.",
+-      topRight: "A strong defense force stops foreign powers from pushing us around and protects our national resources and trade routes.",
+-      midLeft: "Maintaining a competent military is a necessary insurance policy, but true international respect comes from humanitarian aid, trade, and diplomacy.",
+-      center: "I don't know / Not sure — we obviously need to defend our borders, but pouring billions into shiny weapons while hospitals struggle feels wrong.",
+-      midRight: "Defense budgets always blow out, enriching foreign arms contractors without making our everyday communities any safer.",
+-      bottomLeft: "Stockpiling massive offensive arsenals fuels regional arms races, escalates tensions, and diverts billions away from schools and healthcare.",
+-      bottomCenter: "Security is built through multilateral treaties, international law, and regional cooperation, not sabre-rattling.",
+-      bottomRight: "We shouldn't waste our taxes playing deputy sheriff in overseas arms races that only benefit overseas weapons manufacturers."
++      topLeft: "A credible defense force deters aggressive regimes and protects peaceful shipping routes for all.",
++      topCenter: "Equip defense forces with modern patrol vessels, air defense, and cyber security.",
++      topRight: "A strong defense stops foreign bullies pushing us around and protects our trade.",
++      midLeft: "A capable military is necessary insurance, but diplomacy and aid build lasting security.",
++      center: "We must defend our borders, but pouring billions into weapons while hospitals struggle hurts.",
++      midRight: "Bloated defense budgets enrich foreign arms makers without making our towns any safer.",
++      bottomLeft: "Stockpiling offensive weapons fuels regional arms races and diverts cash from schools.",
++      bottomCenter: "True security is built through multilateral treaties and regional cooperation, not sabre-rattling.",
++      bottomRight: "We shouldn't waste tax dollars on foreign weapons that drag us into overseas conflicts."
+     },
+     diplomacia_02: {
+-      topLeft: "War brings catastrophic human devastation; every single diplomatic avenue must be exhausted to protect human life and regional stability.",
+-      topCenter: "Engage multilateral diplomats, independent mediators, and targeted diplomatic pressure to resolve conflicts before considering military force.",
+-      topRight: "Exhausting diplomacy stops our sons and daughters in uniform from being sent to die in unnecessary overseas quagmires.",
+-      midLeft: "Diplomacy should always be the default approach, but negotiations must be backed by credible resolve if the other side acts in bad faith.",
+-      center: "I don't know / Not sure — diplomacy should be tried first, but when facing a ruthless dictator, endless talking can just buy them time to attack.",
+-      midRight: "Endless diplomatic summits are mostly photo-ops for politicians while hostile forces prepare on the ground anyway.",
+-      bottomLeft: "Hesitating and negotiating endlessly with aggressive invaders gives them time to build military footholds and commit mass atrocities.",
+-      bottomCenter: "Credible military readiness and rapid counter-action are essential; an enemy preparing a strike won't be stopped by polite diplomatic letters.",
+-      bottomRight: "Naive appeasement only emboldens hostile regimes; standing down our defenses leaves our nation vulnerable to economic and military extortion."
++      topLeft: "War brings devastation; every diplomatic avenue must be exhausted to protect human life.",
++      topCenter: "Use multilateral mediators and diplomatic sanctions to resolve disputes before considering military force.",
++      topRight: "Exhausting diplomacy keeps our troops safe from dying in unnecessary foreign quagmires.",
++      midLeft: "Diplomacy must come first, but talks need credible strength if the opponent acts maliciously.",
++      center: "Diplomacy should be tried first, but ruthless dictators often use talks to buy time.",
++      midRight: "Diplomatic summits are mostly photo-ops for politicians while hostile troops mobilize anyway.",
++      bottomLeft: "Endless negotiation with aggressive invaders gives them time to entrench and commit atrocities.",
++      bottomCenter: "Military readiness is essential; an invading force won't be stopped by polite diplomatic letters.",
++      bottomRight: "Appeasement only emboldens hostile regimes; dropping our guard leaves our country vulnerable."
+     },
+     diplomacia_03: {
+       topLeft: "Neutralizing a confirmed imminent attack before missiles or forces launch protects millions of innocent civilian lives from catastrophic destruction.",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

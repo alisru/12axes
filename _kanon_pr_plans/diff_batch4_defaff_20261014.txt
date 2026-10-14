@@ -1,0 +1,194 @@
+The following changes were made by the replace_file_content tool to: e:\Vector Field Theory\12axes\frontend\src\data\hegemonicScenarios.ts. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -381,37 +381,37 @@
+ 
+     // RELIGIAO
+     religiao_01: {
+-      topLeft: "A secular state guarantees that citizens of all faiths and backgrounds are treated equally under the law without religious favoritism.",
+-      topCenter: "Enact strict separation of church and state so public policy, healthcare, and education are decided purely by evidence and civic need.",
+-      topRight: "Religious dogmas shouldn't dictate how I live my life, what medical care I receive, or how my family chooses to live.",
+-      midLeft: "Faith communities do great charitable work, but their private beliefs shouldn't be imposed as universal law on everyone else.",
+-      center: "I don't know / Not sure — keeping religion out of government makes sense, but many people's deepest moral values come from their faith.",
+-      midRight: "Politicians and lobbyists only trot out religious talk to divide voters and dodge real questions about public services and cost of living.",
+-      bottomLeft: "Erasing religious principles from public life discards centuries of moral wisdom on charity, human dignity, and care for the vulnerable.",
+-      bottomCenter: "Preserve our constitutional traditions and legal heritage, which were built on shared moral values, without discriminating against minorities.",
+-      bottomRight: "Aggressive secularism is just trying to push traditional believers out of the public square and silence people who hold deep moral convictions."
++      topLeft: "A secular state treats citizens of all faiths and backgrounds equally under the law.",
++      topCenter: "Separate church and state so laws, healthcare, and education are based on evidence.",
++      topRight: "Religious dogmas shouldn't dictate how I live, what healthcare I get, or my choices.",
++      midLeft: "Religions do charitable work, but their private beliefs shouldn't be imposed as law on everyone.",
++      center: "Keeping government secular makes sense, but many people's core morals stem from faith.",
++      midRight: "Politicians just use religion to divide people and dodge questions on cost of living.",
++      bottomLeft: "Removing religious ethics discards centuries of wisdom on charity, dignity, and caring for others.",
++      bottomCenter: "Preserve our legal heritage and shared moral traditions without discriminating against any minority.",
++      bottomRight: "Aggressive secularism pushes traditional believers out of public life and silences their convictions."
+     },
+     religiao_02: {
+-      topLeft: "When public leaders are guided by deep spiritual morality, they govern with genuine humility, compassion, and concern for the weak.",
+-      topCenter: "Encourage faith-based charities, community groups, and moral leaders to take an active role in shaping social programs and public welfare.",
+-      topRight: "My religious faith gives me an unshakeable moral compass to protect my family and community from corruption and moral decay.",
+-      midLeft: "Personal faith is a great foundation for personal integrity, provided leaders still govern fairly for people of all beliefs.",
+-      center: "I don't know / Not sure — faith inspires people to do good, but using religion to decide politics often leads to conflict.",
+-      midRight: "Too many politicians wrap themselves in religion just to look righteous while voting against the interests of working people.",
+-      bottomLeft: "Using religious doctrine to dictate public policy creates sectarian division, intolerance, and exclusion in a diverse society.",
+-      bottomCenter: "Democratic governance must be based on universal human rights, scientific evidence, and secular law, not religious dogma.",
+-      bottomRight: "I don't want religious zealots or church hierarchies telling me how to vote, how to raise my kids, or how to live my life."
++      topLeft: "Spiritual morality encourages leaders to govern with humility, compassion, and care for the weak.",
++      topCenter: "Support faith-based charities and community groups taking an active role in social welfare.",
++      topRight: "Personal faith gives me a clear moral compass to protect my family and community.",
++      midLeft: "Faith builds personal integrity, provided leaders still govern fairly for people of all beliefs.",
++      center: "Faith inspires people to do good, but using religion in politics causes conflict.",
++      midRight: "Too many politicians wrap themselves in religion while voting against working people.",
++      bottomLeft: "Using religious doctrine to dictate public policy creates sectarian division and intolerance.",
++      bottomCenter: "Democratic governance must rest on human rights, evidence, and secular law, not dogma.",
++      bottomRight: "Religious zealots shouldn't tell me how to vote, raise my kids, or live."
+     },
+     religiao_03: {
+-      topLeft: "Laws must protect every citizen equally, ensuring that no single religious group can use state power to dominate others.",
+-      topCenter: "Draft legislation and judicial standards solely on secular human rights, constitutional principles, and objective public benefit.",
+-      topRight: "Neutral laws protect my freedom of conscience so nobody else can force their dietary, cultural, or religious rules on my household.",
+-      midLeft: "Religious traditions helped shape our basic concepts of justice, but statutory laws today need to be neutral for everyone.",
+-      center: "I don't know / Not sure — laws should be fair to all, but whether any law can ever be completely neutral on moral questions is debatable.",
+-      midRight: "Claiming laws are neutral is usually an excuse for corporate and bureaucratic elites to replace traditional ethics with whatever suits their interests.",
+-      bottomLeft: "Pretending laws are value-neutral erodes the moral duties we owe each other, reducing society to cold legal contracts and commercial transactions.",
+-      bottomCenter: "Respect our common law foundations, which developed out of Christian traditions of justice and individual accountability, while protecting civil liberties.",
+-      bottomRight: "Neutral laws often end up trampling on religious freedoms, forcing faith-based schools, hospitals, and charities to violate their own beliefs."
++      topLeft: "Neutral laws ensure no single religious group can use government power to dominate others.",
++      topCenter: "Base legislation solely on secular human rights, constitutional principles, and objective public benefit.",
++      topRight: "Neutral laws protect my freedom of conscience from having other people's religious rules forced on me.",
++      midLeft: "Religions helped shape ideas of justice, but statutory laws must be neutral for everyone.",
++      center: "Laws should be fair to all, but whether any law is completely value-neutral is debatable.",
++      midRight: "Claiming laws are neutral is usually an excuse for corporate elites to push their interests.",
++      bottomLeft: "Pretending laws are value-neutral erodes moral duties, reducing society to cold commercial transactions.",
++      bottomCenter: "Respect common law foundations developed from Christian traditions of justice and individual accountability.",
++      bottomRight: "Neutral laws often trample religious freedoms, forcing faith-based charities to violate their beliefs."
+     },
+ 
+     // MORAL
+@@ -418,34 +418,34 @@
+-      topLeft: "Every child in foster care deserves a loving, stable home; giving loving same-sex couples equal adoption rights gives more kids a chance at a great life.",
+-      topCenter: "Update adoption regulations and screening processes to evaluate prospective parents strictly on safety, love, and stability, regardless of sexual orientation.",
+-      topRight: "Loving couples have an equal right to build a family through adoption without facing discrimination from the government.",
+-      midLeft: "What matters most is a safe and supportive home, though adoption services must always keep the child's individual needs as the top priority.",
+-      center: "I don't know / Not sure — providing loving homes for orphans is essential, but people hold strong views about the traditional family structure.",
+-      midRight: "Adoption agencies should focus purely on the welfare of vulnerable kids rather than getting caught up in cultural culture wars.",
+-      bottomLeft: "Children have a natural right and developmental need for both a mother and a father; adoption policy should preserve this balance wherever possible.",
+-      bottomCenter: "Preserve the traditional family model in family law and adoption policy as the proven historical foundation for raising children.",
+-      bottomRight: "Forcing faith-based adoption agencies to violate their religious tenets or shut down deprives vulnerable children of experienced care."
++      topLeft: "Every foster child deserves a loving home; equal adoption rights gives more kids a family.",
++      topCenter: "Screen prospective adoptive parents strictly on safety, stability, and love, regardless of orientation.",
++      topRight: "Loving couples have every right to build a family through adoption without government discrimination.",
++      midLeft: "A safe, supportive home matters most, with the child's individual welfare as top priority.",
++      center: "Providing loving homes for orphans is essential, but people hold strong traditional views.",
++      midRight: "Adoption agencies should focus purely on child welfare instead of culture war politics.",
++      bottomLeft: "Children have a developmental need for both a mother and father; adoption should reflect this.",
++      bottomCenter: "Preserve the traditional family model in adoption law as the proven foundation for children.",
++      bottomRight: "Forcing faith-based adoption agencies to violate religious tenets deprives vulnerable kids of care."
+     },
+     moral_02: {
+-      topLeft: "Strong, stable two-parent families provide the most resilient environment for raising happy, healthy children and building a stable society.",
+-      topCenter: "Provide targeted family tax benefits, parental leave, and marriage support programs to help couples stay together and raise children.",
+-      topRight: "Preserving traditional family values gives my kids stability, moral boundaries, and strong roots to rely on throughout life.",
+-      midLeft: "A stable two-parent household is a wonderful ideal, provided we don't look down on or penalize single parents doing their absolute best.",
+-      center: "I don't know / Not sure — strong families are the bedrock of any community, but families come in all shapes and sizes today.",
+-      midRight: "Politicians lecture working people about family values while passing economic policies that make housing and childcare completely unaffordable.",
+-      bottomLeft: "Insisting on a rigid traditional family model alienates single parents, foster carers, and blended families who do incredible work raising kids.",
+-      bottomCenter: "Support all families through equal access to healthcare, education, and childcare, without judging family structures.",
+-      bottomRight: "Governments and moralizers have no business telling people what their households should look like or meddling in private family lives."
++      topLeft: "Stable two-parent families provide the most resilient environment for raising healthy children.",
++      topCenter: "Provide family tax benefits and parental leave to help couples stay together and raise children.",
++      topRight: "Traditional family values give my kids stability, moral boundaries, and strong roots in life.",
++      midLeft: "Two-parent homes are a great ideal, provided we don't penalize single parents doing their best.",
++      center: "Strong families are the bedrock of community, but families come in many shapes today.",
++      midRight: "Politicians lecture about family values while passing policies that make housing and childcare unaffordable.",
++      bottomLeft: "Insisting on a rigid family model alienates single parents and carers who do incredible work.",
++      bottomCenter: "Support all families through equal access to healthcare, education, and childcare without moral judgment.",
++      bottomRight: "Governments and moralizers have no business telling people what their private households should look like."
+     },
+     moral_03: {
+-      topLeft: "Treating every person with basic human dignity and accepting who they are creates a kinder, safer, and more inclusive community for all.",
+-      topCenter: "Update identification documents, anti-discrimination laws, and public facilities to respect individuals' declared gender identity.",
+-      topRight: "People should be free to live their authentic lives without being harassed, bullied, or denied everyday services by strangers.",
+-      midLeft: "Everyone deserves courtesy and respect in daily life, though balancing this with fair competition in sports and privacy requires care.",
+-      center: "I don't know / Not sure — treating people with respect is basic decency, but there are complex debates around sports categories and young people.",
+-      midRight: "Corporate HR departments and politicians push performative identity campaigns to look progressive while ignoring wages and job security.",
+-      bottomLeft: "Ignoring biological sex undermines hard-won protections for women's sports, female-only spaces, and evidence-based medicine.",
+-      bottomCenter: "Base public records, athletic categories, and medical regulations on biological sex, while ensuring legal protections against unjust discrimination.",
+-      bottomRight: "Nobody should be threatened with fines or losing their job by bureaucratic speech codes just for stating biological facts."
++      topLeft: "Treating every person with basic dignity and accepting who they are creates a safer community.",
++      topCenter: "Update identification documents and public facilities to respect each person's declared gender identity.",
++      topRight: "People should live their authentic lives without being harassed, bullied, or denied everyday services.",
++      midLeft: "Everyone deserves everyday courtesy, though balancing privacy and fair sporting competition requires care.",
++      center: "Respecting people is basic decency, but there are complex debates around sports and youth.",
++      midRight: "Corporate HR and politicians push performative identity campaigns while ignoring real wages and jobs.",
++      bottomLeft: "Ignoring biological sex undermines protections for women's sports, female-only spaces, and medical safeguards.",
++      bottomCenter: "Base records, athletics, and medicine on biological sex while protecting people from unjust discrimination.",
++      bottomRight: "Nobody should face fines or job losses under bureaucratic speech codes for stating biological facts."
+     },
+ 
+     // TECNOLOGIA
+@@ -452,34 +452,34 @@
+-      topLeft: "Technological breakthroughs and industrial capabilities are what cure diseases, lift people out of poverty, and solve global challenges like clean energy.",
+-      topCenter: "Invest heavily in national research facilities, advanced manufacturing, and engineering training to drive rapid technological progress.",
+-      topRight: "Building high-tech industries creates high-paying trade and engineering jobs for our kids, keeping our local economy competitive.",
+-      midLeft: "Innovation drives human progress, but we need guardrails so fast development doesn't destroy natural ecosystems or local communities.",
+-      center: "I don't know / Not sure — technological advancement has made life much easier, but unchecked industrial growth creates serious pollution and stress.",
+-      midRight: "Tech hype usually promises a futuristic paradise, but mostly delivers apps that track our data and gadgets designed to break in two years.",
+-      bottomLeft: "Obsessive industrial expansion exploits finite natural resources, pollutes water and air, and accelerates catastrophic climate destruction.",
+-      bottomCenter: "Balance technological investment with strict environmental protection, preserving our natural heritage and biodiversity for future generations.",
+-      bottomRight: "Mega-industrial projects usually tear up rural communities and pollute local waterways while multinational corporations ship all the profits overseas."
++      topLeft: "Technological breakthroughs cure diseases, lift living standards, and solve clean energy challenges.",
++      topCenter: "Invest heavily in national research facilities and advanced manufacturing to drive technological progress.",
++      topRight: "Building high-tech industries creates high-paying trade and engineering jobs for our kids.",
++      midLeft: "Innovation drives progress, but guardrails are needed so rapid growth doesn't wreck ecosystems.",
++      center: "Technology makes life easier, but unchecked industrial expansion causes serious pollution and stress.",
++      midRight: "Tech hype promises a futuristic paradise, but mostly delivers data-tracking apps and disposable gadgets.",
++      bottomLeft: "Obsessive industrial growth exploits finite resources, pollutes water, and accelerates catastrophic climate destruction.",
++      bottomCenter: "Balance industrial investment with strict environmental protection, preserving our natural heritage for the future.",
++      bottomRight: "Mega-industrial projects tear up rural communities and pollute waterways while corporations ship profits overseas."
+     },
+     tecnologia_02: {
+-      topLeft: "A lifestyle grounded in nature, physical activity, and close community promotes genuine mental wellbeing and ecological harmony for society.",
+-      topCenter: "Encourage regenerative local farming, outdoor recreation, and screen-free community spaces to reconnect people with the natural world.",
+-      topRight: "Stepping off the digital treadmill to live simply and spend time outdoors gives me and my family real peace of mind and health.",
+-      midLeft: "Spending more time in nature is great for everyone's health, though modern medicine and communication are still lifesavers.",
+-      center: "I don't know / Not sure — slowing down and getting away from screens sounds wonderful, but modern amenities make daily life so much easier.",
+-      midRight: "Romanticizing off-grid living is an expensive luxury for wealthy influencers who don't have to worry about earning a real living.",
+-      bottomLeft: "Abandoning technological development would reverse modern sanitation, disease prevention, and agricultural yields, causing mass hardship.",
+-      bottomCenter: "Rely on modern infrastructure, high-tech power grids, and advanced logistics to maintain the living standards and security of the entire population.",
+-      bottomRight: "Anti-tech nostalgia ignores the fact that working families rely on modern tools, affordable electricity, and vehicles just to make ends meet."
++      topLeft: "Living close to nature, physical activity, and community fosters genuine mental health and balance.",
++      topCenter: "Encourage local farming, outdoor recreation, and screen-free community spaces to reconnect with nature.",
++      topRight: "Stepping off the digital treadmill gives me and my family real peace of mind and health.",
++      midLeft: "Spending time in nature is great for health, though modern medicine remains a lifesaver.",
++      center: "Getting away from screens sounds wonderful, but modern amenities make daily life much easier.",
++      midRight: "Romanticizing off-grid living is an expensive luxury for wealthy influencers who don't work real jobs.",
++      bottomLeft: "Abandoning technology would reverse modern sanitation, disease prevention, and agriculture, causing mass poverty.",
++      bottomCenter: "Modern infrastructure, high-tech power grids, and logistics are essential to maintain our living standards.",
++      bottomRight: "Anti-tech nostalgia ignores that working families rely on modern tools and power to survive."
+     },
+     tecnologia_03: {
+-      topLeft: "Automating dangerous, dull, and repetitive labor increases national productivity, lowers costs for essentials, and frees people to do meaningful creative work.",
+-      topCenter: "Accelerate automation in manufacturing and logistics while funding worker retraining and sharing productivity dividends through public services.",
+-      topRight: "Adopting AI tools and smart machinery lets our local businesses work faster, stay competitive, and cut down on tedious busywork.",
+-      midLeft: "AI and automation can do wonders for productivity, provided displaced workers are given genuine support rather than tossed aside.",
+-      center: "I don't know / Not sure — previous technology created more jobs than it replaced, but AI is advancing so fast that it's hard to predict the impact.",
+-      midRight: "Corporate executives don't care about human progress; they are rushing to deploy AI simply to slash payrolls and pump their stock options.",
+-      bottomLeft: "Mass automation threatens to destroy middle-class careers, gut local economies, and concentrate obscene wealth in the hands of a few tech monopolies.",
+-      bottomCenter: "Regulate AI and automation deployment with strict labor protections, transition timelines, and licensing safeguards to preserve social stability.",
+-      bottomRight: "Working people shouldn't have their livelihoods stolen by algorithms so tech billionaires can get even richer while leaving the rest of us with nothing."
++      topLeft: "Automating dangerous and dull labor boosts productivity, lowers living costs, and frees creative work.",
++      topCenter: "Accelerate automation in manufacturing while funding worker retraining and sharing productivity dividends.",
++      topRight: "Smart tools and AI help local businesses work faster, stay competitive, and cut tedious busywork.",
++      midLeft: "Automation boosts productivity, provided displaced workers receive genuine retraining rather than being abandoned.",
++      center: "Technology creates new industries, but AI is advancing so fast that job impacts are hard to predict.",
++      midRight: "Corporate executives deploy AI simply to slash payrolls and pump their own stock bonuses.",
++      bottomLeft: "Mass automation destroys middle-class careers, guts local towns, and concentrates wealth in tech monopolies.",
++      bottomCenter: "Regulate automation with strict labor protections and transition timelines to preserve social stability.",
++      bottomRight: "Workers shouldn't have livelihoods stolen by algorithms so tech billionaires get richer while we get nothing."
+     }
+   },
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
