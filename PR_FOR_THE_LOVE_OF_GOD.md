@@ -54,9 +54,34 @@ TOTAL                 |      16      21     194       9 |   240 100.0%
 
 ---
 
+## The Author's Monumental Achievements & The Documented Audit Flaws
+
+Before diving into the solution, it is vital to be completely honest about the history of this codebase:
+
+### 1. RomanCypherpunk's Monumental Achievement
+The creator of `12axes` accomplished something extraordinary: building a 12-axis taxonomy encompassing **261 ideologies**, **100+ historical and contemporary personalities**, and **dozens of global nations and regimes**, complete with custom artwork, flags, and bilingual support. It stands as one of the most comprehensive open-source political classification databases on the internet.
+
+### 2. The Flaws Discovered in the Initial Auditing Process (`profile-audit/README.md`)
+However, as the author methodically audited the catalog with AI subagents, they documented the inherent failure modes of flat prompt-based profiling:
+- **Excess of Neutrals (36%+)**: LLM agents took the easy way out, assigning `Neutral` (0.50) to dozens of questions whenever a thinker didn't explicitly address a modern topic, turning fierce radicals into artificial centrists.
+- **Profile Duplication (90–97% Overlap)**: Subagents regurgitated generic tropes, making *Revolutionary Syndicalism* only 63% compatible with its founder Georges Sorel, while *Aristocratism* came out 96.8% identical to modern Brazilian Integralism because the prompt used anachronistic "national identity" keywords.
+- **False Opposites**: When a thinker rejected one extreme, models assumed they endorsed the opposite. Nietzsche (who despised both socialism and bourgeois shopkeeper capitalism) was forced into a Chicago-school free-market box (20/22.5 economy), while Ferdinand Lassalle (an anti-state socialist agitator) was coded as a totalitarian police state (66.2 power).
+- **Normalization of Heterodox Figures**: Models dragged unique thinkers into generic modern partisan boxes (turning Sorel into a left-anarchist and Nietzsche into a pacifist).
+- **Rhetoric vs. Actuality**: LLMs answered normative questions based on constitutional aspirations rather than material governance, giving corrupt authoritarian regimes 55–90% Democracy scores.
+
+These weren't isolated glitches—they were the predictable result of trying to represent multi-dimensional human consciousness and historical reality using flat, unanchored 1D numbers.
+
+---
+
 ## What This PR Delivers (Out of the Box)
 
-### Part A: The Interactive 9-Cell Hegemonic Grid Quiz Interface
+### Part A: The Interactive 9-Cell Hegemonic Grid (Proof of Concept)
+
+> [!IMPORTANT]
+> **STRICT PROOF OF CONCEPT (PoC) STATUS**:
+> The 9-cell grid quiz answering system introduced here is strictly a **Proof of Concept (PoC)**. It demonstrates the technical architecture: the 2-axis polar coordinate geometry, 0% side-bleed mathematical model, single dynamic human sentence telemetry, and responsive zero-scroll-trap flow.
+>
+> However, just as the original author faced severe agent limitations during archetype audits, **our current scenario text remains an unfinished prototype**. Without persistent grounding in the underlying action potential dynamics, LLM agents inevitably drift back into generic policy summaries that cause false positives.
 
 ```text
                + AGREE (Action ψ = +1 to +2)
