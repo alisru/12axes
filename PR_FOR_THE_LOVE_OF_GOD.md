@@ -105,6 +105,69 @@ FOR EVERYONE         │         FOR SELF / GROUP
 
 ---
 
+### Important Status: The Grid Scenarios are Unfinished Due to Agent Limitations
+
+> [!WARNING]
+> **The current scenario text in `hegemonicScenarios.ts` is explicitly UNFINISHED.**
+> While the interactive UI, polar geometry, and defaffed language are live and operational, the scenario answer text was constrained by LLM agent limitations during generation. Standard LLM agents suffer from semantic drift—falling back into generic policy summaries and academic compromises rather than anchoring each option in its true epistemic transformation lens.
+
+#### Why Generic 0–5 Likert Scales Yield False Positives
+Generic 0–5 scales ("Strongly Agree" to "Strongly Disagree") evaluate surface keywords rather than deep structural intent. For example:
+- A respondent who agrees with domestic industrial tariffs to prevent national collapse in wartime gets the exact same score as a respondent who agrees with tariffs to protect their brother's steel monopoly from foreign competition.
+- A respondent who opposes public healthcare out of fear of bureaucratic medical rationing gets lumped into the same category as a respondent who opposes it to maximize private health insurance dividends.
+
+This keyword-matching collapse generates massive **false positives** across political quadrants, causing diametrically opposed ideologies to land on identical coordinates.
+
+#### The Intended Ontological Architecture: The 4 Modal Epistemic Lenses
+To permanently eliminate false positives, the scenarios are designed to be generated through the **Geometry of Definitions**, which maps how any central state of being (`IS`) transforms across four modal corners:
+
+```text
+               SOLUTION                                  PROBLEM
+              [ will be ]                              [ can't be ]
+                   ▲                                        ▲
+       Active      │                                        │      Active
+     Inclusive     │                                        │     Exclusive
+                   │                                        │
+           PRODUCTIVE PROCESS                       REDUCTIVE PROCESS
+   using: "is not" & "is like"              using: "was like" & "can be"
+   opposing: "was like"                     opposing: "it's like"
+   UNTIL: "IT CAN BE"                       UNTIL: "IT'S NOT"
+                   │                                        │
+                   └─────────────────┬──────────────────────┘
+                                     │
+                                 [  IS  ]
+                                     │
+                   ┌─────────────────┴──────────────────────┐
+                   │                                        │
+          CONSTRUCTIVE PROCESS                      REGRESSIVE PROCESS
+   using: "can be" & "was like"             using: "it's not" & "it's like"
+   UNTIL: "IT IS LIKE"                      opposing: "can be"
+                   │                        UNTIL: "IT WAS LIKE"
+                   │                                        │
+  Counteractive    │                                        │   Counteractive
+    Inclusive      ▼                                        ▼     Exclusive
+              [ may be ]                               [ won't be ]
+```
+
+The four operational transformation laws governing these lenses:
+
+1. **`can't be` (Top-Right / Problem / Reductive / Active-Exclusive)**:
+   > *"If you want to define IS as something that **can't be**, you must go through a **reductive** process using what it **was like** and **can be**, opposing what it's like until **it's not**."*
+   - Maps to **Agree for Self / Group** ($\upsilon = -1, \psi = +1$): Demanding active carve-outs, deregulation, or immediate personal advantage by reducing universal claims to their practical exceptions.
+2. **`will be` (Top-Left / Solution / Productive / Active-Inclusive)**:
+   > *"If you want to define IS as something that **will be**, you must go through a **productive** process using what **is not** and **is like**, opposing what it was like until **it can be**."*
+   - Maps to **Agree for Everyone / Systemic Justice** ($\upsilon = +1, \psi = +1$ to $+2$): Building positive systemic institutions for the universal common good.
+3. **`may be` (Bottom-Left / Constructive / Counteractive-Inclusive)**:
+   > *"If you want to define IS as something that **may be**, you must go through a **constructive** process using what it **can be** and **was like** until it **is like**."*
+   - Maps to **Disagree for Everyone / Protective Preservation** ($\upsilon = +1, \psi = -1$): Cautious, protective defense of society, preventing reckless disruption.
+4. **`won't be` (Bottom-Right / Regressive / Counteractive-Exclusive)**:
+   > *"If you want to define IS as something that **wont be**, you must go through a **regressive** process using what **it's not** and what **it's like** to oppose what it **can be** until it **was like**."*
+   - Maps to **Disagree for Self / Group** ($\upsilon = -1, \psi = -1$): Active resistance against perceived systemic overreach, refusing to be exploited or burdened.
+
+Until all 39 questions are fully re-authored through these strict transformation formulas without agent drift, the scenario text remains a working preview. The underlying coordinate math and UI interaction, however, are fully functional.
+
+---
+
 ### Part B: The 7×4 Survival Matrix & Psochic Hegemony Engine
 
 Executable Python diagnostic engine ([`profile-audit/kanon_survival_engine.py`](profile-audit/kanon_survival_engine.py)) with zero external dependencies:
