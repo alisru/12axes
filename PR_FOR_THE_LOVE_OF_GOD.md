@@ -118,8 +118,8 @@ Generic 0–5 scales ("Strongly Agree" to "Strongly Disagree") evaluate surface 
 
 This keyword-matching collapse generates massive **false positives** across political quadrants, causing diametrically opposed ideologies to land on identical coordinates.
 
-#### The Intended Ontological Architecture: The 4 Modal Epistemic Lenses
-To permanently eliminate false positives, the scenarios are designed to be generated through the **Geometry of Definitions**, which maps how any central state of being (`IS`) transforms across four modal corners:
+#### The Intended Ontological Architecture: Action Potential Dynamics Driving the Psochic Hegemony Filter
+To permanently eliminate false positives, the scenarios are designed to be generated through the **Geometry of Definitions & Parables Action Potential Dynamics**, which directly drives the **Psochic Hegemony ($H\bar{e}gemonikon$)** matrix:
 
 ```text
                SOLUTION                                  PROBLEM
@@ -149,22 +149,27 @@ To permanently eliminate false positives, the scenarios are designed to be gener
               [ may be ]                               [ won't be ]
 ```
 
-The four operational transformation laws governing these lenses:
+#### How Action Potential Dynamics Directs the Answer Filter
+The four modal transformation processes in the Parables diagram are not abstract philosophy; they represent the **exact operational kinetic energy of human conviction**. Each quadrant acts as a generative filter directing the specific psychological mechanism of the answer:
 
-1. **`can't be` (Top-Right / Problem / Reductive / Active-Exclusive)**:
-   > *"If you want to define IS as something that **can't be**, you must go through a **reductive** process using what it **was like** and **can be**, opposing what it's like until **it's not**."*
-   - Maps to **Agree for Self / Group** ($\upsilon = -1, \psi = +1$): Demanding active carve-outs, deregulation, or immediate personal advantage by reducing universal claims to their practical exceptions.
-2. **`will be` (Top-Left / Solution / Productive / Active-Inclusive)**:
-   > *"If you want to define IS as something that **will be**, you must go through a **productive** process using what **is not** and **is like**, opposing what it was like until **it can be**."*
-   - Maps to **Agree for Everyone / Systemic Justice** ($\upsilon = +1, \psi = +1$ to $+2$): Building positive systemic institutions for the universal common good.
-3. **`may be` (Bottom-Left / Constructive / Counteractive-Inclusive)**:
-   > *"If you want to define IS as something that **may be**, you must go through a **constructive** process using what it **can be** and **was like** until it **is like**."*
-   - Maps to **Disagree for Everyone / Protective Preservation** ($\upsilon = +1, \psi = -1$): Cautious, protective defense of society, preventing reckless disruption.
-4. **`won't be` (Bottom-Right / Regressive / Counteractive-Exclusive)**:
-   > *"If you want to define IS as something that **wont be**, you must go through a **regressive** process using what **it's not** and what **it's like** to oppose what it **can be** until it **was like**."*
-   - Maps to **Disagree for Self / Group** ($\upsilon = -1, \psi = -1$): Active resistance against perceived systemic overreach, refusing to be exploited or burdened.
+1. **Productive Quadrant (`will be` $\to +1\upsilon, +1\psi$ Greater Good / The Good Truth)**:
+   - **Dynamics**: Active-Inclusive. Defines `IS` by taking what *is not* and *is like*, actively opposing what it *was like*, until *it can be*.
+   - **Filter for Answers**: Generates answers grounded in **Productive Systemic Justice** (`"For You, Me and Everyone"`). Answers test willingness to actively build universal institutions, guarantee fair goes, and sacrifice narrow privilege for collective progress.
+2. **Reductive Quadrant (`can't be` $\to -1\upsilon, +1\psi$ Lesser Evil / The Bad Lie)**:
+   - **Dynamics**: Active-Exclusive. Defines `IS` by taking what it *was like* and *can be*, actively reducing what *it's like*, until *it's not*.
+   - **Filter for Answers**: Generates answers grounded in **Tactical Exemption & Self-Advancement** (`"Me and You, but Really for Me"`). Answers test the instinct to deregulate, privatize, or carve out immediate practical gains for one's own business, group, or household by reducing universal rules to their practical flaws.
+3. **Constructive Quadrant (`may be` $\to +1\upsilon, -1\psi$ Lesser Good / The Good Lie)**:
+   - **Dynamics**: Counteractive-Inclusive. Defines `IS` by taking what it *can be* and *was like*, cautiously stabilizing until *it is like*.
+   - **Filter for Answers**: Generates answers grounded in **Protective Preservation** (`"For You, but Only for Me"` / Protective caution). Answers test the instinct to shield the community from disruption, preserve tested legal traditions, and avoid catastrophic unintended consequences.
+4. **Regressive Quadrant (`won't be` $\to -1\upsilon, -1\psi$ Greater Evil / The Bad Truth)**:
+   - **Dynamics**: Counteractive-Exclusive. Defines `IS` by taking what *it's not* and *it's like*, opposing what it *can be*, until *it was like*.
+   - **Filter for Answers**: Generates answers grounded in **Defensive Grievance & Anti-Extraction** (`"For Me, only Me, and you take what I don't need"`). Answers test the refusal to be exploited, carry someone else's tax burden, or surrender hard-earned resources to unaccountable institutions.
 
-Until all 39 questions are fully re-authored through these strict transformation formulas without agent drift, the scenario text remains a working preview. The underlying coordinate math and UI interaction, however, are fully functional.
+#### The 0.5 Perceptual Inversion & Confusion Zone
+At the center $(0\upsilon, 0\psi)$ lies the **Confusion Zone** (*No-One / Do Nothing*), which must remain strictly neutral and stance-free.
+Crucially, near the self-end of the spectrum (the $\pm 0.5$ threshold), **the ego inverts perception**: extraction feels like strength, cruelty feels like protection, and mutual aid feels like theft.
+
+When standard LLM agents author quiz options without this dynamical filter, they routinely fall victim to perceptual inversion—confusing corporate extraction for liberty, or state overreach for protection. Re-filtering all 39 questions through these four action potential dynamics is the final prerequisite to eliminate false positives completely.
 
 ---
 
