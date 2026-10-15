@@ -177,13 +177,14 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.55;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 #root {
   position: relative;
   z-index: 1;
   min-height: 100dvh;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4,

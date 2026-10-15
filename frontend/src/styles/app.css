@@ -4094,12 +4094,12 @@
 .app-shell[data-screen="quiz"] .question-card {
   flex: 0 1 auto;
   min-height: 0;
-  max-height: 100%;
+  max-height: none;
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 2vh, 20px);
   padding: clamp(20px, 3vw, 30px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .app-shell[data-screen="quiz"] .question-card-header {
@@ -4186,8 +4186,8 @@
 }
 
 .app-shell[data-screen="quiz"] .question-card {
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow-y: visible;
+  overscroll-behavior: auto;
   scrollbar-gutter: auto;
 }
 
@@ -8969,12 +8969,12 @@
 .app-shell[data-screen="quiz"] .question-card {
   flex: 0 1 auto;
   min-height: 0;
-  max-height: 100%;
+  max-height: none;
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 2vh, 20px);
   padding: clamp(20px, 3vw, 30px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .app-shell[data-screen="quiz"] .question-card-header {
@@ -9061,8 +9061,8 @@
 }
 
 .app-shell[data-screen="quiz"] .question-card {
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow-y: visible;
+  overscroll-behavior: auto;
   scrollbar-gutter: auto;
 }
 
@@ -11660,7 +11660,7 @@
   .app-shell[data-screen="quiz"] .progress-header{padding:12px 14px;gap:8px;border-radius:18px}
   .app-shell[data-screen="quiz"] .progress-header .eyebrow{font-size:.7rem;padding:5px 10px}
   .app-shell[data-screen="quiz"] .progress-header strong{font-size:.82rem}
-  .app-shell[data-screen="quiz"] .question-card{gap:14px;padding:20px 18px;overflow-y:auto;border-radius:22px}
+  .app-shell[data-screen="quiz"] .question-card{gap:14px;padding:20px 18px;overflow-y:visible;border-radius:22px}
   .app-shell[data-screen="quiz"] .question-card-header{gap:10px}
   .app-shell[data-screen="quiz"] .question-axis{font-size:.7rem;padding:6px 10px}
   .app-shell[data-screen="quiz"] .question-card h2{font-size:clamp(1.15rem,5.2vw,1.45rem);line-height:1.22}

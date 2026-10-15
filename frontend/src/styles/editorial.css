@@ -3,8 +3,8 @@
 .ed{--wrap:1200px;--r-lg:28px;--r-md:20px;--linha-escura:#2C4A3F;--cat:var(--i-anarquismo);--cat-bg:var(--i-anarquismo-bg)}
 .ed h1,.ed h2,.ed h3,.ed h4{color:inherit;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
-/* O app.css antigo trava a altura/rolagem do .app-shell por tela; nas telas editoriais a página rola normalmente e o cabeçalho fica fixo. */
-.app-shell:is([data-screen="home"],[data-screen="variant"],[data-screen="results"]){height:auto;max-height:none;overflow:visible;overflow-x:clip}
+/* O app.css antigo trava a altura/rolagem do .app-shell por tela; nas telas editoriais e no quiz a página rola normalmente e o cabeçalho fica fixo. */
+.app-shell:is([data-screen="home"],[data-screen="variant"],[data-screen="quiz"],[data-screen="archetype"],[data-screen="results"]){height:auto;max-height:none;overflow:visible;overflow-x:clip}
 
 .ed *{box-sizing:border-box;margin:0;padding:0}
 .ed{background:var(--papel);color:var(--tinta);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
