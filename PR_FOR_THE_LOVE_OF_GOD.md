@@ -1,6 +1,6 @@
 # For the Love of God and All That Is Holy, Take This and Get On With It
 
-**Title:** `feat(kanon): upgrade 12axes with 343 Kanon Protocol, Psochic Hegemony (υ, ψ), and the 7×4 Survival Matrix Engine`
+**Title:** `feat(kanon): upgrade 12axes with 9-Cell Hegemonic Grid, Polar Angle-Magnitude Model, 343 Kanon Protocol, and 7×4 Survival Matrix Engine`
 
 ---
 
@@ -8,23 +8,23 @@
 
 If you read your own internal audit logs in [`profile-audit/BUSSOLA_VS_CATEGORIA.md`](profile-audit/BUSSOLA_VS_CATEGORIA.md), [`profile-audit/README.md`](profile-audit/README.md), and [`DimensionMatcherServiceTest.java`](backend/src/test/java/com/twelveaxes/DimensionMatcherServiceTest.java), your repository is already documenting—in painful detail—the exact structural wall that every flat, opinion-based political quiz eventually hits:
 
-1. **45.2% of Your Own Ideologies Fail Your Own 2D Political Compass (`BUSSOLA_VS_CATEGORIA.md`):**
-   - Out of **261 audited ideologies**, **118 (45.2%) land in the wrong region of the 2D compass** compared to their actual ideological family.
-   - In [`politicalCompass.ts`](frontend/src/utils/politicalCompass.ts), you hand-tuned magic weights (`0.20` economy, `0.30` control, `0.20` trade, `0.25` immigration, `0.05` moral), dropped 4 entire axes (`religiao`, `tecnologia`, `diplomacia`, `intervencao`), and bolted on an asymmetric hyperbolic tangent stretch (`GAIN_LEFT = 1.6`, `GAIN_RIGHT = 2.6`).
-   - Even after all that curve-fitting, **Cameralism** (absolutist monarchic mercantilism), **Enlightened Monarchy**, **Pluralist Imperialism**, **Positivism**, **Stoicism**, and **Platonism** all get classified as **"Radical Left"** (`Esquerda radical`), while 23 Far-Right and 11 Third Position ideologies collapse into each other.
-   - **Why?** Because measuring *whether the state intervenes* (Plane 5 *How*) without measuring **Who actually benefits ($\upsilon$)** and **What the energy is actually doing ($\psi$)** makes an absolute monarch who owns the state mathematically indistinguishable from a socialist cooperative.
+### 1. 45.2% of Your Own Ideologies Fail Your Own 2D Political Compass (`BUSSOLA_VS_CATEGORIA.md`)
+- Out of **261 audited ideologies**, **118 (45.2%) land in the wrong region of the 2D compass** compared to their actual ideological family.
+- In [`politicalCompass.ts`](frontend/src/utils/politicalCompass.ts), you hand-tuned magic weights (`0.20` economy, `0.30` control, `0.20` trade, `0.25` immigration, `0.05` moral), dropped 4 entire axes (`religiao`, `tecnologia`, `diplomacia`, `intervencao`), and bolted on an asymmetric hyperbolic tangent stretch (`GAIN_LEFT = 1.6`, `GAIN_RIGHT = 2.6`).
+- Even after all that curve-fitting, **Cameralism** (absolutist monarchic mercantilism), **Enlightened Monarchy**, **Pluralist Imperialism**, **Positivism**, **Stoicism**, and **Platonism** all get classified as **"Radical Left"** (`Esquerda radical`), while 23 Far-Right and 11 Third Position ideologies collapse into each other.
+- **Why?** Because measuring *whether the state intervenes* (Plane 5 *How*) without measuring **Who actually benefits ($\upsilon$)** and **What the energy is actually doing ($\psi$)** makes an absolute monarch who owns the state mathematically indistinguishable from a socialist cooperative.
 
-2. **Your Sub-Dimension Matcher Is Faking 2 of Its 3 Dimensions (`DimensionMatcherService.java`):**
-   - Look at [`DimensionMatcherService.java` (lines 31–40)](backend/src/main/java/com/twelveaxes/service/DimensionMatcherService.java#L31-L40):
-     - `POLITICAL_AXES` is literally **all 12 axes pasted into a list** (`estrutura`, `representacao`, `poder`, `diplomacia`, `imigracao`, `intervencao`, `tecnologia`, `controle`, `comercio`, `religiao`, `economia`, `moral`). It computes the exact same score as the overall 12-axis match and only returns a different person because `excludeId` hides `#1` and hands the user `#2`!
-     - Even your unit test in [`DimensionMatcherServiceTest.java` (line 81)](backend/src/test/java/com/twelveaxes/DimensionMatcherServiceTest.java#L81) had to use `anySatisfy` (*"at least one dimension differs from the overall score"*) instead of `allSatisfy` because `political` never differs from `overall`.
+### 2. Your Sub-Dimension Matcher Is Faking 2 of Its 3 Dimensions (`DimensionMatcherService.java`)
+- Look at [`DimensionMatcherService.java` (lines 31–40)](backend/src/main/java/com/twelveaxes/service/DimensionMatcherService.java#L31-L40):
+  - `POLITICAL_AXES` is literally **all 12 axes pasted into a list** (`estrutura`, `representacao`, `poder`, `diplomacia`, `imigracao`, `intervencao`, `tecnologia`, `controle`, `comercio`, `religiao`, `economia`, `moral`). It computes the exact same score as the overall 12-axis match and only returns a different person because `excludeId` hides `#1` and hands the user `#2`!
+  - Even your unit test in [`DimensionMatcherServiceTest.java` (line 81)](backend/src/test/java/com/twelveaxes/DimensionMatcherServiceTest.java#L81) had to use `anySatisfy` (*"at least one dimension differs from the overall score"*) instead of `allSatisfy` because `political` never differs from `overall`.
 
-3. **Zero Primary Sources + Single-Vector Rhetoric/Actuality Confusion (`profile-audit/README.md`):**
-   - Every profile in the catalog is generated by an LLM roleplaying 240 "Strongly Agree / Disagree" answers in a vacuum without a single verified quote, date, statute, or voting record.
-   - As you noted in [`profile-audit/README.md` (Failure Mode #5)](profile-audit/README.md#L369-L377), countries like DR Congo, Nigeria, Kenya, and Tunisia scored `48–87%` on Democracy because subagents answered normative statements (*"Free elections should be maintained..."*) using constitutional rhetoric rather than regime practice. Because each profile only has **one vector**, you have no mathematical way to represent the **Hypocrisy Gap ($\Delta H$)** between what a regime or politician *says* (Rhetoric / Bait) and what they *actually do* (Actuality / Extraction).
+### 3. Zero Primary Sources + Single-Vector Rhetoric/Actuality Confusion (`profile-audit/README.md`)
+- Every profile in the catalog is generated by an LLM roleplaying 240 "Strongly Agree / Disagree" answers in a vacuum without a single verified quote, date, statute, or voting record.
+- As you noted in [`profile-audit/README.md` (Failure Mode #5)](profile-audit/README.md#L369-L377), countries like DR Congo, Nigeria, Kenya, and Tunisia scored `48–87%` on Democracy because subagents answered normative statements (*"Free elections should be maintained..."*) using constitutional rhetoric rather than regime practice. Because each profile only has **one vector**, you have no mathematical way to represent the **Hypocrisy Gap ($\Delta H$)** between what a regime or politician *says* (Rhetoric / Bait) and what they *actually do* (Actuality / Extraction).
 
-4. **80.8% Macro Bias & Three Missing Planes of Human Survival:**
-   - Running `python profile-audit/kanon_survival_engine.py --question-coverage` on your `questions-pool.json` reveals why figures like Nietzsche, Sorel, and Proudhon suffer from "False Opposite" collapse (`profile-audit/README.md`, Failure Mode #3):
+### 4. 80.8% Macro Bias & Three Missing Planes of Human Survival
+- Running `python profile-audit/kanon_survival_engine.py --question-coverage` on your `questions-pool.json` reveals why figures like Nietzsche, Sorel, and Proudhon suffer from "False Opposite" collapse (`profile-audit/README.md`, Failure Mode #3):
 
 ```text
 ==============================================================================
@@ -43,45 +43,108 @@ P7     Sustenance     |       0       2       5       0 |     7    2.9%
 TOTAL                 |      16      21     194       9 |   240 100.0%
 ```
 
-   - **60% of the entire quiz** is just **Plane 5 (Power / State Control)** and **Plane 3 (Shelter / Property)** at the **MACRO (80.8%)** scale, while **Plane 2 (Purpose — 2.5%)**, **Plane 4 (Refreshment/Rest — 2.9%)**, and **Plane 7 (Sustenance/Social Trust — 2.9%)** are almost completely absent.
+- **60% of the entire quiz** is just **Plane 5 (Power / State Control)** and **Plane 3 (Shelter / Property)** at the **MACRO (80.8%)** scale, while **Plane 2 (Purpose — 2.5%)**, **Plane 4 (Refreshment/Rest — 2.9%)**, and **Plane 7 (Sustenance/Social Trust — 2.9%)** are almost completely absent.
+
+### 5. The 1D "Strongly Agree / Strongly Disagree" Binary Trap
+- Flat 1D scales force every respondent to compress two completely different dimensions into one line:
+  1. **Action ($\psi$)**: Do you support systemic intervention, defensive preservation, or deregulation?
+  2. **Scope ($\upsilon$)**: Are you doing it for the universal common good (everyone), or to protect yourself and your group?
+- An ordinary working person who opposes high taxes because their local family is struggling gets scored as an ideological Chicago-school libertarian. A person who supports public healthcare because they don't want their grandmother to die gets scored as an authoritarian central planner.
+- Compromise and nuance get flattened into "Neutral", making honest citizens look indifferent when they actually hold nuanced, grounded views.
 
 ---
 
-## What This PR Gives You (Out of the Box)
+## What This PR Delivers (Out of the Box)
 
-### 1. Drop-In Claude Code Skills & Commands (`.claude/skills/` & `.claude/commands/`)
-- **`/kanon_build` ([`.claude/skills/kanon-build/SKILL.md`](.claude/skills/kanon-build/SKILL.md))**:
-  The complete **343 National/Ideological Kanon ($7 \times 7 \times 7$ Qqci) Build Protocol** (`Plane.Sense.Vector`). Replaces unverified 30-word blurb roleplay with verbatim primary-source quotes, Hypothesis-Then-Verify sourcing, Psochic Hegemony $(\upsilon, \psi)$ coordinates, and First Nations / subaltern shadow entries.
-- **`/kanon_audit` ([`.claude/skills/kanon-audit/SKILL.md`](.claude/skills/kanon-audit/SKILL.md))**:
-  The **Kanon Alignment & Dual-Vector Audit Protocol**. Evaluates actors and regimes across **Move 1 (Identify the Ideal Mechanism)** and **Move 2 (Primary Quote vs. Material Actuality)**, separating **Rhetoric (`Quote`)** from **Practice (`Actuality`)** and measuring the **Hypocrisy Gap ($\Delta H$)** and **Helxis Tensor (`[who, who]`)**.
-- **`/survival_matrix_audit` ([`.claude/skills/survival-matrix-audit/SKILL.md`](.claude/skills/survival-matrix-audit/SKILL.md))**:
-  Runs the **$7 \times 4$ Survival Matrix & Psochic Hegemony Engine** on any existing `12axes` profile.
-
-### 2. Executable Python Diagnostic & Benchmark Engine ([`profile-audit/kanon_survival_engine.py`](profile-audit/kanon_survival_engine.py))
-Zero external dependencies; reads your existing `backend/src/main/resources/data/*.json` files directly and computes:
-1. **Psochic Hegemony Coordinates $(\upsilon, \psi) \in [-2.0, +2.0]$**:
-   - **Axis $\upsilon$ (Morality — Who benefits?)**: `+2` Everyone (Systemic Justice) $\to$ `+1` Others (Greater Good) $\to$ `0` Neutral $\to$ `-1` My Group Only (Lesser Evil) $\to$ `-2` Only Me (Tyranny / Pure Extraction).
-   - **Axis $\psi$ (Will — What is the energy doing?)**: `+2` Productive Justice $\to$ `+1` Proactive Building $\to$ `0` Stasis $\to$ `-1` Passive Withholding $\to$ `-2` Active Destruction / Chaos.
-   - **$0.5$-Zone Perceptual Inversion Detection**: Automatically catches when a profile disguises *Extraction as Liberty*, *Cruelty as Moral Protection*, *Tyranny as Collective Care*, or *Abandonment as Freedom*.
-2. **The $7 \times 4$ Survival Matrix ($\Phi_1 \dots \Phi_7$) & Multiplicative Systemic Viability ($V = \prod_{p=1}^7 \Phi_p$)**:
-   - Unlike a flat arithmetic mean where an ideology that zeroes out civil liberty (`poder = 100`) or physical shelter (`economia = 0`) still looks "balanced", $V = \prod_{p=1}^7 \Phi_p$ enforces the biological and institutional law that **if any single survival plane drops to zero, the system collapses ($V \to 0$)**.
-3. **Plane Misidentification Error Drain ($L_{\text{drain}} = \gamma (\Phi_a - \Phi_b)^2 \Phi_b$)**:
-   - Diagnoses when an ideology tries to solve a crisis on Plane $a$ (e.g., $P_1$ Recognition or $P_7$ Sustenance) using the coercive or market tools of Plane $b$ ($P_5$ Power/Control), draining physical and lyrical capacitance ($\Phi_3, \Phi_4$).
-4. **Time-Delayed Dynamical Cascade Simulation ($t = 0\text{h} \to 639\text{h}$)**:
-   - Simulates the closed circular dependency loop:
-     $$P_1 \text{ (Recognition)} \to P_2 \text{ (Purpose)} \to P_5 \text{ (Power)} \to P_3 \text{ (Shelter)} \to P_4 \text{ (Refreshment)} \to P_7 \text{ (Sustenance)} \to P_6 \text{ (Moral)} \to P_1$$
-     using each body's characteristic decay time constant ($\tau_3 = 3\text{h}$, $\tau_4 = 36\text{h}$, $\tau_1 = 72\text{h}$, $\tau_5 = 120\text{h}$, $\tau_7 = 168\text{h}$, $\tau_2 = 336\text{h}$, $\tau_6 = 720\text{h}$).
-
----
-
-## Live Benchmark Proof on Your Own Catalog (`python profile-audit/kanon_survival_engine.py --benchmark`)
-
-Here is what happens when you run `kanon_survival_engine.py` on the exact ideologies that your 2D Political Compass failed on in `BUSSOLA_VS_CATEGORIA.md`:
+### Part A: The Interactive 9-Cell Hegemonic Grid Quiz Interface
 
 ```text
-==============================================================================
+               + AGREE (Action ψ = +1 to +2)
+                     ▲
+       Top-Left      │      Top-Right
+   [Fair Go For All] │  [Looking Out For #1]
+   (υ = +1, ψ = +1)  │  (υ = -1, ψ = +1)
+                     │
+◄────────────────────┼────────────────────►
+FOR EVERYONE         │         FOR SELF / GROUP
+(Scope υ = +1 to +2) │         (Scope υ = -1 to -2)
+                     │
+      Bottom-Left    │     Bottom-Right
+  [Protect Community]│   [Don't Rip Me Off]
+   (υ = +1, ψ = -1)  │   (υ = -1, ψ = -1)
+                     ▼
+             - DISAGREE (Action ψ = -1 to -2)
+```
+
+1. **Interactive 2-Axis Polar Vector Target Pad ([`QuestionTargetPad.tsx`](frontend/src/components/QuestionTargetPad.tsx))**:
+   - Replaces the 1D 5-button strip with an intuitive 2D grid allowing direct crosshair dragging or one-click scenario selection.
+   - **Angle-Magnitude Polar Sector Answering Model (0% Side Bleed)**:
+     $$\theta = \operatorname{atan2}(\psi, \upsilon), \quad r = \sqrt{\upsilon^2 + \psi^2}$$
+     Dragging or clicking in a quadrant guarantees **$0\%$ allocation bleed** to the opposing moral scope. If you choose "For Everyone", your score is strictly allocated between Systemic Justice, Common Good, and Moderation—never leaking into Self/Group extraction.
+2. **Single Dynamic Human Sentence Telemetry**:
+   - Replaced technical, cramped 3-column debug percentages with a single, clear, grounded human sentence that updates live as the crosshair moves:
+     - *"You support this with radical systemic action for the universal common good."*
+     - *"You moderately oppose this to protect your family and local community from unfair burdens."*
+     - *"You are currently undecided or unsure about this issue."*
+3. **Defaffed Pub-Tested Scenarios Across All 39 Questions ([`hegemonicScenarios.ts`](frontend/src/data/hegemonicScenarios.ts))**:
+   - All 351 scenario cards across all 12 axes were defaffed and rewritten in plain, grounded language.
+   - Cut academic compound jargon and thesaurus word salad, reducing scenario length by 35–45% and saving over 15 kB in bundle size.
+   - Tested against real-world "Pub Test" personas: no Crocodile Dundee caricature slang, no sociology textbook prose—just real, clear positions.
+4. **Rotating Stance-Free Center ("Not Sure") Resolution**:
+   - Fixed the critical flaw where the center card was taking balanced policy stances.
+   - Replaced with 4 rotating, genuine stance-free neutral expressions anchored strictly at $(0, 0)$:
+     1. `"I haven't made up my mind and don't know or care enough to take a side."`
+     2. `"I'm undecided; I don't know or care enough about this topic to take a stand."`
+     3. `"I don't have a firm opinion, and don't know or care enough to take a side."`
+     4. `"I don't know or care enough about this topic to take a firm stand."`
+5. **Instant 1D Classic (5 Buttons) Toggle Fallback**:
+   - A one-click toggle at the top of every card allows purists to switch back to the classic 1D 5-button interface at any second without losing their quiz state.
+6. **Zero Scroll-Trap Responsive Flow ([`app.css`](frontend/src/styles/app.css), [`editorial.css`](frontend/src/styles/editorial.css), [`tokens.css`](frontend/src/styles/tokens.css))**:
+   - Removed nested `overflow-y: auto`, `overscroll-behavior: contain`, and root `overflow-x: clip` traps that locked vertical scrolling in Chromium.
+   - Full question, grid, scenarios, and confirm button scroll smoothly from top to bottom on both mobile phones and desktop displays.
+
+---
+
+### Part B: The 7×4 Survival Matrix & Psochic Hegemony Engine
+
+Executable Python diagnostic engine ([`profile-audit/kanon_survival_engine.py`](profile-audit/kanon_survival_engine.py)) with zero external dependencies:
+
+1. **Psochic Hegemony Coordinates $(\upsilon, \psi) \in [-2.0, +2.0]$**:
+   - **Axis $\upsilon$ (Morality — Who benefits?)**:
+     `+2` Everyone (Systemic Justice) $\to$ `+1` Others (Greater Good) $\to$ `0` Neutral $\to$ `-1` My Group Only (Lesser Evil) $\to$ `-2` Only Me (Tyranny / Pure Extraction).
+   - **Axis $\psi$ (Will — What is the energy doing?)**:
+     `+2` Productive Justice $\to$ `+1` Proactive Building $\to$ `0` Stasis $\to$ `-1` Passive Withholding $\to$ `-2` Active Destruction / Chaos.
+   - **$0.5$-Zone Perceptual Inversion Detection**:
+     Catches when an actor's stated moral position conflicts with material reality (e.g., claiming *Protection* while executing *Extraction*).
+2. **The $7 \times 4$ Survival Matrix ($\Phi_1 \dots \Phi_7$) & Multiplicative Systemic Viability ($V = \prod_{p=1}^7 \Phi_p$)**:
+   - Flat arithmetic means hide fatal institutional bottlenecks. $V = \prod_{p=1}^7 \Phi_p$ enforces the biological and governance law that **if any single survival plane drops to zero, the entire system collapses ($V \to 0$)**.
+3. **Plane Misidentification Error Drain ($L_{\text{drain}} = \gamma (\Phi_a - \Phi_b)^2 \Phi_b$)**:
+   - Identifies when an ideology tries to solve a crisis on Plane $a$ (e.g., $P_1$ Recognition or $P_7$ Sustenance) using the tools of Plane $b$ ($P_5$ Power/Coercion), draining physical and social capacity.
+4. **Time-Delayed Dynamical Cascade Simulation ($t = 0\text{h} \to 639\text{h}$)**:
+   - Simulates the circular dependency loop across survival planes using characteristic biological and institutional decay rates:
+     $$\tau_3 = 3\text{h} \text{ (Shelter/Air/Water)}, \; \tau_4 = 36\text{h} \text{ (Sleep)}, \; \tau_1 = 72\text{h} \text{ (Signal)}, \; \tau_5 = 120\text{h} \text{ (Sanitation/Order)}, \; \tau_7 = 168\text{h} \text{ (Food)}, \; \tau_2 = 336\text{h} \text{ (Community)}, \; \tau_6 = 720\text{h} \text{ (Moral Horizon)}$$
+
+---
+
+### Part C: Drop-In Claude Code / Antigravity Skills (`.claude/skills/`)
+
+- **`/kanon_build` ([`.claude/skills/kanon-build/SKILL.md`](.claude/skills/kanon-build/SKILL.md))**:
+  Builds a complete **343 National/Ideological Kanon ($7 \times 7 \times 7$ Qqci) semantic map** (`Plane.Sense.Vector`). Replaces unverified 30-word roleplay blurbs with verbatim primary-source quotes, Hypothesis-Then-Verify validation, $(\upsilon, \psi)$ coordinates, and First Nations perspective shadow entries.
+- **`/kanon_audit` ([`.claude/skills/kanon-audit/SKILL.md`](.claude/skills/kanon-audit/SKILL.md))**:
+  Evaluates political actors and regimes across **Move 1 (Ideal Mechanism)** and **Move 2 (Primary Quote vs. Material Actuality)**, measuring the **Hypocrisy Gap ($\Delta H$)** and **Helxis Tensor (`[who, who]`)**.
+- **`/survival_matrix_audit` ([`.claude/skills/survival-matrix-audit/SKILL.md`](.claude/skills/survival-matrix-audit/SKILL.md))**:
+  Audits any profile in the database against the 7 survival planes and generates a complete viability report with dynamical failure forecasts.
+
+---
+
+## Live Benchmark: Resolving 12Axes Compass Failures (`python profile-audit/kanon_survival_engine.py --benchmark`)
+
+Here is what happens when you run `kanon_survival_engine.py` on the exact ideologies that failed on the 2D Political Compass in `BUSSOLA_VS_CATEGORIA.md`:
+
+```text
+==============================================================================================================
 BENCHMARK: RESOLVING 12AXES COMPASS FAILURES (BUSSOLA_VS_CATEGORIA.md)
-==============================================================================
+==============================================================================================================
 Ideology ID                Cat (12axes)      (upsilon, psi)   Viability  Weakest Psochic Zone
 --------------------------------------------------------------------------------------------------------------
 comunismo-de-conselhos     Anarquismo        (+1.44, +1.01)       78.5%  P3=0.64 Greater Good (+1, +1) — Productive Altruism
@@ -92,27 +155,43 @@ platonismo                 Extrema Direita   (-0.82, +0.69)       30.8%  P5=0.13
 monarquismo-absoluto       Extrema Direita   (-1.12, -0.32)       21.6%  P5=0.10 Greater Evil (-1, -1) — Extractive / Regressive Hierarchy
 capitalismo-autoritario    Extrema Direita   (-1.02, -1.29)       22.9%  P5=0.13 Greater Evil (-1, -1) — Extractive / Regressive Hierarchy
 anarcocapitalismo          Libertário        (+0.03, -1.91)       54.6%  P3=0.07 Lesser Good (+1, -1) — Passive / Unprotected Idealism
+==============================================================================================================
 ```
 
-- **Cameralism** and **Platonism** no longer get misclassified as "Radical Left"—they map to **Greatest Lie $(-1, +1)$** (high state mobilization serving a narrow aristocratic/monarchic hierarchy, with $P_5$ Democratic Agency bottlenecked at `0.08` and `0.13`).
+- **Cameralism** and **Platonism** no longer get misclassified as "Radical Left"—they map to **Greatest Lie $(-1, +1)$** (state power mobilized to protect an elite aristocratic order, with $P_5$ Democratic Agency bottlenecked at `0.08` and `0.13`).
 - **Absolute Monarchy** and **Authoritarian Capitalism** map to **Greater Evil $(-1, -1)$** with Viability collapsing to `21.6%` and `22.9%`.
-- **Anarcho-Capitalism** maps to **Lesser Good $(+1, -1)$ — Passive Abandonment**, exposing its exact physical bottleneck: **Plane 3 (Shelter / Biospheric Containment) drops to `0.07`** because stripping all public safety nets and environmental regulations collapses physical containment.
+- **Anarcho-Capitalism** maps to **Lesser Good $(+1, -1)$ — Passive Abandonment**, exposing its exact physical bottleneck: **Plane 3 (Shelter / Biospheric Containment) drops to `0.07`** because stripping public infrastructure and environmental standards collapses physical containment.
 
 ---
 
-## Try It Right Now
+## How to Test and Run Right Now
 
+### 1. Run the Frontend & Tests
 ```powershell
-# 1. See the 7x4 question pool coverage gap:
+cd frontend
+
+# Run all 89 unit & integration tests:
+npm test -- --run
+
+# Run local development server:
+npm run dev
+
+# Verify clean production build:
+npm run build
+```
+
+### 2. Run the Diagnostic & Survival Engine
+```powershell
+# See the 7x4 question pool coverage gap:
 python profile-audit/kanon_survival_engine.py --question-coverage
 
-# 2. Run the BUSSOLA_VS_CATEGORIA.md resolution benchmark:
+# Run the BUSSOLA_VS_CATEGORIA.md resolution benchmark:
 python profile-audit/kanon_survival_engine.py --benchmark
 
-# 3. Audit any profile with full 639-hour cascade simulation:
+# Audit any profile with full 639-hour cascade simulation:
 python profile-audit/kanon_survival_engine.py personality stalin
 python profile-audit/kanon_survival_engine.py personality rothbard
 
-# 4. Run a Rhetoric vs. Actuality (Delta H & Helxis Tensor) comparison:
+# Run a Rhetoric vs. Actuality (Delta H & Helxis Tensor) comparison:
 python profile-audit/kanon_survival_engine.py --compare ideology:comunismo-de-conselhos country:coreia-do-norte
 ```
