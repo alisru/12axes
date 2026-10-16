@@ -28,4 +28,4 @@ Build a complete, drop-in **Kanon Build + Kanon Audit + Psochic Hegemony $(\upsi
 
 3. **Master Pull Request & Protocol Documentation**:
    - `profile-audit/KANON_AND_SURVIVAL_MATRIX_PROTOCOL.md`: Full technical specification (EN + PT) integrating the 343 Kanon, Psochic Hegemony, and the $7 \times 4$ Survival Matrix into `12axes`.
-   - `PR_FOR_THE_LOVE_OF_GOD.md`: Ready-to-paste Pull Request description with receipts from the `12axes` codebase (`BUSSOLA_VS_CATEGORIA.md`, `DimensionMatcherServiceTest.java`, `profile-audit/README.md`) and benchmark output from `kanon_survival_engine.py`.
+   - `PULL_REQUEST.md`: Ready-to-paste Pull Request description with receipts from the `12axes` codebase (`BUSSOLA_VS_CATEGORIA.md`, `DimensionMatcherServiceTest.java`, `profile-audit/README.md`) and benchmark output from `kanon_survival_engine.py`.
