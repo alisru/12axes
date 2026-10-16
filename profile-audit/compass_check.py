@@ -37,9 +37,8 @@ AXIS_ORDER = ["estrutura", "representacao", "poder", "imigracao", "diplomacia", 
 URL_KEYS = ["est", "rep", "pod", "imi", "dip", "int", "eco", "con", "com", "rel", "mor", "tec"]
 
 # --- espelha politicalCompass.ts -------------------------------------------------------------
-WEIGHT_ECONOMIA, WEIGHT_CONTROLE, WEIGHT_COMERCIO, WEIGHT_IMIGRACAO, WEIGHT_MORAL = 0.21, 0.25, 0.18, 0.22, 0.10
-WEIGHT_CULTURAL_EXTRA = 0.04
-GAIN_LEFT, GAIN_RIGHT = 1.75, 2.55
+WEIGHT_ECONOMIA, WEIGHT_CONTROLE, WEIGHT_COMERCIO, WEIGHT_IMIGRACAO, WEIGHT_MORAL = 0.2, 0.3, 0.2, 0.25, 0.05
+GAIN_LEFT, GAIN_RIGHT = 1.6, 2.6
 GRID_SIZE = 9
 
 
@@ -51,35 +50,13 @@ def stretch(average: float) -> float:
 
 def compass(v: dict) -> tuple[float, float, float]:
     """(direita, autoritario, tradicionalista), cada um de 0 a 100. `v` guarda leftPercent por eixo."""
-    rel = v.get("religiao", 50)
-    dip = v.get("diplomacia", 50)
-    intv = v.get("intervencao", 50)
-
-    cultural_extra = 0.45 * (100 - rel) + 0.35 * dip + 0.20 * (100 - intv)
-    exclusivity = (
-        0.38 * (100 - v["moral"])
-        + 0.28 * v["imigracao"]
-        + 0.14 * (100 - rel)
-        + 0.12 * dip
-        + 0.08 * (100 - intv)
-    )
-
-    raw_right = (
+    right = stretch(
         WEIGHT_ECONOMIA * (100 - v["economia"])
         + WEIGHT_CONTROLE * (100 - v["controle"])
         + WEIGHT_COMERCIO * (100 - v["comercio"])
         + WEIGHT_IMIGRACAO * v["imigracao"]
         + WEIGHT_MORAL * (100 - v["moral"])
-        + WEIGHT_CULTURAL_EXTRA * cultural_extra
     )
-
-    if exclusivity > 58 and v["controle"] > 52 and v["economia"] < 75:
-        excl_factor = (exclusivity - 58) / 42
-        ctrl_factor = (v["controle"] - 52) / 48
-        prop_factor = 11.5 if v["economia"] < 60 else 6.0
-        raw_right += excl_factor * ctrl_factor * prop_factor
-
-    right = stretch(raw_right)
     authoritarian = (v["poder"] + (100 - v["representacao"]) + (100 - v["estrutura"])) / 3
     return right, authoritarian, 100 - v["moral"]
 
@@ -88,14 +65,10 @@ def cell(percent: float) -> int:
     return max(0, min(GRID_SIZE - 1, math.floor(percent / 100 * GRID_SIZE)))
 
 
-def region(right: float, authoritarian: float, traditional: float = 50.0) -> str:
+def region(right: float, authoritarian: float) -> str:
     column, row = cell(right), cell(100 - authoritarian)
-    if row <= 2 or (authoritarian >= 62 and right < 28):
-        if right < 28 or (column <= 2 and traditional < 72):
-            return "esq-radical"
-        if column <= 4 or (column == 5 and right < 56):
-            return "terceira"
-        return "ext-direita"
+    if row <= 2:
+        return "esq-radical" if column <= 2 else "terceira" if column <= 5 else "ext-direita"
     if row <= 6:
         return "esquerda" if column <= 2 else "centro" if column <= 5 else "direita"
     if column <= 3:
@@ -156,7 +129,7 @@ def load() -> list[dict]:
         if not vector:
             continue
         right, authoritarian, traditional = compass(vector)
-        cat, where = category_key(item["category"]), region(right, authoritarian, traditional)
+        cat, where = category_key(item["category"]), region(right, authoritarian)
         rows.append({
             "id": item["id"], "name": item["name"], "category": item["category"], "cat": cat,
             "region": where, "right": right, "authoritarian": authoritarian, "traditional": traditional,

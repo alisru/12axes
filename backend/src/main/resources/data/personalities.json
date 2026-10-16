@@ -3240,7 +3240,7 @@
   },
   {
     "id": "deodoro-da-fonseca",
-    "name": "Marechal Deodoro da Fonseca",
+    "name": "Deodoro da Fonseca",
     "role": "Militar e estadista",
     "category": "politico",
     "lifespan": "1827–1892",
@@ -7976,6 +7976,142 @@
     "imageNote": "Retrato de Paulo Kogos via Wikipédia/Wikimedia Commons.",
     "religions": [
       "catholic"
+    ]
+  },
+  {
+    "id": "pim-fortuyn",
+    "name": "Pim Fortuyn",
+    "role": "Político e sociólogo",
+    "category": "politico",
+    "lifespan": "1948–2002",
+    "description": "Sociólogo e político neerlandês, fundador da LPF assassinado em 2002. Abertamente gay, uniu defesa do laicismo, direitos LGBT e eutanásia à dura oposição ao multiculturalismo e à imigração islâmica, além de desburocratização liberal, democracia direta e euroceticismo.",
+    "imagePath": "/personalities/portraits/pim-fortuyn.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Pim_Fortuyn",
+    "imageNote": "Retrato de Pim Fortuyn via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "klaus-schwab",
+    "name": "Klaus Schwab",
+    "role": "Economista",
+    "category": "economista",
+    "lifespan": "1938–",
+    "description": "Economista e engenheiro alemão, fundador do Fórum Econômico Mundial em Davos (1971–2025). Teorizou o capitalismo de stakeholders, a Quarta Revolução Industrial e o Great Reset, propondo governança global público-privada, metas ESG, descarbonização e convergência biodigital.",
+    "imagePath": "/personalities/portraits/klaus-schwab.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Klaus_Schwab",
+    "imageNote": "Retrato de Klaus Schwab via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "subcomandante-marcos",
+    "name": "Subcomandante Marcos",
+    "role": "Ideólogo zapatista",
+    "category": "ativista",
+    "lifespan": "1957–",
+    "description": "Porta-voz e estrategista do Exército Zapatista de Libertação Nacional (EZLN) em Chiapas desde o levante de 1994. Uniu marxismo e cosmovisão indígena maia no neozapatismo, defendendo autogoverno comunitário nos caracoles ('mandar obedecendo'), anticapitalismo e altermundialismo.",
+    "imagePath": "/personalities/portraits/subcomandante-marcos.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Subcomandante_Marcos",
+    "imageNote": "Retrato de Subcomandante Marcos via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "michael-collins",
+    "name": "Michael Collins",
+    "role": "Líder revolucionário",
+    "category": "politico",
+    "lifespan": "1890–1922",
+    "description": "Líder revolucionário e estadista irlandês, diretor de inteligência do IRA e ministro das Finanças na Guerra de Independência. Negociou o Tratado Anglo-Irlandês (1921), presidiu o Estado Livre Irlandês e defendeu modernização econômica e renascimento cultural gaélico.",
+    "imagePath": "/personalities/portraits/michael-collins.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Michael_Collins_(Irish_leader)",
+    "imageNote": "Retrato de Michael Collins via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "jose-gervasio-artigas",
+    "name": "José Gervasio Artigas",
+    "role": "Estadista e líder revolucionário",
+    "category": "politico",
+    "lifespan": "1764–1850",
+    "description": "Caudilho e estadista da Revolução Oriental e Protetor dos Povos Livres (1815–1820). Nas Instruções do Ano XIII e no Regulamento de Terras de 1815, defendeu confederalismo republicano contra o centralismo portenho, liberdade civil e religiosa e reforma agrária popular.",
+    "imagePath": "/personalities/portraits/jose-gervasio-artigas.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://es.wikipedia.org/wiki/Jos%C3%A9_Gervasio_Artigas",
+    "imageNote": "Retrato de José Gervasio Artigas por Juan Manuel Blanes via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "costin-vlad-alamariu",
+    "name": "Costin Vlad Alamariu (BAP)",
+    "role": "Filósofo político e escritor",
+    "category": "teorico",
+    "lifespan": "1980–presente",
+    "description": "Filósofo político romeno-americano e autor sob o pseudônimo Bronze Age Pervert, defende um vitalismo aristocrático nietzschiano, exaltação do heroísmo clássico da Idade do Bronze, eugenia e combate frontal ao igualitarismo liberal moderno.",
+    "imagePath": "/personalities/portraits/costin-vlad-alamariu.jpg",
+    "imageSourceName": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Cellini_-_Perseus_with_the_Head_of_Medusa_(detail),_08perseu.jpg",
+    "imageNote": "Busto da escultura Perseu com a Cabeça da Medusa de Benvenuto Cellini, símbolo e avatar icônico do autor.",
+    "religions": []
+  },
+  {
+    "id": "campos-sales",
+    "name": "Campos Sales",
+    "role": "Presidente do Brasil e advogado",
+    "category": "politico",
+    "lifespan": "1841–1913",
+    "description": "Presidente do Brasil (1898–1902) e republicano paulista, criou a 'política dos governadores', trocando apoio federal por lealdade das oligarquias estaduais, e saneou as finanças com o funding loan, corte de gastos e aumento de impostos.",
+    "imagePath": "/personalities/portraits/campos-sales.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Campos_Sales",
+    "imageNote": "Retrato de Campos Sales via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "floriano-peixoto",
+    "name": "Floriano Peixoto",
+    "role": "Marechal e presidente do Brasil",
+    "category": "politico",
+    "lifespan": "1839–1895",
+    "description": "Marechal e segundo presidente do Brasil (1891–1894), o 'Marechal de Ferro' consolidou a República pela força contra a Revolta da Armada e a Revolução Federalista, com nacionalismo jacobino, estado de sítio e centralização.",
+    "imagePath": "/personalities/portraits/floriano-peixoto.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Floriano_Peixoto",
+    "imageNote": "Retrato de Floriano Peixoto via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "henri-bergson",
+    "name": "Henri Bergson",
+    "role": "Filósofo",
+    "category": "filosofo",
+    "lifespan": "1859–1941",
+    "description": "Filósofo francês e Nobel de Literatura (1927), formulou o élan vital e a duração criadora contra o mecanicismo, defendendo a intuição, a evolução criadora e uma moral aberta, e apoiou a Liga das Nações e os Aliados.",
+    "imagePath": "/personalities/portraits/henri-bergson.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Henri_Bergson",
+    "imageNote": "Retrato de Henri Bergson via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "rene-guenon",
+    "name": "René Guénon",
+    "role": "Metafísico e escritor",
+    "category": "religioso",
+    "lifespan": "1886–1951",
+    "description": "Metafísico francês convertido ao sufismo no Cairo e fundador do tradicionalismo perenialista, condena o mundo moderno, o igualitarismo e a democracia em nome da Tradição primordial, da hierarquia iniciática e do esoterismo.",
+    "imagePath": "/personalities/portraits/rene-guenon.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Ren%C3%A9_Gu%C3%A9non",
+    "imageNote": "Retrato de René Guénon via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "islam"
     ]
   }
 ]

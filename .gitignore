@@ -40,3 +40,13 @@ docs/
 
 # Artefatos de screenshots do Playwright MCP
 .playwright-mcp/
+
+# Local workspace agent & plan artifacts
+_kanon_pr_plans/
+.agent/
+.agents/
+.claude/
+PSOQUIC_*.md
+WHAT_WAS_DONE_*.md
+run_servers.bat
+profile-audit/local_api_server.py

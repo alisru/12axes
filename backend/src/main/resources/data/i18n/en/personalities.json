@@ -1375,7 +1375,7 @@
   },
   {
     "id": "deodoro-da-fonseca",
-    "name": "Marshal Deodoro da Fonseca",
+    "name": "Deodoro da Fonseca",
     "role": "Military officer and statesman",
     "description": "An army marshal who led the proclamation of the republic in 1889, Deodoro da Fonseca became the country's first president, ruling in a centralizing and authoritarian manner until dissolving Congress in 1891, resigning shortly after amid institutional crisis."
   },
@@ -3710,5 +3710,70 @@
     "name": "Paulo Kogos",
     "role": "Political activist and influencer",
     "description": "Brazilian right-libertarian activist and YouTuber, Kogos blends Hoppean anarcho-capitalism and Austrian economics with sedevacantist traditionalist Catholicism, rejecting democracy for natural elites and monarchy, unrestricted gun rights, and secession."
+  },
+  {
+    "id": "pim-fortuyn",
+    "name": "Pim Fortuyn",
+    "role": "Politician and sociologist",
+    "lifespan": "1948–2002",
+    "description": "Dutch sociologist and politician, founder of the LPF assassinated in 2002. Openly gay, he combined secularism, LGBT rights, and euthanasia with fierce opposition to multiculturalism and Islamic immigration, free-market deregulation, direct democracy, and Euroscepticism."
+  },
+  {
+    "id": "klaus-schwab",
+    "name": "Klaus Schwab",
+    "role": "Economist",
+    "lifespan": "1938–",
+    "description": "German economist and engineer, founder of the World Economic Forum in Davos (1971–2025). He theorized stakeholder capitalism, the Fourth Industrial Revolution, and the Great Reset, proposing public-private global governance, ESG goals, decarbonization, and biodigital convergence."
+  },
+  {
+    "id": "subcomandante-marcos",
+    "name": "Subcomandante Marcos",
+    "role": "Zapatista spokesperson",
+    "lifespan": "1957–",
+    "description": "Spokesperson and strategist of the Zapatista Army of National Liberation (EZLN) in Chiapas since the 1994 uprising. He fused Marxism and Mayan cosmology into Neozapatismo, advocating communal self-government ('commanding by obeying'), anti-capitalism, and alter-globalization."
+  },
+  {
+    "id": "michael-collins",
+    "name": "Michael Collins",
+    "role": "Irish revolutionary leader",
+    "lifespan": "1890–1922",
+    "description": "Irish revolutionary leader and statesman, IRA Director of Intelligence and Minister for Finance in the War of Independence. He negotiated the 1921 Anglo-Irish Treaty, chaired the Irish Free State, and advocated economic modernization and the Gaelic cultural revival."
+  },
+  {
+    "id": "jose-gervasio-artigas",
+    "name": "José Gervasio Artigas",
+    "role": "Statesman and revolutionary leader",
+    "lifespan": "1764–1850",
+    "description": "Leader of the Oriental Revolution and Protector of the Free Peoples (1815–1820). In the Instructions of the Year XIII and the 1815 Land Regulation, he advocated republican confederalism against Buenos Aires centralism, civil and religious liberty, and popular agrarian reform."
+  },
+  {
+    "id": "costin-vlad-alamariu",
+    "name": "Costin Vlad Alamariu (BAP)",
+    "role": "Political philosopher and author",
+    "description": "Romanian-American political philosopher and author writing under the pseudonym Bronze Age Pervert, advocating Nietzschean aristocratic vitalism, classical Bronze Age heroism, eugenics, and fierce opposition to modern liberal egalitarianism."
+  },
+  {
+    "id": "campos-sales",
+    "name": "Campos Sales",
+    "role": "President of Brazil and lawyer",
+    "description": "President of Brazil (1898–1902) and a São Paulo republican, he created the 'politics of the governors', trading federal support for the loyalty of state oligarchies, and restored finances with the funding loan, spending cuts and higher taxes."
+  },
+  {
+    "id": "floriano-peixoto",
+    "name": "Floriano Peixoto",
+    "role": "Marshal and president of Brazil",
+    "description": "Marshal and second president of Brazil (1891–1894), the 'Iron Marshal' consolidated the Republic by force against the Armada Revolt and the Federalist Revolution, with Jacobin nationalism, states of siege and centralization."
+  },
+  {
+    "id": "henri-bergson",
+    "name": "Henri Bergson",
+    "role": "Philosopher",
+    "description": "French philosopher and Nobel laureate in Literature (1927), he formulated the élan vital and creative duration against mechanism, defending intuition, creative evolution and an open morality, and backed the League of Nations and the Allies."
+  },
+  {
+    "id": "rene-guenon",
+    "name": "René Guénon",
+    "role": "Metaphysician and writer",
+    "description": "French metaphysician who converted to Sufism in Cairo and founded perennialist Traditionalism, he condemns the modern world, egalitarianism and democracy in the name of primordial Tradition, initiatic hierarchy and esotericism."
   }
 ]

@@ -3394,5 +3394,113 @@
       "pt": "",
       "en": ""
     }
+  },
+  {
+    "personalityId": "pim-fortuyn",
+    "title": {
+      "pt": "De puinhopen van acht jaar Paars",
+      "en": "De puinhopen van acht jaar Paars"
+    },
+    "year": 2002,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "klaus-schwab",
+    "title": {
+      "pt": "A Quarta Revolução Industrial",
+      "en": "The Fourth Industrial Revolution"
+    },
+    "year": 2016,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "subcomandante-marcos",
+    "title": {
+      "pt": "Nossa Arma é a Nossa Palavra",
+      "en": "Our Word Is Our Weapon"
+    },
+    "year": 2001,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "michael-collins",
+    "title": {
+      "pt": "The Path to Freedom",
+      "en": "The Path to Freedom"
+    },
+    "year": 1922,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "jose-gervasio-artigas",
+    "title": {
+      "pt": "Instruções do Ano XIII",
+      "en": "Instructions of the Year XIII"
+    },
+    "year": 1813,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "costin-vlad-alamariu",
+    "title": {
+      "pt": "Bronze Age Mindset",
+      "en": "Bronze Age Mindset"
+    },
+    "year": 2018,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "henri-bergson",
+    "title": {
+      "pt": "As Duas Fontes da Moral e da Religião",
+      "en": "The Two Sources of Morality and Religion"
+    },
+    "year": 1932,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "campos-sales",
+    "title": {
+      "pt": "Da Propaganda à Presidência",
+      "en": "Da Propaganda à Presidência"
+    },
+    "year": 1908,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
+  },
+  {
+    "personalityId": "rene-guenon",
+    "title": {
+      "pt": "A Crise do Mundo Moderno",
+      "en": "The Crisis of the Modern World"
+    },
+    "year": 1927,
+    "url": {
+      "pt": "",
+      "en": ""
+    }
   }
 ]

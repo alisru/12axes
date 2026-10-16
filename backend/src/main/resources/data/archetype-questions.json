@@ -3,51 +3,46 @@
     "id": "sociedade",
     "label": {
       "pt": "Sociedade",
-      "en": "Society",
-      "es": "Sociedad"
+      "en": "Society"
     },
     "text": {
       "pt": "A sociedade deve se apoiar em quê?",
-      "en": "What should society rest on?",
-      "es": "¿En qué debe apoyarse la sociedad?"
+      "en": "What should society rest on?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Fé, família e tradição da nação",
-          "en": "Faith, family and national tradition",
-          "es": "Fe, familia y tradición de la nación"
+          "en": "Faith, family and national tradition"
         },
         "effects": {
-          "moral": 14,
-          "religiao": 12,
-          "imigracao": 74
+          "moral": 12,
+          "religiao": 20,
+          "imigracao": 82
         }
       },
       {
         "id": "B",
         "text": {
           "pt": "Costumes e fé, mudando devagar",
-          "en": "Custom and faith, changing slowly",
-          "es": "Costumbres y fe, cambiando lentamente"
+          "en": "Custom and faith, changing slowly"
         },
         "effects": {
-          "moral": 26,
-          "religiao": 30,
-          "imigracao": 58
+          "moral": 32,
+          "religiao": 42,
+          "imigracao": 60
         }
       },
       {
         "id": "C",
         "text": {
           "pt": "Cada um vive como quiser",
-          "en": "Live and let live",
-          "es": "Cada quien vive como quiere"
+          "en": "Live and let live"
         },
         "effects": {
-          "moral": 60,
-          "religiao": 68,
+          "moral": 55,
+          "religiao": 60,
           "imigracao": 40
         }
       },
@@ -55,39 +50,36 @@
         "id": "D",
         "text": {
           "pt": "Igualdade, diversidade e direitos civis",
-          "en": "Equality, diversity and civil rights",
-          "es": "Igualdad, diversidad y derechos civiles"
+          "en": "Equality, diversity and civil rights"
         },
         "effects": {
-          "moral": 72,
-          "religiao": 74,
-          "imigracao": 28
+          "moral": 80,
+          "religiao": 75,
+          "imigracao": 20
         }
       },
       {
         "id": "E",
         "text": {
           "pt": "Tradição e ordem, sem religião",
-          "en": "Tradition and order, without religion",
-          "es": "Tradición y orden, sin religión"
+          "en": "Tradition and order, without religion"
         },
         "effects": {
-          "moral": 30,
-          "religiao": 70,
-          "imigracao": 68
+          "moral": 25,
+          "religiao": 82,
+          "imigracao": 65
         }
       },
       {
         "id": "F",
         "text": {
           "pt": "Fé a serviço da justiça social",
-          "en": "Faith in service of social justice",
-          "es": "Fe al servicio de la justicia social"
+          "en": "Faith in service of social justice"
         },
         "effects": {
-          "moral": 40,
-          "religiao": 30,
-          "imigracao": 42
+          "moral": 72,
+          "religiao": 25,
+          "imigracao": 30
         }
       }
     ]
@@ -96,78 +88,71 @@
     "id": "poder",
     "label": {
       "pt": "Poder",
-      "en": "Power",
-      "es": "Poder"
+      "en": "Power"
     },
     "text": {
       "pt": "Como o poder deve ser organizado?",
-      "en": "How should power be organized?",
-      "es": "¿Cómo debe organizarse el poder?"
+      "en": "How should power be organized?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Líder ou partido único, centralizado",
-          "en": "A single leader or party, centralized",
-          "es": "Líder o partido único, centralizado"
+          "en": "A single leader or party, centralized"
         },
         "effects": {
-          "representacao": 22,
-          "estrutura": 20,
-          "poder": 82
+          "representacao": 15,
+          "estrutura": 18,
+          "poder": 85
         }
       },
       {
         "id": "B",
         "text": {
           "pt": "Elites decidem, com voto limitado",
-          "en": "Elites decide, with limited voting",
-          "es": "Las élites deciden, con voto limitado"
+          "en": "Elites decide, with limited voting"
         },
         "effects": {
-          "representacao": 30,
-          "estrutura": 42,
-          "poder": 68
+          "representacao": 40,
+          "estrutura": 38,
+          "poder": 65
         }
       },
       {
         "id": "C",
         "text": {
           "pt": "Democracia com freios e contrapesos",
-          "en": "Democracy with checks and balances",
-          "es": "Democracia con frenos y contrapesos"
+          "en": "Democracy with checks and balances"
         },
         "effects": {
           "representacao": 78,
-          "estrutura": 44,
-          "poder": 50
+          "estrutura": 45,
+          "poder": 42
         }
       },
       {
         "id": "D",
         "text": {
           "pt": "Estado mínimo ou nenhum",
-          "en": "Little or no state",
-          "es": "Estado mínimo o ninguno"
+          "en": "Little or no state"
         },
         "effects": {
-          "representacao": 62,
-          "estrutura": 86,
-          "poder": 20
+          "representacao": 70,
+          "estrutura": 88,
+          "poder": 12
         }
       },
       {
         "id": "E",
         "text": {
           "pt": "Sem Estado, conselhos ou contratos",
-          "en": "No state, councils or contracts",
-          "es": "Sin Estado, consejos o contratos"
+          "en": "No state, councils or contracts"
         },
         "effects": {
-          "representacao": 86,
-          "estrutura": 78,
-          "poder": 18
+          "representacao": 90,
+          "estrutura": 95,
+          "poder": 8
         }
       }
     ]
@@ -176,86 +161,78 @@
     "id": "economia",
     "label": {
       "pt": "Economia",
-      "en": "Economy",
-      "es": "Economía"
+      "en": "Economy"
     },
     "text": {
       "pt": "Quem deve controlar a produção?",
-      "en": "Who should control production?",
-      "es": "¿Quién debe controlar la producción?"
+      "en": "Who should control production?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Produção coletiva e planejada, sem patrões",
-          "en": "Collective, planned production, no bosses",
-          "es": "Producción colectiva y planificada, sin patrones"
+          "en": "Collective, planned production, no bosses"
         },
         "effects": {
-          "economia": 88,
-          "controle": 82,
-          "comercio": 64
+          "economia": 92,
+          "controle": 92,
+          "comercio": 80
         }
       },
       {
         "id": "B",
         "text": {
           "pt": "Cooperativas, Estado social e regulação",
-          "en": "Co-ops, welfare state and regulation",
-          "es": "Cooperativas, Estado de bienestar y regulación"
+          "en": "Co-ops, welfare state and regulation"
         },
         "effects": {
-          "economia": 75,
-          "controle": 72,
-          "comercio": 58
+          "economia": 76,
+          "controle": 66,
+          "comercio": 55
         }
       },
       {
         "id": "C",
         "text": {
           "pt": "Mercado com regras e rede de proteção",
-          "en": "Markets with rules and a safety net",
-          "es": "Mercado con reglas y red de protección social"
+          "en": "Markets with rules and a safety net"
         },
         "effects": {
-          "economia": 50,
-          "controle": 50,
-          "comercio": 40
+          "economia": 42,
+          "controle": 44,
+          "comercio": 42
         }
       },
       {
         "id": "D",
         "text": {
           "pt": "Patrões e sindicatos unidos pelo Estado",
-          "en": "Bosses and unions united by the state",
-          "es": "Patrones y sindicatos unidos por el Estado"
+          "en": "Bosses and unions united by the state"
         },
         "effects": {
-          "economia": 60,
-          "controle": 74,
-          "comercio": 76
+          "economia": 65,
+          "controle": 84,
+          "comercio": 88
         }
       },
       {
         "id": "E",
         "text": {
           "pt": "Empresas nacionais protegidas pelo Estado",
-          "en": "National firms shielded by the state",
-          "es": "Empresas nacionales protegidas por el Estado"
+          "en": "National firms shielded by the state"
         },
         "effects": {
-          "economia": 50,
-          "controle": 68,
-          "comercio": 65
+          "economia": 38,
+          "controle": 60,
+          "comercio": 80
         }
       },
       {
         "id": "F",
         "text": {
           "pt": "Livre comércio e impostos mínimos",
-          "en": "Free trade and minimal taxes",
-          "es": "Libre comercio e impuestos mínimos"
+          "en": "Free trade and minimal taxes"
         },
         "effects": {
           "economia": 12,
@@ -269,73 +246,66 @@
     "id": "mundo",
     "label": {
       "pt": "Mundo",
-      "en": "World",
-      "es": "Mundo"
+      "en": "World"
     },
     "text": {
       "pt": "Como o país deve agir no mundo?",
-      "en": "How should the country act abroad?",
-      "es": "¿Cómo debe actuar el país en el mundo?"
+      "en": "How should the country act abroad?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Potência militar influente",
-          "en": "An influential military power",
-          "es": "Potencia militar influyente"
+          "en": "An influential military power"
         },
         "effects": {
-          "diplomacia": 82,
-          "intervencao": 20
+          "diplomacia": 85,
+          "intervencao": 15
         }
       },
       {
         "id": "B",
         "text": {
           "pt": "Defesa forte e aliados próximos",
-          "en": "Strong defense and close allies",
-          "es": "Defensa fuerte y aliados cercanos"
+          "en": "Strong defense and close allies"
         },
         "effects": {
           "diplomacia": 60,
-          "intervencao": 35
+          "intervencao": 40
         }
       },
       {
         "id": "C",
         "text": {
           "pt": "Diplomacia antes da força",
-          "en": "Diplomacy before force",
-          "es": "Diplomacia antes que la fuerza"
+          "en": "Diplomacy before force"
         },
         "effects": {
-          "diplomacia": 32,
-          "intervencao": 58
+          "diplomacia": 30,
+          "intervencao": 62
         }
       },
       {
         "id": "D",
         "text": {
           "pt": "Armado, mas fora de guerras alheias",
-          "en": "Armed, but out of others' wars",
-          "es": "Armado, pero fuera de guerras ajenas"
+          "en": "Armed, but out of others' wars"
         },
         "effects": {
-          "diplomacia": 52,
-          "intervencao": 58
+          "diplomacia": 70,
+          "intervencao": 80
         }
       },
       {
         "id": "E",
         "text": {
           "pt": "Paz e não intervenção, sempre",
-          "en": "Peace and non-intervention, always",
-          "es": "Paz y no intervención, siempre"
+          "en": "Peace and non-intervention, always"
         },
         "effects": {
-          "diplomacia": 18,
-          "intervencao": 76
+          "diplomacia": 8,
+          "intervencao": 90
         }
       }
     ]
@@ -344,68 +314,61 @@
     "id": "tecnologia",
     "label": {
       "pt": "Tecnologia",
-      "en": "Technology",
-      "es": "Tecnología"
+      "en": "Technology"
     },
     "text": {
       "pt": "Qual deve ser o papel da tecnologia?",
-      "en": "What role should technology play?",
-      "es": "¿Cuál debe ser el papel de la tecnología?"
+      "en": "What role should technology play?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Voltar à natureza, sem indústria",
-          "en": "Back to nature, no industry",
-          "es": "Volver a la naturaleza, sin industria"
+          "en": "Back to nature, no industry"
         },
         "effects": {
-          "tecnologia": 14
+          "tecnologia": 8
         }
       },
       {
         "id": "B",
         "text": {
           "pt": "Natureza acima do progresso",
-          "en": "Nature before progress",
-          "es": "Naturaleza por encima del progreso"
+          "en": "Nature before progress"
         },
         "effects": {
-          "tecnologia": 26
+          "tecnologia": 30
         }
       },
       {
         "id": "C",
         "text": {
           "pt": "Equilíbrio entre progresso e natureza",
-          "en": "Balance progress and nature",
-          "es": "Equilibrio entre progreso y naturaleza"
+          "en": "Balance progress and nature"
         },
         "effects": {
-          "tecnologia": 48
+          "tecnologia": 50
         }
       },
       {
         "id": "D",
         "text": {
           "pt": "Tecnologia e indústria como motor",
-          "en": "Technology and industry as the engine",
-          "es": "Tecnología e industria como motor"
+          "en": "Technology and industry as the engine"
         },
         "effects": {
-          "tecnologia": 66
+          "tecnologia": 72
         }
       },
       {
         "id": "E",
         "text": {
           "pt": "Acelerar a tecnologia, sem freios",
-          "en": "Accelerate technology, no brakes",
-          "es": "Acelerar la tecnología, sin frenos"
+          "en": "Accelerate technology, no brakes"
         },
         "effects": {
-          "tecnologia": 88
+          "tecnologia": 92
         }
       }
     ]

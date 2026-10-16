@@ -3356,7 +3356,8 @@
     "countryId": "reino-unido-vitoriano-imperio-britanico",
     "personalityId": "john-stuart-mill",
     "religions": [
-      "protestant"
+      "protestant",
+      "only"
     ]
   },
   {
@@ -3368,6 +3369,39 @@
     "vector": null,
     "countryId": "liechtenstein",
     "personalityId": "hoppe",
+    "religions": []
+  },
+  {
+    "id": "tecnoprogressismo",
+    "name": "Tecnoprogressismo",
+    "category": "Esquerda",
+    "description": "Transumanismo democrático que une controle público da tecnologia e justiça social, defendendo melhoramento humano, extensão radical da vida, liberdade morfológica e repartição universal dos ganhos da automação.",
+    "phrase": "Quero democratizar o melhoramento humano e a longevidade, garantir liberdade sobre o próprio corpo e repartir os ganhos da automação com todos.",
+    "vector": null,
+    "countryId": "suecia",
+    "personalityId": "nicolas-de-condorcet",
+    "religions": []
+  },
+  {
+    "id": "federalismo-rioplatense",
+    "name": "Federalismo Rioplatense",
+    "category": "Esquerda",
+    "description": "Tradição federalista do Rio da Prata fundada por José Gervasio Artigas na Liga dos Povos Livres (1813–1820). Defende confederalismo republicano de províncias soberanas contra o centralismo portenho, liberdade civil e religiosa, proteção manufatureira e reforma agrária popular.",
+    "phrase": "Quero províncias soberanas em pacto confederal republicano, com liberdade civil e religiosa, reforma agrária popular e alfândegas protegendo o trabalho local.",
+    "vector": null,
+    "countryId": "uruguai",
+    "personalityId": "jose-gervasio-artigas",
+    "religions": []
+  },
+  {
+    "id": "vitalismo",
+    "name": "Vitalismo",
+    "category": "Direita",
+    "description": "Corrente que toma a vida, o élan vital de Bergson e a vontade de potência de Nietzsche como valor supremo, exaltando instinto, vigor físico, criação e heroísmo contra a decadência, a doença e o igualitarismo.",
+    "phrase": "Quero a vida afirmada como valor supremo, com vigor, coragem e criação de uma elite excepcional, contra o ressentimento, a renúncia e a nivelação.",
+    "vector": null,
+    "countryId": "esparta",
+    "personalityId": "nietzsche",
     "religions": []
   }
 ]
