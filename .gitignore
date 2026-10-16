@@ -45,7 +45,10 @@ docs/
 _kanon_pr_plans/
 .agent/
 .agents/
-.claude/
+.claude/commands/kanon_*
+.claude/commands/survival_*
+.claude/skills/kanon-*
+.claude/skills/survival-*
 PSOQUIC_*.md
 WHAT_WAS_DONE_*.md
 run_servers.bat
