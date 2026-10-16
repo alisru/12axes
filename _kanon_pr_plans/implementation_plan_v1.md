@@ -4,7 +4,7 @@
 **Project Folder:** `e:\Vector Field Theory\12axes`
 
 ## Goal
-Build a complete, drop-in **Kanon Build + Kanon Audit + Psochic Hegemony $(\upsilon, \psi)$ + $7 \times 4$ Survival Matrix Framework** inside the `12axes` repository so it can be submitted or shared as a comprehensive Pull Request ("For the love of God and all that is holy, take this and get on with it").
+Build a complete, drop-in **Kanon Build + Kanon Audit + Psochic Hegemony $(\upsilon, \psi)$ + $7 \times 4$ Survival Matrix Framework** inside the `12axes` repository so it can be submitted or shared as a comprehensive Pull Request.
 
 ## Components to Build
 
