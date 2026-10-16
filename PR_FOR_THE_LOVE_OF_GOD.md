@@ -257,6 +257,60 @@ anarcocapitalismo          Libertário        (+0.03, -1.91)       54.6%  P3=0.0
 
 ---
 
+## What the Author Needs to Do Next (Actionable Roadmap)
+
+Now that the core technical foundations (interactive 2D grid, polar sector math, zero-bleed telemetry, survival matrix engine, and dynamical cascade simulator) are in place, here is the concrete step-by-step roadmap for you to complete the transition:
+
+### Phase 1: Re-Author the 39 Quiz Scenarios Using the 4 Kinetic Action Potential Lenses
+- **Target File:** [`frontend/src/data/hegemonicScenarios.ts`](frontend/src/data/hegemonicScenarios.ts)
+- **Action:**
+  - The current scenarios serve as a clean, pub-tested Proof of Concept (PoC). To permanently eradicate false positives, re-author each question's 8 perimeter scenario cells using the strict transformation formulas:
+    1. **Top-Left (`will be`)**: Productive Justice / Good Truth ($+1\upsilon, +1\psi$) — actively building universal structures for Everyone (`"For You, Me and Everyone"`).
+    2. **Top-Right (`can't be`)**: Tactical Exemption / Bad Lie ($-1\upsilon, +1\psi$) — reducing universal standards to carve out personal/group gain (`"Me and You, but Really for Me"`).
+    3. **Bottom-Left (`may be`)**: Protective Preservation / Good Lie ($+1\upsilon, -1\psi$) — cautious defensive stabilization to safeguard the community (`"For You, but Only for Me"`).
+    4. **Bottom-Right (`won't be`)**: Defensive Grievance / Bad Truth ($-1\upsilon, -1\psi$) — resisting extraction, refusing to carry other people's burdens (`"For Me, only Me, and you take what I don't need"`).
+  - Preserve the 4 rotating stance-free neutral expressions strictly at the Center $(0, 0)$ card.
+
+### Phase 2: Upgrade Catalog Audits to Dual Vectors (Rhetoric vs. Actuality)
+- **Target Directories:** [`profile-audit/`](profile-audit/), `backend/src/main/resources/data/`
+- **Action:**
+  - Upgrade the profile schema for Ideologies, Personalities, and Countries to store two distinct vectors:
+    1. $\vec{V}_{\text{rhetoric}}$: Stated constitutional ideals, official platforms, speeches, and propaganda.
+    2. $\vec{V}_{\text{actuality}}$: Material governance, legislative roll-call votes, budget allocations, and enforcement records.
+  - Compute the **Hypocrisy Gap ($\Delta H$)** and **Helxis Tensor (`[who, who]`)** using [`kanon_survival_engine.py`](profile-audit/kanon_survival_engine.py).
+  - This immediately eliminates Failure Mode #5 (`README.md`), preventing authoritarian regimes and corrupt actors from hijacking the "Democracy" or "Human Rights" axes via empty rhetoric.
+
+### Phase 3: Replace the Broken 2D Compass with the Psochic Hegemony $(\upsilon, \psi)$ Matrix
+- **Target Files:** [`frontend/src/utils/politicalCompass.ts`](frontend/src/utils/politicalCompass.ts), `frontend/src/components/results/`
+- **Action:**
+  - Deprecate the arbitrary hand-tuned weights (`0.20, 0.30...`) and asymmetric hyperbolic tangent stretch that failed 45.2% of ideologies in [`BUSSOLA_VS_CATEGORIA.md`](profile-audit/BUSSOLA_VS_CATEGORIA.md).
+  - Project quiz results directly onto the **Psochic Hegemony $(\upsilon, \psi)$ Plane**:
+    - **$\upsilon$ (Scope / Morality):** $[-2, +2]$ (Everyone $\leftrightarrow$ Only Me)
+    - **$\psi$ (Action / Will):** $[-2, +2]$ (Productive Creation $\leftrightarrow$ Active Destruction / Extraction)
+  - Display the profile's **Multiplicative Viability ($V = \prod_{p=1}^7 \Phi_p$)** to highlight institutional choke points where an ideology starves basic survival requirements.
+
+### Phase 4: Fix the Sub-Dimension Matcher (`DimensionMatcherService.java`)
+- **Target Files:** [`backend/src/main/java/com/twelveaxes/service/DimensionMatcherService.java`](backend/src/main/java/com/twelveaxes/service/DimensionMatcherService.java), `backend/src/test/java/com/twelveaxes/DimensionMatcherServiceTest.java`
+- **Action:**
+  - Disentangle `POLITICAL_AXES` so it no longer duplicates all 12 axes.
+  - Map each sub-dimension to its actual ontological survival planes:
+    - **Political Dimension:** Planes 1, 5, 6 (`representacao`, `poder`, `estrutura`).
+    - **Economic Dimension:** Planes 3, 4, 7 (`economia`, `controle`, `comercio`).
+    - **Cultural & Diplomatic Dimension:** Planes 2, 6, 7 (`moral`, `religiao`, `imigracao`, `diplomacia`, `intervencao`).
+  - Update `DimensionMatcherServiceTest.java` from `anySatisfy` to `allSatisfy`, ensuring all three dimensions compute genuinely independent matches without cheating via `excludeId`.
+
+### Phase 5: Rebalance Question Pool Beyond the 80.8% Macro Bias
+- **Target File:** `backend/src/main/resources/data/questions-pool.json`
+- **Action:**
+  - The current pool is 80.8% Macro-scale, with 60% clustered in Plane 5 (Power) and Plane 3 (Shelter).
+  - Draft Micro and Meso questions specifically targeting the missing survival planes:
+    - **Plane 2 (Purpose / Existential Meaning):** Vocational autonomy, personal dignity, cultural creative output.
+    - **Plane 4 (Refreshment / Rest):** Work-life balance, psychological burnout, leisure access.
+    - **Plane 7 (Sustenance / Trust):** Mutual aid networks, food security, social capital, everyday neighborhood solidarity.
+  - Validate with `python profile-audit/kanon_survival_engine.py --question-coverage`.
+
+---
+
 ## How to Test and Run Right Now
 
 ### 1. Run the Frontend & Tests
